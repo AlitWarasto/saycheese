@@ -25,8 +25,12 @@ function load_stylesheets(){
 add_action('wp_enqueue_scripts','load_stylesheets');
 
 function load_javascript(){
-	wp_register_script('custom', get_template_directory_uri(). '/js/app.js','jquery', 0.1, true);
-	wp_enqueue_script('custom');
+    wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
+    wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js','', 4.0, true);
+	wp_register_script('appjs', get_template_directory_uri(). '/js/app.js','jquery', 0.1, true);
+    wp_enqueue_script('jquery351');
+    wp_enqueue_script('bootstrap');
+	wp_enqueue_script('appjs');
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
 
@@ -43,3 +47,11 @@ function saycheese_logo() {
     add_theme_support( 'custom-logo', $defaults );
 }
 add_action( 'after_setup_theme', 'saycheese_logo' );
+
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
+ 
+    // additional image sizes
+    add_image_size( 'landing-thumb', 9999, 9999 ); // unlimited wide and unlimited height
+ }
