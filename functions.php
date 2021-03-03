@@ -43,4 +43,3 @@ function saycheese_logo() {
     add_theme_support( 'custom-logo', $defaults );
 }
 add_action( 'after_setup_theme', 'saycheese_logo' );
-?>
