@@ -110,8 +110,8 @@ body {
 }
 .aksen{
 	width: 102%;
-	height: 18.1%;
+	height: 20%;
 	position: absolute;
 	z-index: 2;
-	bottom: -1px;
+	bottom: 0;
 }

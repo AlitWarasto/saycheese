@@ -56,5 +56,5 @@ if ( function_exists( 'add_theme_support' ) ) {
     set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
  
     // additional image sizes
-    add_image_size( 'landing-thumb', 9999, 9999 ); // unlimited wide and unlimited height
+    add_image_size( 'landing-thumb', 720, 720, true ); // unlimited wide and unlimited height
  }

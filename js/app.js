@@ -10,6 +10,7 @@ $(window).on('load',function(){
 
 /*Initialize Swiper*/
 var swiper = new Swiper('.swiper-container', {
+	autoHeight: true,
   centeredSlides: true,
   autoplay: {
     delay: 2500,
