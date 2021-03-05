@@ -73,11 +73,47 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <section id="section3">
   	<div id="section-3-aksen-1"></div>
   	<?php
-  	$limg = wp_get_attachment_image_src(1922,'landing-thumb');
+  	$limg = wp_get_attachment_image_src(35,'landing-thumb');
     $limgurl = $limg[0];
   	?>
   	<img class="img-fluid" src="<?php echo $limgurl; ?>">
   	<div id="section-3-aksen-2"></div>
+    <div class="container">
+      <div class="row">
+        <div class="var-menu col-3">
+            <h5>Mixzone</h5>
+            <div class="vm-bg">
+              <div class="ov-con">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-mixzone.png">
+              </div>
+            </div>
+        </div>
+        <div class="var-menu col-3">
+            <h5>In & Out</h5>
+            <div class="vm-bg">
+              <div class="ov-con">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-inout.png">
+              </div>
+            </div>
+        </div>
+        <div class="var-menu col-3">
+            <h5>Pizza Slice</h5>
+            <div class="vm-bg">
+              <div class="ov-con">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-slice.png">
+              </div>
+            </div>
+        </div>
+        <div class="var-menu col-3">
+            <h5>Calzone</h5>
+            <div class="vm-bg">
+              <div class="ov-con">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-calzone.png">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
   </section>
 <?php
 get_footer();
