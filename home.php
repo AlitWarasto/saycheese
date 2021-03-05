@@ -11,8 +11,18 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 ?>
 
 <style type="text/css">
-  .aksen{
+  #aksen{
     background-image: url("<?php echo $themeurl ?>/img/aksen.SVG");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #section-3-aksen-1{
+  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-1.SVG");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #section-3-aksen-2{
+  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-2.SVG");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -24,7 +34,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 <!-- -->
 <section id="section1">
   <div class="swiper-container">
-    <div class="aksen"></div>
+    <div id="aksen" class="aksen"></div>
     <div class="swiper-wrapper">
     <?php
       $shn = new WP_Query(array(
@@ -59,6 +69,15 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       <h1 class="col-md-12 text-center d-flex justify-content-center">19.000</h1>
       <h5 class="col-md-6 text-center" style="padding:0 7em;">Selalu menggunakan keju yang berkualitas dan berserfikat HALAL dari MUI, serta memiliki 20 lebih varian rasa</h5>
     </div>
+  </section>
+  <section id="section3">
+  	<div id="section-3-aksen-1"></div>
+  	<?php
+  	$limg = wp_get_attachment_image_src(1922,'landing-thumb');
+    $limgurl = $limg[0];
+  	?>
+  	<img class="img-fluid" src="<?php echo $limgurl; ?>">
+  	<div id="section-3-aksen-2"></div>
   </section>
 <?php
 get_footer();

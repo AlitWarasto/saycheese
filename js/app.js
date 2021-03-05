@@ -11,6 +11,7 @@ $(window).on('load',function(){
 /*Initialize Swiper*/
 var swiper = new Swiper('.swiper-container', {
 	autoHeight: true,
+	loop: true,
   centeredSlides: true,
   autoplay: {
     delay: 2500,
