@@ -23,8 +23,9 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   }
   #section-3-aksen-2{
   	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-2.SVG");
-    background-repeat: no-repeat;
-    background-size: cover;
+  	background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
   }
 </style>
 <div id="loader" class="loader">
@@ -73,13 +74,13 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <section id="section3">
   	<div id="section-3-aksen-1"></div>
   	<?php
-  	$limg = wp_get_attachment_image_src(35,'landing-thumb');
+  	$limg = wp_get_attachment_image_src(1922,'landing-thumb');
     $limgurl = $limg[0];
   	?>
   	<img class="img-fluid" src="<?php echo $limgurl; ?>">
   	<div id="section-3-aksen-2"></div>
     <div class="container">
-      <div class="row">
+      <div class="row d-flex align-items-center">
         <div class="var-menu col-3">
             <h5>Mixzone</h5>
             <div class="vm-bg">
@@ -114,6 +115,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         </div>
       </div>
     </div>
+  </section>
+  <section id="section4">
+  	<img class="img-fluid" src="http://localhost/coba/wp-content/uploads/2021/03/presieden-vs-reality-mixzone.png"></img>
+  	<img class="img-fluid" src="http://localhost/coba/wp-content/uploads/2021/03/pizza-slice-beauty-and-the-beef.png"></img>
+  	<img class="img-fluid" src="http://localhost/coba/wp-content/uploads/2021/03/in-and-out-pizza-to-remember.png"></img>
+  	<img class="img-fluid" src="http://localhost/coba/wp-content/uploads/2021/03/13.-SAY-CHEESE.png"></img>
   </section>
 <?php
 get_footer();
