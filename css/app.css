@@ -27,6 +27,24 @@ body {
   font-weight: bold;
   font-size: large;
 }
+/* font */
+#section2 h5,
+.var-menu h5,
+#section2 h2,
+#section6 h2,
+#section2 h1,
+#section6 h1,
+#section2 h1,
+#section6 h1,
+#section2 h1::before,
+#section6 h1::before,
+#section2 h1::after,
+#section6 h1::after,
+#section2 p,
+footer ul
+{
+	font-family: 'Roboto', sans-serif;
+}
 .custom-logo{
   width: 30%;
   height: auto;
@@ -35,7 +53,7 @@ body {
   left: 0;
   top: 0;
 }
-.swiper-container {
+.swiper-container, #swiper-btm {
   width: 100%;
   height: 100%;
 }
@@ -69,41 +87,30 @@ body {
 	background-color:#ef0c15;
 }
 #section2 h5, .var-menu h5{
-	font-family: 'Roboto', sans-serif;
 	font-size: 0.7em;
 	font-weight: 600;
 	letter-spacing: 0.1px;
 	color: white;
 }
-#section2 h2, #section6 h2{
-	font-family: 'Roboto', sans-serif;
+#section2 h2, #section6 h2, #section2 h1, #section6 h1{
 	font-size: 2em;
 	font-weight: 900;
 	color: white;
 }
 #section2 h1, #section6 h1{
-	font-family: 'Roboto', sans-serif;
 	font-size: xxx-large;
-	font-weight: 900;
-	color: white;
 	position: relative;
 }
-#section2 h1::before,#section6 h1::before {
+#section2 h1::before,#section6 h1::before, #section2 h1::after, #section6 h1::after {
   content: 'Rp.';
-  font-family: 'Roboto', sans-serif;
   font-size: large;
   font-weight: 600;
   color: white;
 }
 #section2 h1::after, #section6 h1::after{
   content: '-an';
-  font-family: 'Roboto', sans-serif;
-  font-size: large;
-  font-weight: 600;
-  color: white;
 }
 #section2 p{
-	font-family: 'Roboto', sans-serif;
 	font-size: x-small;
 	font-weight: unset;
 	letter-spacing: 0.1px;
@@ -141,10 +148,9 @@ body {
 	background-color: #ef0c15;
 	z-index: 3;
 }
-.var-menu h5, #section2 h1, #section6 h1{
+.var-menu h5, #section2 h1, #section6 h1, #fs2 a{
 	text-shadow: 1px 2px 6px rgba(0,0,0,0.62);
 }
-
 .vm-bg{
 	height: 18vw;
 	background-color: white;
@@ -161,4 +167,26 @@ body {
 #section-6-mui{
   width: 2rem;
   height: 2rem;
+}
+.img-swp-btm{
+	min-width: 100%;
+	object-fit: cover;
+}
+footer{
+	background-color: #ef0c15;
+}
+footer ul{
+	font-size: 1em;
+	font-weight: bold;
+	color: white;
+}
+footer li{
+	font-size: 0.8em;
+	font-weight: normal;
+}
+#fs2{
+	background-color: #ad0006;
+}
+#fs2>div{
+	color: white;
 }

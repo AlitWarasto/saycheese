@@ -47,7 +47,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       $shn = new WP_Query(array(
       'orderby' => 'date',
       'order' => 'DESC',
-      'posts_per_page' => 3, 
+      'posts_per_page' => 3,
       'offset' => 0
       ));
         /*=== WP LOOP === */
@@ -63,10 +63,8 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         endif;
       ?>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <section id="section2" class="container">
     <div class="row d-flex justify-content-center">
@@ -80,7 +78,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <section id="section3">
   	<div id="section-3-aksen-1"></div>
   	<?php
-  	$limg = wp_get_attachment_image_src(1922,'landing-thumb');
+  	$limg = wp_get_attachment_image_src(35,'landing-thumb');
     $limgurl = $limg[0];
   	?>
   	<img class="img-fluid d-block mx-auto" src="<?php echo $limgurl; ?>">
@@ -131,18 +129,43 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <section id="section5" class="container pb-5" style="margin-top: -1px;">
   	<div class="row ">
   		<div class="col-md-12 mt-5 d-flex flex-column align-items-center">
-  			<h2 class="text-center mb-3 font-weight-bold text-danger">Temukan Promo Khusus Followers!</h2>
+  			<h2 class="text-center mb-3 font-weight-bolder text-danger">Temukan Promo Khusus Followers!</h2>
   			<a href="https://www.instagram.com/pantiespizzaindonesia/"></a><button class="btn btn-danger shadow">Ikut @pantiespizzaindonesia</button>
   		</div>
   		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png"></img>
   	</div>
   </section>
-  <section id="section6" class="container pt-5">
-  	<div class="row d-flex justify-content-center">
-	  	<h2 class="col-md-12 text-center">Harga mulai dari</h2>
-	    <h1 class="col-md-12 text-center d-flex justify-content-center">19.000</h1>
-	  </div>
-	  <div id="section-6-mui" class="mt-n2"></div>
+  <section id="section6" class="pt-5 pb-3">
+    <div class="container">
+    	<div class="row d-flex justify-content-center">
+  	  	<h2 class="col-md-12 text-center">Harga mulai dari</h2>
+  	    <h1 class="col-md-12 text-center d-flex justify-content-center">19.000</h1>
+  	  </div>
+  	  <div id="section-6-mui" class="mt-n2"></div>
+    </div>
+    <div id="swiper-btm" class="pt-3  overflow-hidden">
+      <div class="swiper-wrapper">
+      <?php
+        $swb = new WP_Query(array(
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'posts_per_page' => 5, 
+        'offset' => 3
+        ));
+          /*=== WP LOOP === */
+          if($swb->have_posts()) :
+            while($swb->have_posts()) :
+              $swb->the_post();
+              if ( has_post_thumbnail()) { ?>
+                <div class="swiper-slide"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-swp-btm' )); ?></div>
+              <?php
+              }
+            endwhile; 
+            wp_reset_postdata();
+          endif;
+        ?>
+      </div>
+    </div>
   </section>
 <?php
 get_footer();

@@ -18,6 +18,15 @@ var swiper = new Swiper('.swiper-container', {
     disableOnInteraction: false,
   },
 });
+var swiperbtm = new Swiper('#swiper-btm', {
+	slidesPerView: 2,
+	autoHeight: true,
+	loop: true,
+  centeredSlides: true,
+  freeMode: true,
+  autoplay: false,
+});
+
 
 /* pure js loader
 window.addEventListener('load',function(){
