@@ -35,58 +35,10 @@ body {
   left: 0;
   top: 0;
 }
-#section2{
-	background-color:#ef0c15;
-}
-#section2 h5, .var-menu h5{
-	font-family: 'Roboto', sans-serif;
-	font-size: smaller;
-	font-weight: 600;
-	letter-spacing: 0.1px;
-	color: white;
-}
-#section2 h2{
-	font-family: 'Roboto', sans-serif;
-	font-size: 2em;
-	font-weight: 900;
-	color: white;
-}
-#section2 h1{
-	font-family: 'Roboto', sans-serif;
-	font-size: xxx-large;
-	font-weight: 900;
-	color: white;
-	position: relative;
-}
-#section2 h1::before{
-  content: 'Rp.';
-  font-family: 'Roboto', sans-serif;
-  font-size: large;
-  font-weight: 600;
-  color: white;
-}
-#section2 h1::after{
-  content: '-an';
-  font-family: 'Roboto', sans-serif;
-  font-size: large;
-  font-weight: 600;
-  color: white;
-}
-#section2 p{
-	font-family: 'Roboto', sans-serif;
-	font-size: x-small;
-	font-weight: unset;
-	letter-spacing: 0.1px;
-	color: #ffc107;
-}
-#section3{
-  position: relative;
-}
 .swiper-container {
   width: 100%;
   height: 100%;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -106,52 +58,107 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
-.svg{
-	width: 100%;
-	height: 15vh;
-	position: absolute;
-}
 .aksen{
-	width: 100%;
-	height: 20%;
-	position: absolute;
-	z-index: 2;
-	bottom: -1px;
+  width: 100%;
+  min-height: 20%;
+  position: absolute;
+  z-index: 2;
+  bottom: -1px;
+}
+#section2{
+	background-color:#ef0c15;
+}
+#section2 h5, .var-menu h5{
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.7em;
+	font-weight: 600;
+	letter-spacing: 0.1px;
+	color: white;
+}
+#section2 h2, #section6 h2{
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+	font-weight: 900;
+	color: white;
+}
+#section2 h1, #section6 h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: xxx-large;
+	font-weight: 900;
+	color: white;
+	position: relative;
+}
+#section2 h1::before,#section6 h1::before {
+  content: 'Rp.';
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  font-weight: 600;
+  color: white;
+}
+#section2 h1::after, #section6 h1::after{
+  content: '-an';
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  font-weight: 600;
+  color: white;
+}
+#section2 p{
+	font-family: 'Roboto', sans-serif;
+	font-size: x-small;
+	font-weight: unset;
+	letter-spacing: 0.1px;
+	color: #ffc107;
+}
+#section3{
+  position: relative;
 }
 #section-3-aksen-1{
   width: 100vw;
-  height: 75px;
+  min-height: 77px;
   position: absolute;
   z-index: 2;
   top: -1px;
 }
 #section-3-aksen-2{
   width: 100%;
-  height: 185px;
+  min-height: 47vw;
   position: absolute;
   z-index: 2;
   margin-top: -10%;
+}
+#section5{
+  background: #efc70c;
+}
+#section6{
+  background: #ef040d;
+}
+.svg{
+	width: 100%;
+	height: 15vh;
+	position: absolute;
 }
 .var-menu{
 	background-color: #ef0c15;
 	z-index: 3;
 }
-.var-menu h5, #section2 h1{
+.var-menu h5, #section2 h1, #section6 h1{
 	text-shadow: 1px 2px 6px rgba(0,0,0,0.62);
 }
+
 .vm-bg{
-	height: 65px;
+	height: 18vw;
 	background-color: white;
 	border-radius: 10px;
-	box-shadow: 0px 7px 21px 0px rgba(0,0,0,0.21);
-	-webkit-box-shadow: 0px 7px 21px 0px rgba(0,0,0,0.21);
-	-moz-box-shadow: 0px 7px 21px 0px rgba(0,0,0,0.21);
 }
 .ov-con{
 	max-width: 100%;
 	overflow-x: hidden;
 }
 .ov-con img{
-	margin: 2px 0 0 5px;
-	width: 70px;
+	margin: 1vw 0 0 1vw;
+	width: 18vw;
+}
+#section-6-mui{
+  width: 2rem;
+  height: 2rem;
 }

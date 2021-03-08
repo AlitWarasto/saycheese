@@ -27,6 +27,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     background-size: 100%;
     background-position: center;
   }
+  #section-6-mui{
+  	background-image: url("<?php echo $themeurl ?>/img/halal-mui.SVG");
+  	background-repeat: no-repeat;
+  	background-size: 100%;
+    background-position: center;
+  }
 </style>
 <div id="loader" class="loader">
   <div class="spinner-border text-warning"></div>
@@ -62,7 +68,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     </div>
   </section>
 
-  <section id="section2" class="container-fluid">
+  <section id="section2" class="container">
     <div class="row d-flex justify-content-center">
       <h5 class="col-md-12 pt-3 text-center">Panties Pizza Adalah "Calzone" yang berasal dari Naples, Italia</h5>
       <p class="col-md-12 text-center">Di Italia, Calzone biasa disebut dengan Pizza Celana atau Pizza Lipat dengan filling yang variatif. Panties Pizza adalah warung “pizza lipat” pertama di kota Solo, berdiri sejak 2013. Dengan harga mulai dari Rp 19.000 saja, kita bisa menikmati pizza lipat yang sangat lezat . Saat ini Panties Pizza menjadi tempat makan dan tempat nongkrong favorite baik dari remaja maupun keluarga di kota Indonesia</p>
@@ -77,13 +83,13 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   	$limg = wp_get_attachment_image_src(1922,'landing-thumb');
     $limgurl = $limg[0];
   	?>
-  	<img class="img-fluid" src="<?php echo $limgurl; ?>">
+  	<img class="img-fluid d-block mx-auto" src="<?php echo $limgurl; ?>">
   	<div id="section-3-aksen-2"></div>
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="var-menu col-3">
             <h5>Mixzone</h5>
-            <div class="vm-bg">
+            <div class="vm-bg shadow">
               <div class="ov-con">
                 <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-mixzone.png">
               </div>
@@ -91,7 +97,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         </div>
         <div class="var-menu col-3">
             <h5>In & Out</h5>
-            <div class="vm-bg">
+            <div class="vm-bg shadow">
               <div class="ov-con">
                 <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-inout.png">
               </div>
@@ -99,7 +105,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         </div>
         <div class="var-menu col-3">
             <h5>Pizza Slice</h5>
-            <div class="vm-bg">
+            <div class="vm-bg shadow">
               <div class="ov-con">
                 <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-slice.png">
               </div>
@@ -107,7 +113,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         </div>
         <div class="var-menu col-3">
             <h5>Calzone</h5>
-            <div class="vm-bg">
+            <div class="vm-bg shadow">
               <div class="ov-con">
                 <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-calzone.png">
               </div>
@@ -116,11 +122,27 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       </div>
     </div>
   </section>
-  <section id="section4">
-  	<img class="img-fluid" src="http://localhost/coba/wp-content/uploads/2021/03/presieden-vs-reality-mixzone.png"></img>
-  	<img class="img-fluid" src="http://localhost/coba/wp-content/uploads/2021/03/pizza-slice-beauty-and-the-beef.png"></img>
-  	<img class="img-fluid" src="http://localhost/coba/wp-content/uploads/2021/03/in-and-out-pizza-to-remember.png"></img>
-  	<img class="img-fluid" src="http://localhost/coba/wp-content/uploads/2021/03/13.-SAY-CHEESE.png"></img>
+  <section id="section4 d-flex flex-column justify-content-center">
+  	<img class="img-fluid d-block mx-auto" src="http://localhost/coba/wp-content/uploads/2021/03/presieden-vs-reality-mixzone.png"></img>
+  	<img class="img-fluid d-block mx-auto" src="http://localhost/coba/wp-content/uploads/2021/03/pizza-slice-beauty-and-the-beef.png"></img>
+  	<img class="img-fluid d-block mx-auto" src="http://localhost/coba/wp-content/uploads/2021/03/in-and-out-pizza-to-remember.png"></img>
+  	<img class="img-fluid d-block mx-auto" src="http://localhost/coba/wp-content/uploads/2021/03/calzone-saycheese.png"></img>
+  </section>
+  <section id="section5" class="container pb-5" style="margin-top: -1px;">
+  	<div class="row ">
+  		<div class="col-md-12 mt-5 d-flex flex-column align-items-center">
+  			<h2 class="text-center mb-3 font-weight-bold text-danger">Temukan Promo Khusus Followers!</h2>
+  			<a href="https://www.instagram.com/pantiespizzaindonesia/"></a><button class="btn btn-danger shadow">Ikut @pantiespizzaindonesia</button>
+  		</div>
+  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png"></img>
+  	</div>
+  </section>
+  <section id="section6" class="container pt-5">
+  	<div class="row d-flex justify-content-center">
+	  	<h2 class="col-md-12 text-center">Harga mulai dari</h2>
+	    <h1 class="col-md-12 text-center d-flex justify-content-center">19.000</h1>
+	  </div>
+	  <div id="section-6-mui" class="mt-n2"></div>
   </section>
 <?php
 get_footer();
