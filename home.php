@@ -154,7 +154,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   	<div class="row ">
   		<div class="col-md-12 mt-5 d-flex flex-column align-items-center">
   			<h2 class="text-center mb-3 font-weight-bolder text-danger">Temukan Promo Khusus Followers!</h2>
-  			<a href="https://www.instagram.com/pantiespizzaindonesia/"></a><button class="btn btn-danger shadow">Ikut @pantiespizzaindonesia</button>
+  			<a href="https://www.instagram.com/pantiespizzaindonesia/"><button class="btn btn-danger shadow">Ikuti @pantiespizzaindonesia</button></a>
   		</div>
   		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png"></img>
   	</div>
@@ -168,7 +168,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   	  <div id="section-6-mui" class="mt-n2"></div>
     </div>
     <div id="swiper-btm" class="pt-3  overflow-hidden">
-      <div class="swiper-wrapper">
+      <!--<div class="swiper-wrapper">-->
       <?php
         $swb = new WP_Query(array(
           'pagename' => 'instagram feed'
@@ -190,7 +190,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             wp_reset_postdata();
           endif;
         ?>
-      </div>
+      <!--</div>-->
     </div>
   </section>
 <?php

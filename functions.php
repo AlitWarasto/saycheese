@@ -28,8 +28,8 @@ add_action('wp_enqueue_scripts','load_stylesheets');
 function load_javascript(){
     wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
     wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js','', 4.0, true);
-	wp_register_script('appjs', get_template_directory_uri(). '/js/swiper-bundle.min.js','jquery', 0.1, true);
-    wp_register_script('swiper', get_template_directory_uri(). '/js/app.js','', 3.0, true);
+	wp_register_script('swiper', get_template_directory_uri(). '/js/swiper-bundle.min.js','jquery', 3, true);
+    wp_register_script('appjs', get_template_directory_uri(). '/js/app.js','',0.1, true);
     wp_enqueue_script('jquery351');
 	wp_enqueue_script('appjs');
     wp_enqueue_script('swiper');

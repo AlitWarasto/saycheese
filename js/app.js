@@ -10,7 +10,13 @@ $(window).on('load',function(){
 
 /*inject class*/
 $(document).ready(function(){
+    $("#sb_instagram").addClass("swiper-btm");
+    $("#sb_instagram").css("height","50vw");
+    $("#sbi_images").addClass("swiper-wrapper");
     $(".sbi_item").addClass("swiper-slide");
+    /*$(".sbi_photo > img").addClass("img-fluid");*/
+    $(".sbi_photo").css({"background-image": "none","display": "unset"});
+    $(".sbi_photo > img").css({"min-width": "100%", "max-width": "100%","height":"auto","display":"block"});
 
 	/*Initialize Swiper*/
 	var swiper = new Swiper('.swiper-container', {
@@ -19,7 +25,7 @@ $(document).ready(function(){
 	  centeredSlides: true,
 	  autoplay: {
 	    delay: 2500,
-	    disableOnInteraction: false,
+	    disableOnInteraction: true,
 	  },
 	});
 	/*var swiperbtm = new Swiper('#swiper-btm', {
@@ -30,9 +36,9 @@ $(document).ready(function(){
 	  freeMode: true,
 	  autoplay: false,
 	});*/
-	var swiperbtm = new Swiper('#swiper-btm', {
+	var swiperbtm = new Swiper('.swiper-btm', {
 			slidesPerView: 2,
-			autoHeight: true,
+			autoHeight: false,
 			loop: true,
 		  centeredSlides: true,
 		  freeMode: true,
