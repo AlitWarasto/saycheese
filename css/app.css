@@ -6,9 +6,9 @@ version 1.0
 
 body {
   position: relative;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: white;
   font-size: 14px;
-  color: #000;
   margin: 0;
   padding: 0;
 }
@@ -26,24 +26,7 @@ body {
   padding-left: 15px;
   font-weight: bold;
   font-size: large;
-}
-/* font */
-#section2 h5,
-.var-menu h5,
-#section2 h2,
-#section6 h2,
-#section2 h1,
-#section6 h1,
-#section2 h1,
-#section6 h1,
-#section2 h1::before,
-#section6 h1::before,
-#section2 h1::after,
-#section6 h1::after,
-#section2 p,
-footer ul
-{
-	font-family: 'Roboto', sans-serif;
+  color: black;
 }
 .custom-logo{
   width: 30%;
@@ -61,7 +44,6 @@ footer ul
   text-align: center;
   font-size: 18px;
   background: #fff;
-
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,7 +63,7 @@ footer ul
   min-height: 20%;
   position: absolute;
   z-index: 2;
-  bottom: -1px;
+  bottom: -2vw;
 }
 #section2{
 	background-color:#ef0c15;
@@ -90,12 +72,10 @@ footer ul
 	font-size: 0.7em;
 	font-weight: 600;
 	letter-spacing: 0.1px;
-	color: white;
 }
 #section2 h2, #section6 h2, #section2 h1, #section6 h1{
 	font-size: 2em;
 	font-weight: 900;
-	color: white;
 }
 #section2 h1, #section6 h1{
 	font-size: xxx-large;
@@ -105,7 +85,6 @@ footer ul
   content: 'Rp.';
   font-size: large;
   font-weight: 600;
-  color: white;
 }
 #section2 h1::after, #section6 h1::after{
   content: '-an';
@@ -121,10 +100,10 @@ footer ul
 }
 #section-3-aksen-1{
   width: 100vw;
-  min-height: 77px;
+  min-height: 21vw;
   position: absolute;
   z-index: 2;
-  top: -1px;
+  top: -2vw;
 }
 #section-3-aksen-2{
   width: 100%;
@@ -133,8 +112,25 @@ footer ul
   z-index: 2;
   margin-top: -10%;
 }
+#section4 div{
+  position: relative;
+}
+#section3 img, #section4 img{
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+#section4 a{
+  position: absolute;
+  right: 1rem;
+  bottom: 24vw;
+}
+#section4 div:nth-last-child(1) a{
+  bottom: 13vw;
+}
 #section5{
   background: #efc70c;
+  margin-top: -1vw;
 }
 #section6{
   background: #ef040d;
@@ -178,7 +174,6 @@ footer{
 footer ul{
 	font-size: 1em;
 	font-weight: bold;
-	color: white;
 }
 footer li{
 	font-size: 0.8em;
@@ -186,7 +181,4 @@ footer li{
 }
 #fs2{
 	background-color: #ad0006;
-}
-#fs2>div{
-	color: white;
 }

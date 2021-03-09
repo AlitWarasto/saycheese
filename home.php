@@ -9,64 +9,61 @@ get_header();
 $detect = new Mobile_Detect; #mobile detect#
 if ( $detect->isMobile() && !$detect->isTablet() ){
 ?>
-
-<style type="text/css">
-  #aksen{
-    background-image: url("<?php echo $themeurl ?>/img/aksen.SVG");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  #section-3-aksen-1{
-  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-1.SVG");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  #section-3-aksen-2{
-  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-2.SVG");
-  	background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-  }
-  #section-6-mui{
-  	background-image: url("<?php echo $themeurl ?>/img/halal-mui.SVG");
-  	background-repeat: no-repeat;
-  	background-size: 100%;
-    background-position: center;
-  }
-</style>
-<div id="loader" class="loader">
-  <div class="spinner-border text-warning"></div>
-  <div class="lo">Loading..</div>
-</div>
-<!-- -->
-<section id="section1">
-  <div class="swiper-container">
-    <div id="aksen" class="aksen"></div>
-    <div class="swiper-wrapper">
-    <?php
-      $shn = new WP_Query(array(
-      'orderby' => 'date',
-      'order' => 'DESC',
-      'posts_per_page' => 3,
-      'offset' => 0
-      ));
-        /*=== WP LOOP === */
-        if($shn->have_posts()) :
-          while($shn->have_posts()) :
-            $shn->the_post();
-            if ( has_post_thumbnail()) { ?>
-              <div class="swiper-slide"><?php the_post_thumbnail('landing-thumb', array( 'class' => 'img-fluid' )); ?></div>
-            <?php
-            }
-          endwhile; 
-          wp_reset_postdata();
-        endif;
-      ?>
-    </div>
-  </div>
-</section>
-
-  <section id="section2" class="container">
+	<style type="text/css">
+	  #aksen{
+	    background-image: url("<?php echo $themeurl ?>/img/aksen.SVG");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	  }
+	  #section-3-aksen-1{
+	  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-1.SVG");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	  }
+	  #section-3-aksen-2{
+	  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-2.SVG");
+	  	background-repeat: no-repeat;
+	    background-size: 100%;
+	    background-position: center;
+	  }
+	  #section-6-mui{
+	  	background-image: url("<?php echo $themeurl ?>/img/halal-mui.SVG");
+	  	background-repeat: no-repeat;
+	  	background-size: 100%;
+	    background-position: center;
+	  }
+	</style>
+	<div id="loader" class="loader">
+	  <div class="spinner-border text-warning"></div>
+	  <div class="lo">Loading..</div>
+	</div>
+	<section id="section1">
+	  <div class="swiper-container">
+	    <div id="aksen" class="aksen"></div>
+	    <div class="swiper-wrapper">
+	    <?php
+	      $shn = new WP_Query(array(
+	      'orderby' => 'date',
+	      'order' => 'DESC',
+	      'posts_per_page' => 3,
+	      'offset' => 0
+	      ));
+	        /*=== WP LOOP === */
+	        if($shn->have_posts()) :
+	          while($shn->have_posts()) :
+	            $shn->the_post();
+	            if ( has_post_thumbnail()) { ?>
+	              <div class="swiper-slide"><?php the_post_thumbnail('landing-thumb', array( 'class' => 'img-fluid' )); ?></div>
+	            <?php
+	            }
+	          endwhile; 
+	          wp_reset_postdata();
+	        endif;
+	      ?>
+	    </div>
+	  </div>
+	</section>
+  <section id="section2" class="container-fluid">
     <div class="row d-flex justify-content-center">
       <h5 class="col-md-12 pt-3 text-center">Panties Pizza Adalah "Calzone" yang berasal dari Naples, Italia</h5>
       <p class="col-md-12 text-center">Di Italia, Calzone biasa disebut dengan Pizza Celana atau Pizza Lipat dengan filling yang variatif. Panties Pizza adalah warung “pizza lipat” pertama di kota Solo, berdiri sejak 2013. Dengan harga mulai dari Rp 19.000 saja, kita bisa menikmati pizza lipat yang sangat lezat . Saat ini Panties Pizza menjadi tempat makan dan tempat nongkrong favorite baik dari remaja maupun keluarga di kota Indonesia</p>
@@ -78,10 +75,25 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <section id="section3">
   	<div id="section-3-aksen-1"></div>
   	<?php
-  	$limg = wp_get_attachment_image_src(35,'landing-thumb');
-    $limgurl = $limg[0];
+  	$args = array(
+              'posts_per_page' => -1,
+              'post_mime_type' => 'image',
+              'post_status' => 'inherit',
+              'post_type' => 'attachment',
+            );
+  	$imgs = get_children($args);
+  	shuffle($imgs);
+  	$i = 1;
+  	foreach ($imgs as $img) {
+  		if ($i>1) {
+  			break;
+  		} else {
+	  	$limg = wp_get_attachment_image_src($img->ID,'medium');
+	    $limgurl = $limg[0];
+  		}
+  	}
   	?>
-  	<img class="img-fluid d-block mx-auto" src="<?php echo $limgurl; ?>">
+  	<img src="<?php echo $limgurl; ?>">
   	<div id="section-3-aksen-2"></div>
     <div class="container">
       <div class="row d-flex align-items-center">
@@ -120,13 +132,25 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       </div>
     </div>
   </section>
-  <section id="section4 d-flex flex-column justify-content-center">
-  	<img class="img-fluid d-block mx-auto" src="http://localhost/coba/wp-content/uploads/2021/03/presieden-vs-reality-mixzone.png"></img>
-  	<img class="img-fluid d-block mx-auto" src="http://localhost/coba/wp-content/uploads/2021/03/pizza-slice-beauty-and-the-beef.png"></img>
-  	<img class="img-fluid d-block mx-auto" src="http://localhost/coba/wp-content/uploads/2021/03/in-and-out-pizza-to-remember.png"></img>
-  	<img class="img-fluid d-block mx-auto" src="http://localhost/coba/wp-content/uploads/2021/03/calzone-saycheese.png"></img>
+  <section id="section4">
+  	<div>
+	  	<img src="http://localhost/coba/wp-content/uploads/2021/03/presieden-vs-reality-mixzone.png">
+	  	<a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+	  </div>
+  	<div>
+  		<img src="http://localhost/coba/wp-content/uploads/2021/03/pizza-slice-beauty-and-the-beef.png">
+	  	<a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+	  </div>
+  	<div>
+	  	<img src="http://localhost/coba/wp-content/uploads/2021/03/in-and-out-pizza-to-remember.png">
+		  <a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+	  </div>
+  	<div>
+  		<img src="http://localhost/coba/wp-content/uploads/2021/03/calzone-saycheese.png">
+		  <a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+	  </div>
   </section>
-  <section id="section5" class="container pb-5" style="margin-top: -1px;">
+  <section id="section5" class="container-fluid pb-5">
   	<div class="row ">
   		<div class="col-md-12 mt-5 d-flex flex-column align-items-center">
   			<h2 class="text-center mb-3 font-weight-bolder text-danger">Temukan Promo Khusus Followers!</h2>
@@ -147,19 +171,21 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       <div class="swiper-wrapper">
       <?php
         $swb = new WP_Query(array(
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'posts_per_page' => 5, 
-        'offset' => 3
+          'pagename' => 'instagram feed'
+          /*'orderby' => 'date',
+          'order' => 'DESC',
+          'posts_per_page' => 5, 
+          'offset' => 3*/
         ));
           /*=== WP LOOP === */
           if($swb->have_posts()) :
             while($swb->have_posts()) :
               $swb->the_post();
-              if ( has_post_thumbnail()) { ?>
+              the_content();
+              /*if ( has_post_thumbnail()) { ?>
                 <div class="swiper-slide"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-swp-btm' )); ?></div>
               <?php
-              }
+              }*/
             endwhile; 
             wp_reset_postdata();
           endif;
@@ -173,8 +199,8 @@ get_footer();
   ?>
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center align-items-center" style="width: 100vw;height: 100vh;font-family: 'Roboto', sans-serif;font-size: 5em;font-weight: 900;">
-          <h1>ONLY AVAILABLE ON MOBILE DEVICE</h1>
+        <div class="col-lg-12 d-flex justify-content-center align-items-center" style="width: 100vw;height: 100vh;font-family: 'Roboto', sans-serif;font-size: 5vw;font-weight: 900;color: black;">
+          <h1>ONLY AVAILABLE ON MOBILE DEVICE (PHONE)</h1>
         </div>
       </div>
     </div>

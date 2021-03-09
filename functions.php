@@ -53,8 +53,8 @@ add_action( 'after_setup_theme', 'saycheese_logo' );
 
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
+    set_post_thumbnail_size( 150, 150, true ); #default Featured Image dimensions (cropped)
  
-    // additional image sizes
-    add_image_size( 'landing-thumb', 720, 720, true ); // unlimited wide and unlimited height
+    #additional image sizes
+    add_image_size( 'landing-thumb', 420, 420, true ); #unlimited wide(9999) and unlimited height(9999)
  }

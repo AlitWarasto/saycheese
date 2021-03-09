@@ -1,5 +1,5 @@
 	<footer>
-		<div class="container">
+		<div class="container-fluid">
 			<section class="row">
 				<div class="col-8">
 					<ul class="list-unstyled">Panties Pizza Indonesia
