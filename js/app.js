@@ -10,12 +10,11 @@ $(window).on('load',function(){
 
 /*inject class*/
 $(document).ready(function(){
-    $("#sb_instagram").addClass("swiper-btm");
-    $("#sb_instagram").css("height","50vw");
+    $("#sb_instagram").addClass("swiper-btm").css("height","50vw");
     $("#sbi_images").addClass("swiper-wrapper");
     $(".sbi_item").addClass("swiper-slide");
-    /*$(".sbi_photo > img").addClass("img-fluid");*/
     $(".sbi_photo").css({"background-image": "none","display": "unset"});
+    /*$(".sbi_photo").attr({"data-full-res":"none","data-img-src-set":"none"})*/
     $(".sbi_photo > img").css({"min-width": "100%", "max-width": "100%","height":"auto","display":"block"});
 
 	/*Initialize Swiper*/
