@@ -33,7 +33,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 	    background-position: center;
 	  }
 	</style>
-	<div id="loader" class="loader">
+	<div class="">
 	  <div class="spinner-border text-warning"></div>
 	  <div class="lo">Loading..</div>
 	</div>
@@ -75,25 +75,37 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <section id="section3">
   	<div id="section-3-aksen-1"></div>
   	<?php
-  	$args = array(
-              'posts_per_page' => -1,
-              'post_mime_type' => 'image',
-              'post_status' => 'inherit',
-              'post_type' => 'attachment',
-            );
-  	$imgs = get_children($args);
-  	shuffle($imgs);
-  	$i = 1;
-  	foreach ($imgs as $img) {
-  		if ($i>1) {
-  			break;
-  		} else {
-	  	$limg = wp_get_attachment_image_src($img->ID,'medium');
-	    $limgurl = $limg[0];
-  		}
-  	}
+    $ig = new WP_Query(array(
+      'post_type' => 'page',
+      'pagename=image gallery',
+      ));
+    if($ig->have_posts()) :
+      while($ig->have_posts()) :
+        $ig->the_post();
+      	$args = array(
+          'post_mime_type' => 'image',
+          'post_parent' => $post->ID,
+          'post_status' => null,
+          'post_type' => 'attachment',
+        );
+      	$imgs = get_children($args);
+      	shuffle($imgs);
+      	$i = 1;
+      	foreach ($imgs as $img) {
+      		if ($i>1) {
+      			break;
+      		} else {
+    	  	$limg = wp_get_attachment_image_src($img->ID,'medium');
+    	    $limgurl = $limg[0];?>
+          <img src="<?php echo $limgurl; ?>">
+          <?php
+      		}
+          $i++;
+      	}
+      endwhile;
+      wp_reset_postdata();
+    endif;
   	?>
-  	<img src="<?php echo $limgurl; ?>">
   	<div id="section-3-aksen-2"></div>
     <div class="container">
       <div class="row d-flex align-items-center">
