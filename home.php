@@ -77,7 +77,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   	<?php
     $ig = new WP_Query(array(
       'post_type' => 'page',
-      'pagename=image gallery',
+      'title' => 'image gallery',
       ));
     if($ig->have_posts()) :
       while($ig->have_posts()) :
@@ -183,7 +183,8 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       <!--<div class="swiper-wrapper">-->
       <?php
         $swb = new WP_Query(array(
-          'pagename' => 'instagram feed'
+          'post_type' => 'page',
+          'title' => 'instagram feed',
           /*'orderby' => 'date',
           'order' => 'DESC',
           'posts_per_page' => 5, 

@@ -55,7 +55,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     set_post_thumbnail_size( 150, 150, true ); #default Featured Image dimensions (cropped)
  
     #additional image sizes
-    add_image_size( 'Lthumb', 420, 420, true ); #unlimited wide(9999) and unlimited height(9999)
+    add_image_size( 'Lthumb', 512, 512, true ); #unlimited wide(9999) and unlimited height(9999)
  }
 
  #remove width & height attributes from images
@@ -64,3 +64,9 @@ function remove_img_attr ($html)
     return preg_replace('/(width|height)="\d+"\s/', "", $html);
 }
 add_filter( 'post_thumbnail_html', 'remove_img_attr' );
+
+#disable srcset on frontend
+function disable_wp_responsive_images() {
+    return 1;
+}
+add_filter('max_srcset_image_width', 'disable_wp_responsive_images');
