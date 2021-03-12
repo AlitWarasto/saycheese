@@ -11,6 +11,7 @@ $siteurl  = get_option('siteurl');
 $sitename = get_option('blogname');
 $sitedesc = get_option('blogdescription');
 $themeurl = get_bloginfo('template_url');
+
 /*=== Mobile View Detection ===*/
 require get_template_directory().'/md/Mobile_Detect.php';
 
@@ -31,9 +32,9 @@ function load_javascript(){
 	wp_register_script('swiper', get_template_directory_uri(). '/js/swiper-bundle.min.js','jquery', 3, true);
     wp_register_script('appjs', get_template_directory_uri(). '/js/app.js','',0.1, true);
     wp_enqueue_script('jquery351');
-	wp_enqueue_script('appjs');
     wp_enqueue_script('swiper');
     wp_enqueue_script('bootstrap');
+	wp_enqueue_script('appjs');
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
 

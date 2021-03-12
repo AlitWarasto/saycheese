@@ -5,7 +5,8 @@
 ?>
 
 <?php
-get_header(); 
+get_header();
+
 $detect = new Mobile_Detect; #mobile detect#
 if ( $detect->isMobile() && !$detect->isTablet() ){
 ?>
@@ -95,12 +96,16 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       		if ($i>1) {
       			break;
       		} else {
-    	  	$limg = wp_get_attachment_image_src($img->ID,'medium');
-    	    $limgurl = $limg[0];?>
-          <img src="<?php echo $limgurl; ?>">
-          <?php
-      		}
-          $i++;
+            #An attachment/image ID is all that's needed to retrieve its alt and title attributes.
+            $image_alt = get_post_meta( $img->ID, '_wp_attachment_image_alt', true);
+            $imgalt = ucwords(str_replace(array('-','_','+'),' ',$image_alt));
+            $image_title = get_the_title($img->ID);
+      	  	$limg = wp_get_attachment_image_src($img->ID,'medium');
+      	    $limgurl = $limg[0];?>
+            <img src="<?php echo $limgurl; ?>" alt="<?php echo $imgalt; ?>">
+            <?php
+        		}
+            $i++;
       	}
       endwhile;
       wp_reset_postdata();
@@ -168,11 +173,11 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   			<h2 class="text-center mb-3 font-weight-bolder text-danger">Temukan Promo Khusus Followers!</h2>
   			<a href="https://www.instagram.com/pantiespizzaindonesia/"><button class="btn btn-danger shadow">Ikuti @pantiespizzaindonesia</button></a>
   		</div>
-  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png"></img>
+  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png">
   	</div>
   </section>
   <section id="section6" class="pt-5 pb-3">
-    <div class="container">
+    <div class="container-fluid">
     	<div class="row d-flex justify-content-center">
   	  	<h2 class="col-md-12 text-center">Harga mulai dari</h2>
   	    <h1 class="col-md-12 text-center d-flex justify-content-center">19.000</h1>
@@ -180,30 +185,21 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   	  <div id="section-6-mui" class="mt-n2"></div>
     </div>
     <div id="swiper-btm" class="pt-3  overflow-hidden">
-      <!--<div class="swiper-wrapper">-->
       <?php
+      #note : class for swiper controlled at app.js
         $swb = new WP_Query(array(
           'post_type' => 'page',
           'title' => 'instagram feed',
-          /*'orderby' => 'date',
-          'order' => 'DESC',
-          'posts_per_page' => 5, 
-          'offset' => 3*/
         ));
           /*=== WP LOOP === */
           if($swb->have_posts()) :
             while($swb->have_posts()) :
               $swb->the_post();
               the_content();
-              /*if ( has_post_thumbnail()) { ?>
-                <div class="swiper-slide"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-swp-btm' )); ?></div>
-              <?php
-              }*/
             endwhile; 
             wp_reset_postdata();
           endif;
         ?>
-      <!--</div>-->
     </div>
   </section>
 <?php
@@ -219,4 +215,5 @@ get_footer();
     </div>
   <?php
 }
+get_footer();
 ?>
