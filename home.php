@@ -33,7 +33,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 	    background-position: center;
 	  }
 	</style>
-	<div class="">
+	<div class="loader">
 	  <div class="spinner-border text-warning"></div>
 	  <div class="lo">Loading..</div>
 	</div>
@@ -53,7 +53,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 	          while($shn->have_posts()) :
 	            $shn->the_post();
 	            if ( has_post_thumbnail()) { ?>
-	              <div class="swiper-slide"><?php the_post_thumbnail('landing-thumb', array( 'class' => 'img-fluid' )); ?></div>
+	              <div class="swiper-slide"><?php the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid' )); ?></div>
 	            <?php
 	            }
 	          endwhile; 
