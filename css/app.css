@@ -183,18 +183,20 @@ footer li{
 }
 
 /*SINGLE PAGE STYLE*/
-#single-page{
+#single-page, #page{
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
   color: black;
 }
-#single-page h1{
+#single-page, #page :is(h1){
   font-size: 7vw;
   text-align: center;
   text-align: -webkit-center;
 }
-#single-page :is(p, ol){
+#single-page, #page :is(p, ol, ul){
   font-size: 4vw;
   font-weight: normal;
 }
+
+/*FOOTER STYLE*/

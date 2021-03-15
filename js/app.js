@@ -8,7 +8,7 @@ $(window).on('load',function(){
   $(".loader").fadeOut(1000);
 });
 
-/*inject class*/
+/*inject class and styles swiper buttom for ig social feed*/
 $(document).ready(function(){
     $("#sb_instagram").addClass("swiper-btm").css("height","50vw");
     $("#sbi_images").addClass("swiper-wrapper");
@@ -27,14 +27,6 @@ $(document).ready(function(){
 	    disableOnInteraction: true,
 	  },
 	});
-	/*var swiperbtm = new Swiper('#swiper-btm', {
-		slidesPerView: 2,
-		autoHeight: true,
-		loop: true,
-	  centeredSlides: true,
-	  freeMode: true,
-	  autoplay: false,
-	});*/
 	var swiperbtm = new Swiper('.swiper-btm', {
 			slidesPerView: 2,
 			autoHeight: false,

@@ -178,7 +178,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png">
   	</div>
   </section>
-  <section id="section6" class="pt-5 pb-3">
+  <section id="section6" class="pt-5">
     <div class="container-fluid">
     	<div class="row d-flex justify-content-center">
   	  	<h2 class="col-md-12 text-center">Harga mulai dari</h2>
@@ -186,9 +186,9 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   	  </div>
   	  <div id="section-6-mui" class="mt-n2"></div>
     </div>
-    <div id="swiper-btm" class="pt-3  overflow-hidden">
+    <div class="pt-3 overflow-hidden">
       <?php
-      #note : class for swiper controlled at app.js
+      #note : class for swiper controlled by app.js
         $swb = new WP_Query(array(
           'post_type' => 'page',
           'title' => 'instagram feed',
