@@ -5,7 +5,7 @@
 ?>
 
 <?php
-get_header();
+include(TEMPLATEPATH.'/header.php');
 
 $detect = new Mobile_Detect; #mobile detect#
 if ( $detect->isMobile() && !$detect->isTablet() ){
@@ -53,8 +53,10 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 	        if($shn->have_posts()) :
 	          while($shn->have_posts()) :
 	            $shn->the_post();
+              $poslug  = $post->post_name;
+              $posurl  = $siteurl.'/'.$poslug.'/';
 	            if ( has_post_thumbnail()) { ?>
-	              <div class="swiper-slide"><?php the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid' )); ?></div>
+	              <div class="swiper-slide"><a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid' )); ?></a></div>
 	            <?php
 	            }
 	          endwhile; 
