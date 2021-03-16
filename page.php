@@ -25,7 +25,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         <h1><?php the_title(); ?></h1>
         <?php
         if ( has_post_thumbnail()) {
-        the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid' ));
+        the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid mb-2' ));
       	}
         the_content();
       endwhile;

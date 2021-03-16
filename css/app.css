@@ -189,12 +189,12 @@ footer li{
   font-family: 'Roboto', sans-serif;
   color: black;
 }
-#single-page, #page :is(h1){
+#single-page :is(h1), #page :is(h1){
   font-size: 7vw;
   text-align: center;
   text-align: -webkit-center;
 }
-#single-page, #page :is(p, ol, ul){
+#single-page :is(p, ol, ul), #page :is(p, ol, ul){
   font-size: 4vw;
   font-weight: normal;
 }
