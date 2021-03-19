@@ -19,12 +19,18 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     <div class="col-lg-12 mt-5">
       <?php 
       while (have_posts()) : the_post();
+        $date = date('l, F dS Y',strtotime($post->post_date));
         ?>
         <h1><?php the_title(); ?></h1>
         <?php
         $mfi = kdmfi_get_featured_image_id('mfi');
-        echo wp_get_attachment_image($mfi, 'Lthumb', false, ['class' => 'img-fluid mb-2']);
-        the_content();
+        $imfi = wp_get_attachment_image_src($mfi, 'Lthumb');
+        ?>
+        <img src="<?php echo $imfi[0]; ?>" alt="<?php the_title(); ?>" class="img-fluid mb-2"/>
+        <?php
+        the_content(); ?>
+        <div>Publised <?php echo $date; ?></div>
+        <?php
       endwhile;
        ?>
     </div>
