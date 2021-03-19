@@ -15,7 +15,11 @@ $(document).ready(function(){
     $(".sbi_item").addClass("swiper-slide");
     $(".sbi_photo").css({"background-image": "none","display": "unset"});
     /*$(".sbi_photo").attr({"data-full-res":"none","data-img-src-set":"none"})*/
-    $(".sbi_photo > img").css({"min-width": "100%", "max-width": "100%","height":"auto","display":"block"});
+    setTimeout(
+    	function(){
+    		$(".sbi_photo > img").css({"min-width": "100%", "max-width": "100%","height":"auto","display":"block","tarnsition":"0.3s"});
+    	},300
+  	);
 
 	/*Initialize Swiper*/
 	var swiper = new Swiper('.swiper-container', {

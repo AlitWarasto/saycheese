@@ -42,25 +42,38 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="spinner-border text-warning"></div>
   <div class="lo">Loading..</div>
 </div>
-<div id="page" class="container">
+<div id="archive" class="container">
   <div class="row">
-    <div class="col-lg-12 mt-5">
+    <h1 class="col-12 text-center mt-3"><?php echo $ptitle.$pnum; ?></h1>
       <?php
       if(have_posts()) :
-        while (have_posts()) : the_post();
-        	$poslug  = $post->post_name;
-          $posurl  = $siteurl.'/'.$poslug.'/';
-          ?>
-          <h1><?php the_title(); ?></h1>
+        while (have_posts()) : the_post();?>
+          <div class="archive-list mb-2">
+            <?php
+          	$poslug  = $post->post_name;
+            $posurl  = $siteurl.'/'.$poslug.'/';
+            #EXCERPT
+            $wl = 15;
+            $xcont = explode(' ',str_replace(array("\n","\r","\t"),'',strip_tags($post->post_content)));
+            if (count($xcont) >= $wl) $titik = '<a href="'.$posurl.'" style="color: #8e8e8e;">... more</a>';
+            $excerpt = implode(" ",array_splice($xcont,0,$wl)).$titik;
+            #featured image
+            if ( has_post_thumbnail()) { ?>
+              <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('medium', array( 'class' => 'img-fluid' )); ?></a>
+            <?php
+          	}
+            ?>
+            <a href="<?php echo $posurl; ?>">
+              <h5 class="col-12 mt-2" ><?php the_title(); ?></h5>
+            </a>
+            <p class="col-12"><?php echo $excerpt; ?></p>
+            <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>" class="col-12 mt-2" style="color: #8e8e8e;font-size: x-small;"><?php the_time('F j, Y') ?></a>
+          </div>
           <?php
-          if ( has_post_thumbnail()) {
-          the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid mb-2' ));
-        	}
         endwhile;
         wp_reset_postdata();
       endif;
        ?>
-    </div>
   </div>
 </div>
 <?php

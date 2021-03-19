@@ -183,7 +183,7 @@ footer li{
 }
 
 /*SINGLE PAGE STYLE*/
-#single-page, #page{
+#single-page, #page, #archive{
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
@@ -198,5 +198,21 @@ footer li{
   font-size: 4vw;
   font-weight: normal;
 }
+#single-page a:nth-last-child(2),#single-page a:nth-last-child(1){
+	font-size: x-small;
+	color: #8e8e8e;
+}
 
+/*ARCHIVE STYLE*/
+.archive a{
+	text-decoration: none;
+	color: inherit;
+}
+.archive-list img{
+	width: 100vw;
+	height: auto;
+}
+.archive-list :is(h1, h2, h3, h4, h5, h6, a){
+	color: #262626;
+}
 /*FOOTER STYLE*/

@@ -16,20 +16,36 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 </div>
 <div id="single-page" class="container">
   <div class="row">
-    <div class="col-lg-12 mt-5">
-      <?php 
-      while (have_posts()) : the_post();
-        $date = date('l, F dS Y',strtotime($post->post_date));
-        ?>
-        <h1><?php the_title(); ?></h1>
+    <div class="mt-3">
+      <?php while (have_posts()) : the_post();?>
+        <h1 class="col-12"><?php the_title(); ?></h1>
         <?php
         $mfi = kdmfi_get_featured_image_id('mfi');
         $imfi = wp_get_attachment_image_src($mfi, 'Lthumb');
         ?>
         <img src="<?php echo $imfi[0]; ?>" alt="<?php the_title(); ?>" class="img-fluid mb-2"/>
-        <?php
-        the_content(); ?>
-        <div>Publised <?php echo $date; ?></div>
+        <div class="col-12"><?php the_content(); ?></div>
+        <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>">
+          <div class="col-12">Publised <?php the_time('F j, Y') ?></div>
+        </a>
+        <div class="col-12 mb-2" style="font-size:x-small;font-weight:bold;">Category: 
+          <?php
+          $i = 1;
+          $cats = get_the_category();
+          $catname = '';
+          $catlink = '';
+          foreach ($cats as $cat) {
+            if ($i > 3) {
+              break;
+            } else {
+              $catname = $cat->name;
+              $catlink = get_category_link($cat->term_id); ?>
+              <a href="<?php echo $catlink; ?>"><?php echo $catname; ?>, </a>
+              <?php
+            } 
+            $i++;
+          }?>
+        </div>
         <?php
       endwhile;
        ?>
