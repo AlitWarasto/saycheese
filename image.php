@@ -15,7 +15,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 <div id="image">
   <?php
   while (have_posts()) : the_post();?>
-    <h3 class="col-12 pt-2 text-center"><?php the_title(); ?> images</h3>
+    <h1 class="col-12 pt-2 text-center"><?php the_title(); ?> images</h1>
     <?php
     $mfi = kdmfi_get_featured_image_id('mfi');
     $imfi = wp_get_attachment_image_src($mfi, 'large');

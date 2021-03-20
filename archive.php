@@ -42,9 +42,9 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="spinner-border text-warning"></div>
   <div class="lo">Loading..</div>
 </div>
-<div id="archive" class="container">
+<div id="archive" class="container pt-3">
   <div class="row">
-    <h1 class="col-12 text-center mt-3"><?php echo $ptitle.$pnum; ?></h1>
+    <h1 class="col-12 text-center"><?php echo $ptitle.$pnum; ?></h1>
       <?php
       if(have_posts()) :
         while (have_posts()) : the_post();?>

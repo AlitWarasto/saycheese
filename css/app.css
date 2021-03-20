@@ -192,7 +192,7 @@ footer li{
   font-family: 'Roboto', sans-serif;
   color: black;
 }
-#single-page :is(h1), #page :is(h1){
+#single-page h1, #page h1, #archive h1, #image h1{
   font-size: 7vw;
   text-align: center;
   text-align: -webkit-center;
