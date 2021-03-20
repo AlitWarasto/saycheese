@@ -24,7 +24,7 @@
 			<section id="fs2" class="row pt-3 pb-3">
 				<div class="col-6"> &#169; 2021 Panties Pizza Indonesia</div>
 				<div class="col-6 d-flex flex-column align-items-end">
-					<a href="#">Kebijakan Privasi</a>
+					<a href="<?php echo $siteurl; ?>/privacy-policy/">Kebijakan Privasi</a>
 					<a href="#">Credit</a>
 				</div>
 			</section>
