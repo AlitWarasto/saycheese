@@ -2,7 +2,7 @@
 app style css for pantiespizza.com
 version 1.0
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
 
 body {
   position: relative;
@@ -13,7 +13,11 @@ body {
   padding: 0;
 }
 a{
-  font-weight: bolder;
+  font-weight: bold;
+  text-decoration: underline dotted;
+}
+ul li{
+  height: 1.3rem;
 }
 .loader{
   width: 100%;
@@ -38,8 +42,10 @@ a{
   z-index: 9;
   left: 0;
   top: 0;
+  opacity: 0.7;
+  transition-duration: 0.3s;
+  transition-delay: 1s;
 }
-
 /*HOME PAGE(LANDING PAGE) STYLE*/
 .swiper-container, .swiper-btm {
   width: 100%;
@@ -150,7 +156,7 @@ a{
 	background-color: #ef0c15;
 	z-index: 3;
 }
-.var-menu h5, #section2 h1, #section6 h1, #fs2 a{
+.var-menu h5, #section2 h1, #section6 h1{
 	text-shadow: 1px 2px 6px rgba(0,0,0,0.62);
 }
 .vm-bg{
@@ -170,21 +176,6 @@ a{
   width: 2rem;
   height: 2rem;
 }
-footer{
-	background-color: #ef0c15;
-}
-footer ul{
-	font-size: 1em;
-	font-weight: bold;
-}
-footer li{
-	font-size: 0.8em;
-	font-weight: normal;
-}
-#fs2{
-	background-color: #ad0006;
-}
-
 /*SINGLE PAGE STYLE*/
 #single-page, #page, #archive, #image{
   width: 100vw;
@@ -194,6 +185,7 @@ footer li{
 }
 #single-page h1, #page h1, #archive h1, #image h1{
   font-size: 7vw;
+  font-weight: 700;
   text-align: center;
   text-align: -webkit-center;
 }
@@ -201,8 +193,12 @@ footer li{
   font-size: 4vw;
   font-weight: normal;
 }
+/*PAGE STYLE*/
+.list-style-none{
+  list-style: none;
+}
 /*ARCHIVE STYLE*/
-.archive a{
+.archive a, footer a{
 	text-decoration: none;
 	color: inherit;
 }
@@ -212,4 +208,36 @@ footer li{
 .archive-list :is(h1, h2, h3, h4, h5, h6, a){
 	color: #262626;
 }
+/*Contact Page STYLE*/
+ul li{
+  margin-left: -1.5rem;
+  height: 2rem;
+  color: inherit;
+}
+.wa::before,.ig::before,.fb::before,.tk::before,.tw::before,.ln::before{
+  background-repeat: no-repeat;
+  width: 6.5vw;
+  display: block;
+  float: left;
+  transform: translateX(-15%);
+}
 /*FOOTER STYLE*/
+footer{
+  background-color: #ef0c15;
+}
+footer ul{
+  font-size: 1em;
+  font-weight: bold;
+}
+footer li{
+  height: 1.3rem;
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+.sm li::before{
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+#fs2{
+  background-color: #ad0006;
+}

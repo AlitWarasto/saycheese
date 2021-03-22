@@ -5,7 +5,7 @@
 
 include(TEMPLATEPATH.'/header.php');
 
-$detect = new Mobile_Detect; #mobile detect#
+$detect = new Mobile_Detect; #mobile detect
 if ( $detect->isMobile() && !$detect->isTablet() ){
 ?>
 <div class="loader">
@@ -15,7 +15,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 <div id="image">
   <?php
   while (have_posts()) : the_post();?>
-    <h1 class="col-12 pt-2 text-center"><?php the_title(); ?> images</h1>
+    <h1 class="col-12 pt-2 text-center">The image(s) of <?php the_title(); ?></h1>
     <?php
     $mfi = kdmfi_get_featured_image_id('mfi');
     $imfi = wp_get_attachment_image_src($mfi, 'large');
