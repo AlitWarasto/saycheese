@@ -1,5 +1,5 @@
 <?php
-#page.php for pantiespizza.com
+#archive-product.php for pantiespizza.com
 #saycheese theme wp
 #version 1.0
 ?>
@@ -14,19 +14,19 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="spinner-border text-warning"></div>
   <div class="lo">Loading..</div>
 </div>
-<div id="page" class="container">
+<div id="archive-product" class="container">
   <div class="row pt-3">
     <div class="col-12">
       <?php 
       while (have_posts()) : the_post();
-      	$poslug  = $post->post_name;
+        $poslug  = $post->post_name;
         $posurl  = $siteurl.'/'.$poslug.'/';
         ?>
         <h1><?php the_title(); ?></h1>
         <?php
         if ( has_post_thumbnail()) {
         the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid mb-2' ));
-      	}
+        }
         the_content();
       endwhile;
        ?>

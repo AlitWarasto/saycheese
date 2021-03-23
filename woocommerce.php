@@ -17,18 +17,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 <div id="page" class="container">
   <div class="row pt-3">
     <div class="col-12">
-      <?php 
-      while (have_posts()) : the_post();
-      	$poslug  = $post->post_name;
-        $posurl  = $siteurl.'/'.$poslug.'/';
-        ?>
-        <h1><?php the_title(); ?></h1>
-        <?php
-        if ( has_post_thumbnail()) {
-        the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid mb-2' ));
-      	}
-        the_content();
-      endwhile;
+      <?php
+      if ( have_posts() ) :
+	      while (have_posts()) :
+	      	woocommerce_content();
+	      endwhile;
+      endif;
        ?>
     </div>
   </div>

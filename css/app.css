@@ -16,9 +16,6 @@ a{
   font-weight: bold;
   text-decoration: underline dotted;
 }
-ul li{
-  height: 1.3rem;
-}
 .loader{
   width: 100%;
   height: 100%;
@@ -177,7 +174,7 @@ ul li{
   height: 2rem;
 }
 /*SINGLE PAGE STYLE*/
-#single-page, #page, #archive, #image{
+#single-page, #page, #archive, #image, #archive-product{
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
@@ -209,7 +206,7 @@ ul li{
 	color: #262626;
 }
 /*Contact Page STYLE*/
-ul li{
+.con li{
   margin-left: -1.5rem;
   height: 2rem;
   color: inherit;
