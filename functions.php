@@ -106,5 +106,19 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
-#remove woocommers styles
-#add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+    global $woocommerce;
+
+    ob_start();
+
+    ?>
+    <a class="say-cart" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'saycheese'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'saycheese'), $woocommerce->cart->cart_contents_count);?> – <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+    <?php
+    $fragments['a.say-cart'] = ob_get_clean();
+    return $fragments;
+}

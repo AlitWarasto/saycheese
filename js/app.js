@@ -39,6 +39,14 @@ $(document).ready(function(){
 		  freeMode: true,
 		  autoplay: false,
 		});
+	var swiperbtm = new Swiper('#woo-container', {
+			slidesPerView: 2,
+			autoHeight: false,
+			loop: true,
+		  centeredSlides: true,
+		  freeMode: true,
+		  autoplay: false,
+		});
 
 });
 /* pure js loader

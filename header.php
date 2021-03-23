@@ -7,6 +7,10 @@
 	 wp_head();
 	 get_header();?>
 	 	<style type="text/css">
+	 		<?php 
+	 		if (is_page('checkout')) { ?>
+	 			.col-1,.col-2,.col-3{max-width: 100%};
+	 		<?php }	?>
 			.wa::before{
 				content: url("<?php echo $themeurl ?>/img/whatsapp.SVG");
 			}

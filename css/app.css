@@ -44,9 +44,10 @@ a{
   transition-delay: 1s;
 }
 /*HOME PAGE(LANDING PAGE) STYLE*/
-.swiper-container, .swiper-btm {
+.swiper-container, .swiper-btm, #woo-container {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 100%;
 }
 .swiper-slide {
   text-align: center;
@@ -174,13 +175,13 @@ a{
   height: 2rem;
 }
 /*SINGLE PAGE STYLE*/
-#single-page, #page, #archive, #image, #archive-product{
+#single-page, #page, #archive, #image, .say-body{
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
   color: black;
 }
-#single-page h1, #page h1, #archive h1, #image h1{
+#single-page h1, #page h1, #archive h1, #image h1, #woocommerce h1{
   font-size: 7vw;
   font-weight: 700;
   text-align: center;
@@ -217,6 +218,11 @@ a{
   display: block;
   float: left;
   transform: translateX(-15%);
+}
+/*woocommerce STYLE*/
+.woocommerce-input-wrapper{
+	width: 100%;
+	display: block;
 }
 /*FOOTER STYLE*/
 footer{
