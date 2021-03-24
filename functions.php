@@ -24,7 +24,7 @@ function load_stylesheets(){
 	wp_enqueue_style('swiper');
 	wp_enqueue_style('appcss');
 }
-add_action('wp_enqueue_scripts','load_stylesheets');
+add_action('wp_enqueue_scripts','load_stylesheets',1);
 
 function load_javascript(){
     wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
@@ -117,8 +117,10 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
     ob_start();
 
     ?>
-    <a class="say-cart" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'saycheese'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'saycheese'), $woocommerce->cart->cart_contents_count);?> – <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+    <a class="say-cart" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'saycheese'); ?>"><img src="<?php echo get_template_directory_uri() ?>/img/shopping-bag.SVG"><span><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'saycheese'), $woocommerce->cart->cart_contents_count);?></span></a>
     <?php
     $fragments['a.say-cart'] = ob_get_clean();
     return $fragments;
 }
+/*
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );*/

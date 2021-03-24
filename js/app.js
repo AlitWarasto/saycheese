@@ -40,12 +40,16 @@ $(document).ready(function(){
 		  autoplay: false,
 		});
 	var swiperbtm = new Swiper('#woo-container', {
-			slidesPerView: 2,
-			autoHeight: false,
+			slidesPerView: 3,
+			spaceBetween: 5,
+			autoHeight: true,
 			loop: true,
 		  centeredSlides: true,
-		  freeMode: true,
-		  autoplay: false,
+		  freeMode: false,
+		  autoplay: {
+		    delay: 2500,
+		    disableOnInteraction: true,
+		  },
 		});
 
 });
