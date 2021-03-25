@@ -10,16 +10,16 @@ $(window).on('load',function(){
 
 /*inject class and styles swiper buttom for ig social feed*/
 $(document).ready(function(){
-    $("#sb_instagram").addClass("swiper-btm").css("height","50vw");
-    $("#sbi_images").addClass("swiper-wrapper");
-    $(".sbi_item").addClass("swiper-slide");
-    $(".sbi_photo").css({"background-image": "none","display": "unset"});
-    /*$(".sbi_photo").attr({"data-full-res":"none","data-img-src-set":"none"})*/
-    setTimeout(
-    	function(){
-    		$(".sbi_photo > img").css({"min-width": "100%", "max-width": "100%","height":"auto","display":"block","tarnsition":"0.3s"});
-    	},300
-  	);
+  $("#sb_instagram").addClass("swiper-btm").css("height","50vw");
+  $("#sbi_images").addClass("swiper-wrapper");
+  $(".sbi_item").addClass("swiper-slide");
+  $(".sbi_photo").css({"background-image": "none","display": "unset"});
+  /*$(".sbi_photo").attr({"data-full-res":"none","data-img-src-set":"none"})*/
+  setTimeout(
+  	function(){
+  		$(".sbi_photo > img").css({"min-width": "100%", "max-width": "100%","height":"auto","display":"block","tarnsition":"0.3s"});
+  	},300
+	);
 
 	/*Initialize Swiper*/
 	var swiper = new Swiper('.swiper-container', {
@@ -51,7 +51,10 @@ $(document).ready(function(){
 		    disableOnInteraction: true,
 		  },
 		});
-
+	/*Add margin bottom to footer as navbar height*/
+	var navheight = parseInt($('.navbar').height()) + parseInt($('.navbar').css('padding-top')) + parseInt($('.navbar').css('padding-bottom'));
+	$('#fs2').css({"margin-bottom": navheight + "px"});
+	console.log(navheight);
 });
 /* pure js loader
 window.addEventListener('load',function(){

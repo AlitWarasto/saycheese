@@ -43,6 +43,8 @@ a{
   transition-duration: 0.3s;
   transition-delay: 1s;
 }
+/*HEADER STYLE*/
+
 /*HOME PAGE(LANDING PAGE) STYLE*/
 .swiper-container, .swiper-btm, #woo-container {
   width: 100%;
@@ -226,16 +228,16 @@ a{
 	display: block;
 }
 .say-cart{
-  width: 3.6rem;
-  padding: 0.5rem;
-  border-radius: 50%;
-  right: 0.3rem;
-  top: .3rem;
-  background-color: #17a2b8;
+  width: 2.6rem;
+  /* padding: 0.5rem; */
+  /* border-radius: 50%; */
+  /* right: 0.3rem; */
+  /* top: .3rem; */
+  /* background-color: #17a2b8; */
   height: auto;
-  position: fixed;
-  z-index: 9;
-  box-shadow: -1px -1px 7px -3px rgb(0 0 0 / 40%);
+  position: relative;
+  /* z-index: 9; */
+  /* box-shadow: -1px -1px 7px -3px rgb(0 0 0 / 40%); */
 }
 .say-cart img{
   margin-top: -.1rem;
@@ -245,8 +247,8 @@ a{
   width: 1.3rem;
   position: absolute;
   z-index: 3;
-  right: 0.1rem;
-  bottom: -0.4rem;
+  right: 0;
+  bottom: -0.3em;
   color: white;
   text-align: center;
   border-radius: 50%;

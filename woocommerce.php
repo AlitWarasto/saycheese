@@ -14,7 +14,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <section class="say-body">
   	<h5 class="text-center font-weight-bold pt-2">Hot Promo</h5>
     <div id="woo-container" class="overflow-hidden"> 
-      <a class="say-cart"></a>
+      
       <div class="swiper-wrapper">
       <?php
         $shn = new WP_Query(array(

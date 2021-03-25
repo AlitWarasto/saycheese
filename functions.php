@@ -66,6 +66,7 @@ function remove_img_attr ($html)
 }
 add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 add_filter( 'image_send_to_editor', 'remove_img_attr' );
+add_filter( 'the_content', 'remove_img_attr', 10 );
 
 #disable srcset on frontend
 function disable_wp_responsive_images() {
