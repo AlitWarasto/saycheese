@@ -11,6 +11,9 @@
 	 		if (is_page('checkout')) { ?>
 	 			.col-1,.col-2,.col-3{max-width: 100%};
 	 		<?php }	?>
+	 		#woocommerce{
+	 			background-image: url("<?php echo $themeurl ?>/img/pattern.png");
+	 		}
 			.wa::before{
 				content: url("<?php echo $themeurl ?>/img/whatsapp.SVG");
 			}
@@ -44,7 +47,7 @@
   	<header>
 	  	<nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
 			  <a class="navbar-brand" href="<?php echo $siteurl ?>"><img width="30px" height="auto" src="<?php echo get_template_directory_uri() ?>/img/logo-sm.png" alt="logo panties pizza terbaru kecil bulat"></a>
-			  <a href="<?php echo $siteurl ?>/shop" class="navbar-brand">Order</a>
+			  <a href="<?php echo $siteurl ?>/shop" class="navbar-brand"><img src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil" style="height: 1.6em;"></a>
 			  <a class="say-cart navbar-brand"></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
