@@ -272,8 +272,9 @@ a{
 .woocommerce-product-gallery__image:nth-child(1) a > img{
   top: -46vw;
 }.woocommerce-product-gallery__image:nth-child(n+2){
-  margin-top: 3em;
-  margin-bottom: -1.5em;
+  margin-top: 5.2vw;
+  margin-bottom: -5.9vw;
+  padding: 0 0.4vw;
 }
 .woocommerce-product-gallery__image:nth-child(n+2) > a > img{
   position: relative;

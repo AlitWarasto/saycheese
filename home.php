@@ -120,7 +120,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Mixzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-mixzone.png">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-mixzone.png" alt="Test Alt Text">
               </div>
             </div>
         </div>
@@ -128,7 +128,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>In & Out</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-inout.png">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-inout.png" alt="Test Alt Text">
               </div>
             </div>
         </div>
@@ -136,7 +136,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Pizza Slice</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-slice.png">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-slice.png" alt="Test Alt Text">
               </div>
             </div>
         </div>
@@ -144,7 +144,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Calzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-calzone.png">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-calzone.png" alt="Test Alt Text">
               </div>
             </div>
         </div>
