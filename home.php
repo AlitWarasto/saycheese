@@ -104,7 +104,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             $image_title = get_the_title($img->ID);
       	  	$limg = wp_get_attachment_image_src($img->ID,'medium');
       	    $limgurl = $limg[0];?>
-            <img src="<?php echo $limgurl; ?>" alt="<?php echo $imgalt; ?>">
+            <img src="<?php echo $limgurl; ?>" loading="lazy" alt="<?php echo $imgalt; ?>">
             <?php
         		}
             $i++;
@@ -120,7 +120,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Mixzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-mixzone.png" alt="Test Alt Text">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-mixzone.png" loading="lazy" alt="Test Alt Text">
               </div>
             </div>
         </div>
@@ -128,7 +128,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>In & Out</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-inout.png" alt="Test Alt Text">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-inout.png" loading="lazy" alt="Test Alt Text">
               </div>
             </div>
         </div>
@@ -136,7 +136,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Pizza Slice</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-slice.png" alt="Test Alt Text">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-slice.png" loading="lazy" alt="Test Alt Text">
               </div>
             </div>
         </div>
@@ -144,7 +144,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Calzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-calzone.png" alt="Test Alt Text">
+                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-calzone.png" loading="lazy" alt="Test Alt Text">
               </div>
             </div>
         </div>
@@ -153,19 +153,19 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   </section>
   <section id="section4">
   	<div>
-	  	<img src="http://localhost/coba/wp-content/uploads/2021/03/presieden-vs-reality-mixzone.png">
+	  	<img src="http://localhost/coba/wp-content/uploads/2021/03/presieden-vs-reality-mixzone.png" loading="lazy">
 	  	<a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-  		<img src="http://localhost/coba/wp-content/uploads/2021/03/pizza-slice-beauty-and-the-beef.png">
+  		<img src="http://localhost/coba/wp-content/uploads/2021/03/pizza-slice-beauty-and-the-beef.png" loading="lazy">
 	  	<a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-	  	<img src="http://localhost/coba/wp-content/uploads/2021/03/in-and-out-pizza-to-remember.png">
+	  	<img src="http://localhost/coba/wp-content/uploads/2021/03/in-and-out-pizza-to-remember.png" loading="lazy">
 		  <a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-  		<img src="http://localhost/coba/wp-content/uploads/2021/03/calzone-saycheese.png">
+  		<img src="http://localhost/coba/wp-content/uploads/2021/03/calzone-saycheese.png" loading="lazy">
 		  <a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   </section>
@@ -175,7 +175,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   			<h2 class="text-center mb-3 font-weight-bolder text-danger">Temukan Promo Khusus Followers!</h2>
   			<a href="https://www.instagram.com/pantiespizzaindonesia/"><button class="btn btn-danger shadow">Ikuti @pantiespizzaindonesia</button></a>
   		</div>
-  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png">
+  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png" loading="lazy">
   	</div>
   </section>
   <section id="section6" class="pt-5">
