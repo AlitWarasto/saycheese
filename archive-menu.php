@@ -1,5 +1,5 @@
 <?php
-#archive.php for pantiespizza.com
+#archive-menu.php for pantiespizza.com
 #saycheese theme wp
 #version 1.0
 
@@ -27,15 +27,6 @@ if(is_category()) {
   $plink  = '';
 }
 
-/* Random Query 
-$offset = mt_rand(1,($allposts-7));
-$rq     = new WP_Query('posts_per_page=7');*/
-
-/*========== HARGA PERWILAYAH ============*/
-$hw1= get_post_meta($post->ID,'hargawil1',TRUE);
-$hw2= get_post_meta($post->ID,'hargawil2',TRUE);
-$hw3= get_post_meta($post->ID,'hargawil3',TRUE);
-
 include(TEMPLATEPATH.'/header.php');
 
 $detect = new Mobile_Detect; #mobile detect#
@@ -51,30 +42,39 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     the_archive_title( '<h1 class="col-12 text-center">', '</h1>' );
     #LOOP
       if(have_posts()) :
-        while (have_posts()) : the_post();?>
+        while (have_posts()) : the_post();
+          /*========== HARGA PERWILAYAH ============*/
+          $hw1= get_post_meta($post->ID,'hargawil1',TRUE);
+          $hw2= get_post_meta($post->ID,'hargawil2',TRUE);
+          $hw3= get_post_meta($post->ID,'hargawil3',TRUE);
+          ?>
           <div class="col-6 d-flex flex-column mitem">
             <?php
           	$poslug  = $post->post_name;
-            $posurl  = $siteurl.'/'.$poslug.'/';
-            #EXCERPT
-            $wl = 8;
-            $xcont = explode(' ',str_replace(array("\n","\r","\t"),'',strip_tags($post->post_content)));
-            if (count($xcont) >= $wl) $titik = '<a href="'.$posurl.'" style="color: #8e8e8e;">... more</a>';
-            $excerpt = implode(" ",array_splice($xcont,0,$wl)).$titik;
+            $arcurl  = get_post_type_archive_link( 'menu' );
+            $posurl  = $arcurl.$poslug.'/';
             #featured image
             if ( has_post_thumbnail()) { ?>
-              <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid text-center' )); ?></a>
+              <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid' )); ?></a>
             <?php
           	}
             ?>
             <div class="col-12 mt-2 mb-2 overflow-hidden">
               <a href="<?php echo $posurl; ?>">
-                <h2 class="h6 ww" ><?php the_title(); ?></h2>
+                <h2 class="ww" ><?php the_title(); ?></h2>
               </a>
             </div>
             <div class="col-12 hg">
               <span>Rp.</span>
-              <span><?php echo $hw1;?></span>
+              <span>
+                <?php
+                if ($hw1 != ""){
+                echo number_format($hw1,0);
+                } else {
+                echo "-";
+                }
+                ?>
+              </span>
             </div>
           </div>
           <?php

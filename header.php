@@ -45,7 +45,7 @@
 	  </header>
   <?php } else { ?>
   	<header>
-	  	<nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
+	  	<nav class="navbar fixed-bottom navbar-light bg-light">
 			  <a class="navbar-brand" href="<?php echo $siteurl ?>"><img width="30px" height="auto" src="<?php echo get_template_directory_uri() ?>/img/logo-sm.png" alt="logo panties pizza terbaru kecil bulat"></a>
 			  <a href="<?php echo $siteurl ?>/shop" class="navbar-brand"><img src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil" style="height: 1.6em;"></a>
 			  <a class="say-cart navbar-brand"></a>
@@ -55,7 +55,8 @@
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto">
 			      <li class="nav-item active">
-			        <a class="nav-link" href="<?php echo $siteurl ?>">Home <span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="<?php echo $siteurl ?>">Home<span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="<?php echo $siteurl ?>/menu">Menu<span class="sr-only">(current)</span></a>
 			      </li>			      
 			    </ul>
 			  </div>

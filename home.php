@@ -144,7 +144,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Calzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="http://localhost/coba/wp-content/uploads/2021/03/btn-calzone.png" loading="lazy" alt="Test Alt Text">
+                <a href="<?php echo $siteurl; ?>/menu"><img src="http://localhost/coba/wp-content/uploads/2021/03/btn-calzone.png" loading="lazy" alt="Test Alt Text"></a>
               </div>
             </div>
         </div>
@@ -166,7 +166,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 	  </div>
   	<div>
   		<img src="http://localhost/coba/wp-content/uploads/2021/03/calzone-saycheese.png" loading="lazy">
-		  <a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+		  <a href="<?php echo $siteurl; ?>/menu"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   </section>
   <section id="section5" class="container-fluid pb-5">

@@ -55,7 +55,11 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             #EXCERPT
             $wl = 15;
             $xcont = explode(' ',str_replace(array("\n","\r","\t"),'',strip_tags($post->post_content)));
-            if (count($xcont) >= $wl) $titik = '<a href="'.$posurl.'" style="color: #8e8e8e;">... more</a>';
+            if (count($xcont) >= $wl){
+              $titik = '<a href="'.$posurl.'" style="color: #8e8e8e;">... more</a>';
+            } else {
+              $titik = '<a href="'.$posurl.'" style="color: #8e8e8e;">... more</a>';
+            }
             $excerpt = implode(" ",array_splice($xcont,0,$wl)).$titik;
             #featured image
             if ( has_post_thumbnail()) { ?>

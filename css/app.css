@@ -230,7 +230,7 @@ a{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-size: .75rem;
+  font-size: 0.85rem;
 }
 .hg{
   font-size: 1rem;
