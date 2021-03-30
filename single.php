@@ -23,7 +23,10 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       $imfi = wp_get_attachment_image_src($mfi, 'Lthumb');
       $imgl = get_attachment_link($mfi);
       ?>
-      <a href="<?php echo esc_url ($imgl); ?>"><img src="<?php echo $imfi[0]; ?>" alt="<?php the_title(); ?>" class="img-fluid mb-2"/></a>
+      <?php #featured image
+      if ( has_post_thumbnail()) { ?>
+        <a href="<?php echo esc_url ($imgl); ?>"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid text-center' )); ?></a>
+      <?php } ?>
       <div class="col-12"><?php the_content(); ?></div>
       <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>">
         <div class="col-12" style="font-size:x-small;color: #8e8e8e;">Publised <?php the_time('F j, Y') ?></div>

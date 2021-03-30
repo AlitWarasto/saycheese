@@ -123,5 +123,44 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
     $fragments['a.say-cart'] = ob_get_clean();
     return $fragments;
 }
-/*
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );*/
+
+/*============================
+        Custom Post Type
+=============================*/
+
+function ppcpt_post_type() {
+
+require get_template_directory().'/cpt/menu.php';
+require get_template_directory().'/cpt/bvg.php';
+require get_template_directory().'/cpt/rice.php';
+require get_template_directory().'/cpt/pasta.php';
+require get_template_directory().'/cpt/galleries.php';
+require get_template_directory().'/cpt/slice.php';
+
+}
+add_action( 'init', 'ppcpt_post_type', 0 );
+
+/*===== add metabox to CPT ======*/
+require get_template_directory().'/cpt/metabox.php';
+
+/**
+ * Remove archive labels.
+ */
+function remove_label( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    } elseif ( is_home() ) {
+        $title = single_post_title( '', false );
+    }
+
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'remove_label' );

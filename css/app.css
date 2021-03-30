@@ -3,6 +3,7 @@ app style css for pantiespizza.com
 version 1.0
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 body {
   position: relative;
@@ -208,6 +209,35 @@ a{
 }
 .archive-list :is(h1, h2, h3, h4, h5, h6, a){
 	color: #262626;
+}
+/*MENU PIZZA STYLE*/
+.menus{
+  background-color: #efefef;
+}
+.mitem{
+  max-width: 48vw;
+  margin: 1vw 1vw;
+  padding: 1vw 1vw;
+  background-color: white;
+}
+.mitem img{
+  min-width: 100%;
+}
+.ww{
+  white-space: normal;
+  height: 6.15vw;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: .75rem;
+}
+.hg{
+  font-size: 1rem;
+  color: #ef0c15;
+}
+.hg span:nth-child(1){
+  font-size: .75rem;
 }
 /*Contact Page STYLE*/
 .con li{
