@@ -28,7 +28,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         <a href="#"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid text-center' )); ?></a>
       <?php } ?>
       <div class="col-12 mt-2"><?php the_content(); ?></div>
-      <div class="col-12 hg">
+      <div class="col-12 hg mb-2">
         <span>Rp.</span>
         <span>
           <?php
@@ -38,8 +38,33 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             echo "-";
             }
           ?>
-          
         </span>
+        <span class="hinfo">?</span>
+      </div>
+      <div class="toast fade hide" data-autohide="false">
+        <div class="toast-header">
+          <strong class="mr-auto text-primary">Harga</strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body position-relative">
+          <p>Harga Wilayah 1 : 
+            <span class="hg">Rp. <?php echo $hw1; ?></span>
+            <a href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/" style="
+              position: absolute;
+              background-color: darkgray;
+              color: rgb(0 0 0 / 50%);
+              padding: 0.1em 0.6em;
+              border-radius: 5%;
+              font-size: 0.6em;
+              right: 3vw;
+              top: 3vw;
+              ">
+              <span>Info Wilayah</span>
+            </a>
+          </p>
+          <p>Harga Wilayah 2 : <span class="hg">Rp. <?php echo $hw2; ?></span></p>
+          <p>Harga Wilayah 3 : <span class="hg">Rp. <?php echo $hw3; ?></span></p>
+        </div>
       </div>
       <div class="col-6 mb-2" style="font-size:x-small;font-weight:bold;">Categories: 
         <?php

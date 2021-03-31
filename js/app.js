@@ -51,6 +51,9 @@ $(document).ready(function(){
 		    disableOnInteraction: true,
 		  },
 		});
+		 $(".hinfo").click(function(){
+	    $('.toast').toast('show');
+	  });
 	/*Add margin bottom to footer as navbar height*/
 	var navheight = parseInt($('.navbar').height()) + parseInt($('.navbar').css('padding-top')) + parseInt($('.navbar').css('padding-bottom'));
 	$('#fs2').css({"margin-bottom": navheight + "px"});

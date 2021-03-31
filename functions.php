@@ -3,7 +3,7 @@
  * The Functions for saycheese Theme
  *
  * email info@pantiespizza.com
- * https://psntiespizza.com
+ * https://pantiespizza.com
  * @version 2.1.03.03
  */
 
@@ -14,6 +14,7 @@ $themeurl = get_bloginfo('template_url');
 
 /*=== Mobile View Detection ===*/
 require get_template_directory().'/md/Mobile_Detect.php';
+include(TEMPLATEPATH.'/res/home-settings.php');
 
 function load_stylesheets(){
 	wp_register_style('appcss', get_template_directory_uri(). '/css/app.css', '',0.1,'all');
@@ -29,11 +30,13 @@ add_action('wp_enqueue_scripts','load_stylesheets',1);
 function load_javascript(){
     wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
     wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js','', 4.0, true);
+    wp_register_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js','', 4.0, true);
 	wp_register_script('swiper', get_template_directory_uri(). '/js/swiper-bundle.min.js','jquery', 3, true);
     wp_register_script('appjs', get_template_directory_uri(). '/js/app.js','',0.1, true);
     wp_enqueue_script('jquery351');
     wp_enqueue_script('swiper');
     wp_enqueue_script('bootstrap');
+    wp_enqueue_script('popper');
 	wp_enqueue_script('appjs');
 }
 add_action('wp_enqueue_scripts', 'load_javascript');

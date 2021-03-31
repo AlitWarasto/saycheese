@@ -212,7 +212,7 @@ a{
 }
 /*MENU PIZZA STYLE*/
 .menus{
-  background-color: #efefef;
+  background-color: #ffc107ba;
 }
 .mitem{
   max-width: 48vw;
@@ -235,9 +235,19 @@ a{
 .hg{
   font-size: 1rem;
   color: #ef0c15;
+  position: relative;
 }
 .hg span:nth-child(1){
   font-size: .75rem;
+}
+.hinfo{
+  position: absolute;
+  background-color: darkgray;
+  color: rgb(0 0 0 / 50%);
+  padding: 0.1em 0.6em;
+  border-radius: 50%;
+  font-size: 8px;
+  top: 0em;
 }
 /*Contact Page STYLE*/
 .con li{

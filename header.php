@@ -4,34 +4,34 @@
 	<title><?php echo $post->post_title. " | " . $sitename ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php
-	 wp_head();
-	 get_header();?>
-	 	<style type="text/css">
-	 		<?php 
-	 		if (is_page('checkout')) { ?>
-	 			.col-1,.col-2,.col-3{max-width: 100%};
-	 		<?php }	?>
-	 		#woocommerce{
-	 			background-image: url("<?php echo $themeurl ?>/img/pattern.png");
-	 		}
-			.wa::before{
-				content: url("<?php echo $themeurl ?>/img/whatsapp.SVG");
-			}
-			.ig::before {
-				content: url("<?php echo $themeurl ?>/img/instagram.SVG");
-			}
-			.fb::before {
-				content: url("<?php echo $themeurl ?>/img/facebook.SVG");
-			}
-			.tk::before {
-				content: url("<?php echo $themeurl ?>/img/tiktok.SVG");
-			}
-			.tw::before {
-				content: url("<?php echo $themeurl ?>/img/twitter.SVG");
-			}
-			.ln::before {
-				content: url("<?php echo $themeurl ?>/img/line.SVG");
-			}
+	wp_head();
+	get_header();?>
+ 	<style type="text/css">
+ 		<?php 
+ 		if (is_page('checkout')) { ?>
+ 			.col-1,.col-2,.col-3{max-width: 100%};
+ 		<?php }	?>
+ 		#woocommerce,.menus{
+ 			background-image: url("<?php echo $themeurl ?>/img/pattern.png");
+ 		}
+		.wa::before{
+			content: url("<?php echo $themeurl ?>/img/whatsapp.SVG");
+		}
+		.ig::before {
+			content: url("<?php echo $themeurl ?>/img/instagram.SVG");
+		}
+		.fb::before {
+			content: url("<?php echo $themeurl ?>/img/facebook.SVG");
+		}
+		.tk::before {
+			content: url("<?php echo $themeurl ?>/img/tiktok.SVG");
+		}
+		.tw::before {
+			content: url("<?php echo $themeurl ?>/img/twitter.SVG");
+		}
+		.ln::before {
+			content: url("<?php echo $themeurl ?>/img/line.SVG");
+		}
 	</style>
 </head>
 <body <?php body_class();?>>
