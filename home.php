@@ -1,5 +1,6 @@
 <?php
-#home.php for pantiespizza.com
+#landing-settings.php for pantiespizza.com
+#admin page settings for landing page
 #saycheese theme wp
 #version 1.0
 ?>
@@ -153,19 +154,19 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   </section>
   <section id="section4">
   	<div>
-	  	<img src="http://localhost/coba/wp-content/uploads/2021/03/presieden-vs-reality-mixzone.png" loading="lazy">
+	  	<img src="<?php echo get_option('img_mixzone'); ?>" loading="lazy">
 	  	<a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-  		<img src="http://localhost/coba/wp-content/uploads/2021/03/pizza-slice-beauty-and-the-beef.png" loading="lazy">
+  		<img src="<?php echo get_option('img_inout'); ?>" loading="lazy">
 	  	<a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-	  	<img src="http://localhost/coba/wp-content/uploads/2021/03/in-and-out-pizza-to-remember.png" loading="lazy">
+	  	<img src="<?php echo get_option('img_slice'); ?>" loading="lazy">
 		  <a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-  		<img src="http://localhost/coba/wp-content/uploads/2021/03/calzone-saycheese.png" loading="lazy">
+  		<img src="<?php echo get_option('img_calzone'); ?>" loading="lazy">
 		  <a href="<?php echo $siteurl; ?>/menu"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   </section>
@@ -175,7 +176,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   			<h2 class="text-center mb-3 font-weight-bolder text-danger">Temukan Promo Khusus Followers!</h2>
   			<a href="https://www.instagram.com/pantiespizzaindonesia/"><button class="btn btn-danger shadow">Ikuti @pantiespizzaindonesia</button></a>
   		</div>
-  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="http://localhost/coba/wp-content/uploads/2021/03/phone.png" loading="lazy">
+  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="<?php echo get_option('img_phone'); ?>" loading="lazy">
   	</div>
   </section>
   <section id="section6" class="pt-5">

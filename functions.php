@@ -14,7 +14,7 @@ $themeurl = get_bloginfo('template_url');
 
 /*=== Mobile View Detection ===*/
 require get_template_directory().'/md/Mobile_Detect.php';
-include(TEMPLATEPATH.'/res/home-settings.php');
+include(TEMPLATEPATH.'/inc/landing-settings.php');
 
 function load_stylesheets(){
 	wp_register_style('appcss', get_template_directory_uri(). '/css/app.css', '',0.1,'all');
@@ -31,7 +31,7 @@ function load_javascript(){
     wp_enqueue_media();
     wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
     wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js','', 4.0, true);
-    wp_register_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js','', 4.0, true);
+    wp_register_script('popper', get_template_directory_uri(). '/js/popper.js','', 1.6, true);
 	wp_register_script('swiper', get_template_directory_uri(). '/js/swiper-bundle.min.js','jquery', 3, true);
     wp_register_script('appjs', get_template_directory_uri(). '/js/app.js','',0.1, true);
     wp_enqueue_script('jquery351');
@@ -63,7 +63,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'Lthumb', 512, 512, true ); #unlimited wide(9999) and unlimited height(9999)
  }
 
- #remove width & height attributes from images
+#remove width & height attributes from images
 function remove_img_attr ($html)
 {
     return preg_replace('/(width|height)="\d+"\s/', "", $html);
@@ -111,9 +111,8 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
-/**
- * Show cart contents / total Ajax
- */
+
+#Show cart contents / total Ajax
 add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
@@ -147,9 +146,7 @@ add_action( 'init', 'ppcpt_post_type', 0 );
 /*===== add metabox to CPT ======*/
 require get_template_directory().'/cpt/metabox.php';
 
-/**
- * Remove archive labels.
- */
+#remove archive label
 function remove_label( $title ) {
     if ( is_category() ) {
         $title = single_cat_title( '', false );
