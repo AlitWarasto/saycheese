@@ -107,19 +107,19 @@ function saycheese_home_settings(){
           <input id="img_mixzone" type="hidden" name="img_mixzone" value="<?php echo get_option('img_inout'); ?>"/>
         </div>
         <div class="fg">
-          <label for="img_inout">In & Out Button Image</label>
+          <label for="img_inout">In & Out Display Image</label>
           <img id="img-inout" src="<?php echo get_option('img_inout'); ?>" class="img-icon"/>
           <input type="button" value="Upload Image" class="button-primary" id="upload-img-inout"/>
           <input id="img_inout" type="hidden" name="img_inout" value="<?php echo get_option('img_inout'); ?>"/>
         </div>
         <div class="fg">
-          <label for="img_slice">Slice Button Image</label>
+          <label for="img_slice">Slice Display Image</label>
           <img id="img-slice" src="<?php echo get_option('img_slice'); ?>" class="img-icon"/>
           <input type="button" value="Upload Image" class="button-primary" id="upload-img-slice"/>
           <input id="img_slice" type="hidden" name="img_slice" value="<?php echo get_option('img_slice'); ?>"/>
         </div>
         <div class="fg">
-          <label for="img_calzone">Calzone Button Image</label>
+          <label for="img_calzone">Calzone Display Image</label>
           <img id="img-calzone" src="<?php echo get_option('img_calzone'); ?>" class="img-icon"/>
           <input type="button" value="Upload Image" class="button-primary" id="upload-img-calzone"/>
           <input id="img_calzone" type="hidden" name="img_calzone" value="<?php echo get_option('img_calzone'); ?>"/>

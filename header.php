@@ -57,6 +57,7 @@
 			      <li class="nav-item active">
 			        <a class="nav-link" href="<?php echo $siteurl ?>">Home<span class="sr-only">(current)</span></a>
 			        <a class="nav-link" href="<?php echo $siteurl ?>/menu">Menu<span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="<?php echo $siteurl ?>/beverage">Drinks<span class="sr-only">(current)</span></a>
 			      </li>			      
 			    </ul>
 			  </div>

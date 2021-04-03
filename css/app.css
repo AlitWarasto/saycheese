@@ -242,10 +242,10 @@ a{
 }
 .hinfo{
   position: absolute;
-  background-color: darkgray;
-  color: rgb(0 0 0 / 50%);
+  background-color: #e9ecef;
+  color: #ffc107;
   padding: 0.1em 0.6em;
-  border-radius: 50%;
+  border-radius: 3%;
   font-size: 8px;
   top: 0em;
 }
