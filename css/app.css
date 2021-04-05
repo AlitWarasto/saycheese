@@ -212,16 +212,25 @@ a{
 }
 /*MENU PIZZA STYLE*/
 .menus{
-  background-color: #ffc107ba;
+  background-color: #e9ecefab;
 }
 .mitem{
   max-width: 48vw;
+  min-height: 25vw;
   margin: 1vw 1vw;
+  margin-top: 32vw;
   padding: 1vw 1vw;
+  padding-top: 5vw;
+  border-radius: 2%;
   background-color: white;
 }
 .mitem img{
   min-width: 100%;
+}
+.mitem > a {
+  position: absolute;
+  z-index: 2;
+  top: -30vw;
 }
 .ww{
   white-space: normal;
@@ -262,11 +271,11 @@ a{
   float: left;
   transform: translateX(-15%);
 }
-/*woocommerce STYLE*/
+/*woocommerce STYLE
 .woocommerce-input-wrapper{
 	width: 100%;
 	display: block;
-}
+} */
 .say-cart{
   width: 2.6rem;
   height: auto;
@@ -286,16 +295,16 @@ a{
   text-align: center;
   border-radius: 50%;
 }
-/**/
+
 .type-product{
-   position: relative;
-   background-color: #ffc107;
-   border-radius: 0.5rem;
-   box-shadow: 0px 0px 9px -2px rgb(0 0 0 / 20%);
-   padding: 1.9rem 0.6rem 0.6rem !important;
-   min-height: 30vw;
-   margin-top: 25vw !important;
-}
+ position: relative;
+ background-color: #ffc107;
+ border-radius: 0.5rem;
+ box-shadow: 0px 0px 9px -2px rgb(0 0 0 / 20%);
+ padding: 1.9rem 0.6rem 0.6rem !important;
+ min-height: 30vw;
+ margin-top: 25vw !important;
+}/*
 .type-product a img{
   max-width: 65vw;
   position: absolute;
@@ -324,7 +333,7 @@ a{
 .related > ul > li > a > img{
   max-width: 30vw;
   top: -20vw;
-}
+} */
 .add_to_cart_button{
 	background-color: #007bff !important;
 	color: whitesmoke !important;

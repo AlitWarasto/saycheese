@@ -11,7 +11,7 @@
  		if (is_page('checkout')) { ?>
  			.col-1,.col-2,.col-3{max-width: 100%};
  		<?php }	?>
- 		#woocommerce,.menus{
+ 		.menus{
  			background-image: url("<?php echo $themeurl ?>/img/pattern.png");
  		}
 		.wa::before{
