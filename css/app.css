@@ -253,12 +253,13 @@ a{
 }
 .hinfo{
   position: absolute;
+  margin-left: 0.4em;
   background-color: #e9ecef;
   color: #ffc107;
-  padding: 0.1em 0.6em;
+  padding: 0.2em 0.4em;
   border-radius: 3%;
   font-size: 8px;
-  top: 0em;
+  top: -0.4em;
 }
 /*Contact Page STYLE*/
 .con li{
@@ -297,7 +298,6 @@ a{
   text-align: center;
   border-radius: 50%;
 }
-
 .type-product{
  background-color: rgb(255 255 255 / 75%);
  border-radius: 0.2rem;
@@ -361,3 +361,43 @@ footer li{
 #fs2{
   background-color: #ad0006;
 }
+/*== MISC ==*/
+.star {
+  position: relative;
+  
+  display: inline-block;
+  width: 0;
+  height: 0;
+  
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid #FC0;
+  border-left:   .3em solid transparent;
+
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+}
+  .star:before, .star:after {
+    content: '';
+    
+    display: block;
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    top: .6em;
+    left: -1em;
+  
+    border-right:  1em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   1em solid transparent;
+  
+    transform: rotate(-35deg);
+  }
+  
+  .star:after {  
+    transform: rotate(35deg);
+  }

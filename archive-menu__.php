@@ -47,6 +47,24 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           $hw1= get_post_meta($post->ID,'hargawil1',TRUE);
           $hw2= get_post_meta($post->ID,'hargawil2',TRUE);
           $hw3= get_post_meta($post->ID,'hargawil3',TRUE);
+
+          /*================ RATING ================*/
+          $rdate = $post->post_date;
+          $udate = strtotime($rdate);
+          $rr    = $udate+$post->ID;
+          $rawr  = substr($rr,-2);
+          if($rawr < 45) {
+            $rating = 99-$rawr;
+          } else {
+            $rating = $rawr;
+          }
+          $raval = number_format($rating * 0.05,1);
+          $ru = substr($rr,-4,-1);
+          if($ru < 117) {
+            $users = 978-$ru;
+          } else {
+            $users = $ru;
+          }
           ?>
           <div class="col-6 d-flex flex-column mitem">
             <?php
@@ -75,11 +93,10 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
                 }
                 ?>
               </span>
-              <span class=""></span>
             </div>
             <div class="d-flex flex-row justify-content-around mt-2 mb-2">
-              <a href="<?php echo $siteurl ?>/shop"><span class="text-success">Order</span></a>
-              <a href="<?php echo $posurl; ?>"><span class="text-primary">View</span></a>
+              <a href="<?php echo $siteurl ?>/shop"><button class="btn btn-success">Order</button></a>
+              <a href="<?php echo $posurl; ?>"><button class="btn btn-primary">View</button></a>
             </div>
           </div>
           <?php

@@ -47,18 +47,23 @@
   	<header>
 	  	<nav class="navbar fixed-bottom navbar-light bg-light">
 			  <a class="navbar-brand" href="<?php echo $siteurl ?>"><img width="30px" height="auto" src="<?php echo get_template_directory_uri() ?>/img/logo-sm.png" alt="logo panties pizza terbaru kecil bulat"></a>
-			  <a href="<?php echo $siteurl ?>/shop" class="navbar-brand"><img src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil" style="height: 1.6em;"></a>
-			  <a class="say-cart navbar-brand"></a>
+			  <a class="say-cart"href="<?php echo $siteurl ?>/shop"><img src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil"></a>
+			  <a id="say-bag" class="say-cart navbar-brand"></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			    <ul class="navbar-nav mr-auto">
-			      <li class="nav-item active">
-			        <a class="nav-link" href="<?php echo $siteurl ?>">Home<span class="sr-only">(current)</span></a>
-			        <a class="nav-link" href="<?php echo $siteurl ?>/menu">Menu<span class="sr-only">(current)</span></a>
-			        <a class="nav-link" href="<?php echo $siteurl ?>/beverage">Drinks<span class="sr-only">(current)</span></a>
-			      </li>			      
+			    <ul class="navbar-nav mr-auto d-flex flex-row justify-content-around mt-2">
+			      <li class="nav-item">
+			        <a class="nav-link" href="<?php echo $siteurl ?>">Home<span class="sr-only">(current)</span>
+			        </a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link <?php if(is_page('menu')){echo 'active';}; ?>" href="<?php echo $siteurl ?>/menu">Menu<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link <?php if(is_page('beverage')){echo 'active';}; ?>" href="<?php echo $siteurl ?>/beverage">Drinks<span class="sr-only">(current)</span></a>
+			      </li>
 			    </ul>
 			  </div>
 			</nav>
