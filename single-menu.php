@@ -60,11 +60,11 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             }
           ?>
         </span>
-        <span class="hinfo">info harga</span>
+        <span class="hinfo">Info Harga Wilayah</span>
         <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
         <span class="rating"><?php echo $raval; ?></span>
       </div>
-      <div class="toast fade hide" data-autohide="false">
+      <div class="toast fade hide ml-1" data-autohide="false">
         <div class="toast-header">
           <strong class="mr-auto text-primary">Harga</strong>
           <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
@@ -72,16 +72,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         <div class="toast-body position-relative">
           <p>Harga Wilayah 1 : 
             <span class="hg">Rp. <?php echo $hw1; ?></span>
-            <a href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/" style="
-              position: absolute;
-              background-color: darkgray;
-              color: rgb(0 0 0 / 50%);
-              padding: 0.1em 0.6em;
-              border-radius: 5%;
-              font-size: 0.6em;
-              right: 3vw;
-              top: 3vw;
-              ">
+            <a href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/">
               <span>Info Wilayah</span>
             </a>
           </p>

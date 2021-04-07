@@ -28,7 +28,7 @@ function load_stylesheets(){
 add_action('wp_enqueue_scripts','load_stylesheets',1);
 
 function load_javascript(){
-    wp_enqueue_media();
+    //wp_enqueue_media();
     wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
     wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js','', 4.0, true);
     wp_register_script('popper', get_template_directory_uri(). '/js/popper.js','', 1.6, true);

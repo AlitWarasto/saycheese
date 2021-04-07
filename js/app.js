@@ -8,8 +8,10 @@ $(window).on('load',function(){
   $(".loader").fadeOut(1000);
 });
 
-/*inject class and styles swiper buttom for ig social feed*/
 $(document).ready(function(){
+	/*inject class and styles woocommerce checkout
+  $(".form-row").addClass("d-flex flex-column");*/
+	/*inject class and styles swiper buttom for ig social feed*/
   $("#sb_instagram").addClass("swiper-btm").css("height","50vw");
   $("#sbi_images").addClass("swiper-wrapper");
   $(".sbi_item").addClass("swiper-slide");
@@ -20,7 +22,7 @@ $(document).ready(function(){
   	},300
 	);
 
-	/*Initialize Swiper*/
+	/*Initialize Swiper Landing Page*/
 	var swiper = new Swiper('.swiper-container', {
 		slidesPerView: 1,
 		autoHeight: false,
@@ -31,6 +33,7 @@ $(document).ready(function(){
 	    disableOnInteraction: true,
 	  },
 	});
+	/*Initialize Swiper Social Feed*/
 	var swiperbtm = new Swiper('.swiper-btm', {
 			slidesPerView: 2,
 			autoHeight: false,
@@ -39,6 +42,7 @@ $(document).ready(function(){
 		  freeMode: true,
 		  autoplay: false,
 		});
+	/*Initialize Swiper Hot Promo Menu*/
 	var swiperbtm = new Swiper('#woo-container', {
 			slidesPerView: 2,
 			spaceBetween: 5,
@@ -51,26 +55,11 @@ $(document).ready(function(){
 		    disableOnInteraction: true,
 		  },
 		});
-		 $(".hinfo").click(function(){
-	    $('.toast').toast('show');
-	  });
+	/*Toast Click on Info Harga Wilayah*/
+	 $(".hinfo").click(function(){
+    $('.toast').toast('show');
+  });
 	/*Add margin bottom to footer as navbar height*/
 	var navheight = parseInt($('.navbar').height()) + parseInt($('.navbar').css('padding-top')) + parseInt($('.navbar').css('padding-bottom'));
 	$('#fs2').css({"margin-bottom": navheight + "px"});
-	console.log(navheight);
 });
-/* pure js loader
-window.addEventListener('load',function(){
-	var fadeTarget = document.getElementById("loader");
-    var fadeEffect = setInterval(function () {
-        if (!fadeTarget.style.opacity) {
-            fadeTarget.style.opacity = 1;
-        }
-        if (fadeTarget.style.opacity > 0) {
-            fadeTarget.style.opacity -= 0.1;
-            fadeTarget.style.zIndex = -99;
-        } else {
-            clearInterval(fadeEffect);
-        }
-    }, 1000);
-});*/

@@ -9,7 +9,8 @@
  	<style type="text/css">
  		<?php 
  		if (is_page('checkout')) { ?>
- 			.col-1,.col-2,.col-3{max-width: 100%};
+ 			.col-1,.col-2,.col-3{max-width: 100%;}
+ 			.form-row{display: flex;flex-direction: column;}
  		<?php }	?>
  		#woocommerce,.menus{
  			background-image: url("<?php echo $themeurl ?>/img/pattern.png");

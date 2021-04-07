@@ -18,7 +18,7 @@ $sbpost = new WP_Query('posts_per_page=5');
     <?php
     if($sbpost->have_posts()) :
       while ($sbpost->have_posts()) : $sbpost->the_post();?>
-        <div class="sidebar-list col-6 mb-2">
+        <div class="sidebar-list col-6 mb-2 mt-2">
           <?php
         	$poslug  = $post->post_name;
           $posurl  = $siteurl.'/'.$poslug.'/';

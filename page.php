@@ -16,7 +16,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 </div>
 <div id="page" class="container">
   <div class="row pt-3">
-    <div class="col-12">
+    <div class="col">
       <?php 
       while (have_posts()) : the_post();
       	$poslug  = $post->post_name;

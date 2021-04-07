@@ -68,10 +68,10 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           	}
             ?>
             <a href="<?php echo $posurl; ?>">
-              <h5 class="col-12 mt-2" ><?php the_title(); ?></h5>
+              <h5 class="col mt-2" ><?php the_title(); ?></h5>
             </a>
-            <p class="col-12"><?php echo $excerpt; ?></p>
-            <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>" class="col-12 mt-2" style="color: #8e8e8e;font-size: x-small;"><?php the_time('F j, Y') ?></a>
+            <p class="col"><?php echo $excerpt; ?></p>
+            <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>" class="col mt-2" style="color: #8e8e8e;font-size: x-small;"><?php the_time('F j, Y') ?></a>
           </div>
           <?php
         endwhile;
