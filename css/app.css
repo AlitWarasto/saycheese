@@ -183,7 +183,7 @@ a{
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
-  color: black;
+  color: #495057;
 }
 #single-page h1, #page h1, #archive h1, #image h1, #woocommerce h1{
   font-size: 7vw;
@@ -200,7 +200,7 @@ a{
   list-style: none;
 }
 /*ARCHIVE STYLE*/
-.archive a, footer a{
+.archive a, footer a, #sidebar a{
 	text-decoration: none;
 	color: inherit;
 }
@@ -214,6 +214,10 @@ a{
 .menus{
   background-color: #e9ecefab;
 }
+.promo-slide{
+  max-width: 100%;
+  height: auto;
+}
 .mitem{
   position: relative;
   max-width: 48vw;
@@ -225,7 +229,7 @@ a{
   border-radius: 2%;
   background-color: white;
 }
-.mitem img{
+.mitem > img{
   min-width: 100%;
 }
 .mitem > a {
@@ -234,9 +238,12 @@ a{
   top: -35vw;
   padding: 3vw;
 }
+.mitem div:nth-last-child(1) button{
+  font-size: 0.7rem;
+}
 .ww{
   white-space: normal;
-  height: 6.15vw;
+  height: 2rem;
   word-break: break-all;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -260,6 +267,19 @@ a{
   border-radius: 3%;
   font-size: 8px;
   top: -0.4em;
+}
+.star,.rating {
+  float: right;
+}
+.star{
+  max-width: 100%;
+  width: 1rem;
+  display: block;
+  margin-top: -2px;
+  margin-left: 3px;
+}
+.rating{
+  color: #495057;
 }
 /*Contact Page STYLE*/
 .con li{
@@ -341,6 +361,11 @@ a{
 	margin-top: .5rem !important;
 	margin-bottom: .5rem !important;
 }
+
+/*side bar STYLE*/
+.sidebar-list img{
+  min-width: 100%;
+}
 /*FOOTER STYLE*/
 footer{
   background-color: #ef0c15;
@@ -362,42 +387,3 @@ footer li{
   background-color: #ad0006;
 }
 /*== MISC ==*/
-.star {
-  position: relative;
-  
-  display: inline-block;
-  width: 0;
-  height: 0;
-  
-  margin-left: .9em;
-  margin-right: .9em;
-  margin-bottom: 1.2em;
-  
-  border-right:  .3em solid transparent;
-  border-bottom: .7em  solid #FC0;
-  border-left:   .3em solid transparent;
-
-  /* Controlls the size of the stars. */
-  font-size: 24px;
-}
-  .star:before, .star:after {
-    content: '';
-    
-    display: block;
-    width: 0;
-    height: 0;
-    
-    position: absolute;
-    top: .6em;
-    left: -1em;
-  
-    border-right:  1em solid transparent;
-    border-bottom: .7em  solid #FC0;
-    border-left:   1em solid transparent;
-  
-    transform: rotate(-35deg);
-  }
-  
-  .star:after {  
-    transform: rotate(35deg);
-  }

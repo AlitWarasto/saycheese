@@ -40,9 +40,9 @@ $(document).ready(function(){
 		  autoplay: false,
 		});
 	var swiperbtm = new Swiper('#woo-container', {
-			slidesPerView: 3,
+			slidesPerView: 2,
 			spaceBetween: 5,
-			autoHeight: true,
+			autoHeight: false,
 			loop: true,
 		  centeredSlides: true,
 		  freeMode: false,

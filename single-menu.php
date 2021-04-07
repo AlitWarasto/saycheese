@@ -21,6 +21,27 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       $hw1= get_post_meta($post->ID,'hargawil1',TRUE);
       $hw2= get_post_meta($post->ID,'hargawil2',TRUE);
       $hw3= get_post_meta($post->ID,'hargawil3',TRUE);
+
+      /*================ RATING ================*/
+          $rdate = $post->post_date;
+          $udate = strtotime($rdate);
+          $rr    = $udate+$post->ID;
+          $rawr  = substr($rr,-2);
+          if($rawr < 65) {
+            $rating = 99-$rawr;
+          } else {
+            $rating = $rawr;
+          }
+          $raval = number_format($rating * 0.05,1);
+          if ($raval < 3) {
+            $raval = "3.1";
+          }
+          $ru = substr($rr,-4,-1);
+          if($ru < 117) {
+            $users = 978-$ru;
+          } else {
+            $users = $ru;
+          }
       ?>
       <h1 class="col-12 text-center"><?php the_title(); ?></h1>
       <?php #featured image
@@ -40,6 +61,8 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           ?>
         </span>
         <span class="hinfo">info harga</span>
+        <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
+        <span class="rating"><?php echo $raval; ?></span>
       </div>
       <div class="toast fade hide" data-autohide="false">
         <div class="toast-header">

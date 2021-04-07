@@ -45,10 +45,11 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 	    <div class="swiper-wrapper">
 	    <?php
 	      $shn = new WP_Query(array(
-	      'orderby' => 'date',
-	      'order' => 'DESC',
-	      'posts_per_page' => 3,
-	      'offset' => 0
+          'category_name' => 'Latest News Panties Pizza, Promo',
+  	      'orderby' => 'date',
+  	      'order' => 'DESC',
+  	      'posts_per_page' => 3,
+  	      'offset' => 0
 	      ));
 	        /*=== WP LOOP === */
 	        if($shn->have_posts()) :

@@ -48,6 +48,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     endwhile;
      ?>
   </div>
+  <?php include(TEMPLATEPATH.'/sidebar.php'); ?>
 </div>
 <?php
 get_footer();
