@@ -138,7 +138,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Pizza Slice</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="<?php echo get_option('btn_inout'); ?>" loading="lazy" alt="Test Alt Text">
+                <img src="<?php echo get_option('btn_slice'); ?>" loading="lazy" alt="Test Alt Text">
               </div>
             </div>
         </div>

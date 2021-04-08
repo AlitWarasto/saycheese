@@ -1,14 +1,13 @@
 /*
 app style css for pantiespizza.com
 version 1.0
-*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');*/
 
 body {
   position: relative;
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color: #495057;
   font-size: 14px;
   margin: 0;
   padding: 0;
@@ -16,6 +15,9 @@ body {
 a{
   font-weight: bold;
   text-decoration: underline dotted;
+}
+.btn-size{
+  font-size: .7rem;
 }
 .loader{
   width: 100%;
@@ -31,7 +33,6 @@ a{
   padding-left: 15px;
   font-weight: bold;
   font-size: large;
-  color: black;
 }
 .custom-logo{
   width: 30%;
@@ -85,10 +86,12 @@ a{
 	font-size: 0.7em;
 	font-weight: 600;
 	letter-spacing: 0.1px;
+	color: aliceblue;
 }
 #section2 h2, #section6 h2, #section2 h1, #section6 h1{
 	font-size: 2em;
 	font-weight: 900;
+	color: aliceblue;
 }
 #section2 h1, #section6 h1{
 	font-size: xxx-large;
@@ -183,7 +186,6 @@ a{
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
-  color: #495057;
 }
 #single-page h1, #page h1, #archive h1, #image h1, #woocommerce h1{
   font-size: 7vw;
@@ -221,11 +223,9 @@ a{
 .mitem{
   position: relative;
   max-width: 48vw;
-  min-height: 25vw;
-  margin: 1vw 1vw;
-  margin-top: 32vw;
-  padding: 1vw 1vw;
-  padding-top: 5vw;
+  min-height: 7rem;
+  margin: 7.5rem 0.2em 0;
+  padding: 1rem 0.5rem 0;
   border-radius: 2%;
   background-color: white;
 }
@@ -237,9 +237,6 @@ a{
   z-index: 2;
   top: -35vw;
   padding: 3vw;
-}
-.mitem div:nth-last-child(1) button{
-  font-size: 0.7rem;
 }
 .ww{
   white-space: normal;
@@ -370,6 +367,7 @@ a{
 /*FOOTER STYLE*/
 footer{
   background-color: #ef0c15;
+  color: white;
 }
 footer ul{
   font-size: 1em;
@@ -388,3 +386,18 @@ footer li{
   background-color: #ad0006;
 }
 /*== MISC ==*/
+.bc span{
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 1.1rem;
+}
+.bk{
+  background-color: rgb(255 255 255);
+  padding: 0.5rem;
+  border-radius: 10%;
+}
+.bk-float{
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+}

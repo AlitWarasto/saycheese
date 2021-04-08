@@ -110,12 +110,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <?php
           	}
             ?>
-            <div class="col mt-2">
+            <div class="mt-2">
               <a href="<?php echo $posurl; ?>">
                 <h2 class="ww overflow-hidden" ><?php the_title(); ?></h2>
               </a>
             </div>
-            <div class="col hg">
+            <div class="hg">
               <span>Rp.</span>
               <span>
                 <?php
@@ -129,9 +129,9 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
               <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
               <span class="rating"><?php echo $raval; ?></span>
             </div>
-            <div class="col d-flex flex-row justify-content-between mt-2 mb-2">
-              <a href="<?php echo $siteurl ?>/shop"><button class="btn btn-success">Order</button></a>
-              <a href="<?php echo $posurl; ?>"><button class="btn btn-primary">View</button></a>
+            <div class="d-flex flex-row justify-content-between mt-2 mb-2">
+              <a href="<?php echo $siteurl ?>/shop"><button class="btn btn-success btn-size">Order</button></a>
+              <a href="<?php echo $posurl; ?>"><button class="btn btn-primary btn-size">View</button></a>
             </div>
           </div>
           <?php

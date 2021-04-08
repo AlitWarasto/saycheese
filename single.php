@@ -51,6 +51,19 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
      ?>
   </div>
   <?php include(TEMPLATEPATH.'/sidebar.php'); ?>
+  <?php 
+  ########### BREADCRUMB ##########
+  /* CATEGORY */
+  $cats    = get_the_category();
+  $catname = $cats[0]->name;
+  $catslug = $cats[0]->slug;
+  ?>
+  <hr>
+  <div class="bc text-body mb-2">
+    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
+    <a href="<?php echo $siteurl.'/category/'.$catslug.'/' ?>" rel="nofollow"><?php echo $catname; ?></a><span>&rsaquo;</span>
+    <a rel="nofollow"><?php the_title();?></a>
+  </div>
 </div>
 <?php
 get_footer();

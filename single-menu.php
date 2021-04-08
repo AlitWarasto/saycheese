@@ -80,29 +80,46 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           <p>Harga Wilayah 3 : <span class="hg">Rp. <?php echo $hw3; ?></span></p>
         </div>
       </div>
-      <div class="col-6 mb-2" style="font-size:x-small;font-weight:bold;">Categories: 
-        <?php
-        $i = 1;
-        $cats = get_the_category();
-        $catname = '';
-        $catlink = '';
-        foreach ($cats as $cat) {
-          if ($i > 3) {
-            break;
-          } else {
-            $catname = $cat->name;
-            $catlink = get_category_link($cat->term_id); ?>
-            <a href="<?php echo $catlink; ?>" style="color: #8e8e8e;"><?php echo $catname; ?>, </a>
-            <?php
-          } 
-          $i++;
-        }?>
+      <div class="col-12 d-flex justify-content-between align-items-center mb-2" style="font-size:x-small;font-weight:bold;">
+        <span>Categories:
+          <?php
+          $i = 1;
+          $cats = get_the_category();
+          $catname = '';
+          $catlink = '';
+          foreach ($cats as $cat) {
+            if ($i > 3) {
+              break;
+            } else {
+              $catname = $cat->name;
+              $catlink = get_category_link($cat->term_id); ?>
+              <a href="<?php echo $catlink; ?>" style="color: #8e8e8e;"><?php echo $catname; ?>, </a>
+              <?php
+            } 
+            $i++;
+          }?>
+        </span>
+        <a href=""><button type="button" class="btn btn-success btn-size">Order Now</button></a>
       </div>
       <?php
     endwhile;
-     ?>
+    ?>
+
+  </div>
+  <?php
+  ########### BREADCRUMB ##########
+  /* CATEGORY */
+  $cats    = get_the_category();
+  $catname = $cats[0]->name;
+  $catslug = $cats[0]->slug;
+  ?>
+  <div class="bc text-body mb-2">
+    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
+    <a href="<?php echo $siteurl.'/category/'.$catslug.'/' ?>" rel="nofollow"><?php echo $catname; ?></a><span>&rsaquo;</span>
+    <a rel="nofollow"><?php the_title();?></a>
   </div>
 </div>
+
 <?php
 get_footer();
 } else {
