@@ -36,8 +36,11 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="spinner-border text-warning"></div>
   <div class="lo">Loading..</div>
 </div>
-<section class="say-body">
-  <h5 class="text-center font-weight-bold pt-2">Hot Promo</h5>
+<section class="say-body position-relative">
+  <div class="cw">
+    <h5>Hot Promo</h5>
+    <span class="btn-size">Potongan harga dan cozy event</span>
+  </div>
   <div id="woo-container" class="overflow-hidden">  
     <div class="swiper-wrapper">
     <?php

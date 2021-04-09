@@ -54,6 +54,14 @@ $(document).ready(function(){
 		    delay: 2500,
 		    disableOnInteraction: true,
 		  },
+		  effect: 'coverflow',
+      coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 40,
+      modifier: 3,
+      slideShadows : false,
+    },
 		});
 	/*Toast Click on Info Harga Wilayah*/
 	 $(".hinfo").click(function(){
