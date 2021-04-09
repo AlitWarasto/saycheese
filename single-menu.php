@@ -44,6 +44,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           }
       ?>
       <h1 class="col-12 text-center"><?php the_title(); ?></h1>
+      <hr>
       <?php #featured image
       if ( has_post_thumbnail()) { ?>
         <a href="#"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid text-center' )); ?></a>
@@ -113,6 +114,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   $catname = $cats[0]->name;
   $catslug = $cats[0]->slug;
   ?>
+  <hr>
   <div class="bc text-body mb-2">
     <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
     <a href="<?php echo $siteurl.'/category/'.$catslug.'/' ?>" rel="nofollow"><?php echo $catname; ?></a><span>&rsaquo;</span>

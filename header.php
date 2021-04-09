@@ -6,14 +6,14 @@
 	<?php
 	wp_head();
 	get_header();?>
- 	<style type="text/css">
+ 	<style type="text/css">/*
  		@font-face {
 		font-family: "Roboto";
 		src: url("<?php echo $themeurl; ?>/fonts/roboto/Roboto-Regular.ttf");
 		src: url("<?php echo $themeurl; ?>/fonts/roboto/Roboto-Regular.ttf") format("woff"),
 		url("<?php echo $themeurl; ?>/fonts/roboto/Roboto-Regular.ttf") format("opentype"),
 		url("<?php echo $themeurl; ?>/fonts/roboto/Roboto-Regular.ttf") format("svg");
-		}
+		}*/
  		<?php 
  		if (is_page('checkout')) { ?>
  			.col-1,.col-2,.col-3{max-width: 100%;}
@@ -54,27 +54,11 @@
   <?php } else { ?>
   	<header>
 	  	<nav class="navbar fixed-bottom navbar-light bg-light">
-	  		<div class="bk text-muted" type="button" onclick="history.back();"><span>&lsaquo;</span> Back</div>
-			  <a class="navbar-brand" href="<?php echo $siteurl ?>"><img width="30px" height="auto" src="<?php echo get_template_directory_uri() ?>/img/logo-sm.png" alt="logo panties pizza terbaru kecil bulat"></a>
-			  <a class="say-cart"href="<?php echo $siteurl ?>/shop"><img src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil"></a>
+	  		<div class="bk text-muted" type="button" onclick="history.back();"><span>&lsaquo;</span></div>
+			  <a class="say-cart" href="<?php echo $siteurl ?>"><img height="auto" src="<?php echo get_template_directory_uri() ?>/img/home.svg" alt="logo panties pizza terbaru kecil bulat"></a>
+			  <a class="say-cart"href="<?php echo $siteurl ?>/menu"><img src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil"></a>
+			  <a class="say-cart"href="<?php echo $siteurl ?>/shop"><img src="<?php echo get_template_directory_uri() ?>/img/shop.svg" alt="shop panties pizza kecil"></a>
 			  <a id="say-bag" class="say-cart navbar-brand"></a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			    <ul class="navbar-nav mr-auto d-flex flex-row justify-content-around mt-2">
-			      <li class="nav-item">
-			        <a class="nav-link" href="<?php echo $siteurl ?>">Home<span class="sr-only">(current)</span>
-			        </a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link <?php if(is_page('menu')){echo 'active';}; ?>" href="<?php echo $siteurl ?>/menu">Menu<span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link <?php if(is_page('beverage')){echo 'active';}; ?>" href="<?php echo $siteurl ?>/beverage">Drinks<span class="sr-only">(current)</span></a>
-			      </li>
-			    </ul>
-			  </div>
 			</nav>
   	</header>
 	<?php } ?>

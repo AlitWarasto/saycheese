@@ -38,8 +38,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 </div>
 <section class="say-body">
   <h5 class="text-center font-weight-bold pt-2">Hot Promo</h5>
-  <div id="woo-container" class="overflow-hidden"> 
-    
+  <div id="woo-container" class="overflow-hidden">  
     <div class="swiper-wrapper">
     <?php
       $shn = new WP_Query(array(
@@ -139,6 +138,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         wp_reset_postdata();
       endif;
        ?>
+  </div>
+  <?php ########### BREADCRUMB ########## ?>
+  <hr>
+  <div class="bc text-body mb-2">
+    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
+    <a rel="nofollow"><?php echo $ptitle.$pnum;?></a>
   </div>
 </div>
 <?php

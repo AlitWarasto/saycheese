@@ -45,6 +45,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 <div id="archive" class="container pt-3">
   <div class="row">
     <h1 class="col-12 text-center"><?php echo $ptitle.$pnum; ?></h1>
+    <hr>
       <?php
       if(have_posts()) :
         while (have_posts()) : the_post();?>
@@ -78,6 +79,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         wp_reset_postdata();
       endif;
        ?>
+  </div>
+  <?php ########### BREADCRUMB ########## ?>
+  <hr>
+  <div class="bc text-body mb-2">
+    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
+    <a rel="nofollow"><?php echo $ptitle.$pnum;?></a>
   </div>
 </div>
 <?php
