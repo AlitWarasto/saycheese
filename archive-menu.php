@@ -41,7 +41,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     <h5>Hot Promo</h5>
     <span class="btn-size">Potongan harga dan cozy event</span>
   </div>
-  <div id="woo-container" class="overflow-hidden">  
+  <div id="woo-container" class="overflow-hidden pt-3 pb-3">  
     <div class="swiper-wrapper">
     <?php
       $shn = new WP_Query(array(
