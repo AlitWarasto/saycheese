@@ -1,5 +1,5 @@
 <?php
-#archive-beverage.php for pantiespizza.com
+#archive-pizza-slice.php for pantiespizza.com
 #saycheese theme wp
 #version 1.0
 
@@ -103,14 +103,14 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           ?>
           <div class="col-6 d-flex flex-column mitem">
             <?php
-            $poslug  = $post->post_name;
-            $arcurl  = get_post_type_archive_link( 'beverage' );
+          	$poslug  = $post->post_name;
+            $arcurl  = get_post_type_archive_link( 'pizza-slice' );
             $posurl  = $arcurl.$poslug.'/';
             #featured image
             if ( has_post_thumbnail()) { ?>
               <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid' )); ?></a>
             <?php
-            }
+          	}
             ?>
             <div class="mt-2">
               <a href="<?php echo $posurl; ?>">

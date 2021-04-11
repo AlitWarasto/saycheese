@@ -62,6 +62,8 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           ?>
         </span>
         <span class="hinfo">Info Harga Wilayah</span>
+        <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/love.SVG"></span>
+        <span class="users float-right ml-2 text-muted"><?php echo $users; ?></span>
         <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
         <span class="rating"><?php echo $raval; ?></span>
       </div>

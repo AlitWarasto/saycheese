@@ -1,5 +1,5 @@
 <?php
-#archive-menu.php for pantiespizza.com
+#archive-pasta.php for pantiespizza.com
 #saycheese theme wp
 #version 1.0
 
@@ -36,6 +36,38 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="spinner-border text-warning"></div>
   <div class="lo">Loading..</div>
 </div>
+<section class="say-body position-relative">
+  <div class="cw">
+    <h5>Hot Promo</h5>
+    <span class="btn-size">Potongan harga dan cozy event</span>
+  </div>
+  <div id="woo-container" class="overflow-hidden pt-3 pb-3">  
+    <div class="swiper-wrapper">
+    <?php
+      $shn = new WP_Query(array(
+        'category_name' => 'Promo',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'posts_per_page' => 3,
+        'offset' => 0
+      ));
+        /*=== WP LOOP === */
+        if($shn->have_posts()) :
+          while($shn->have_posts()) :
+            $shn->the_post();
+            $poslug  = $post->post_name;
+            $posurl  = $siteurl.'/'.$poslug.'/';
+            if ( has_post_thumbnail()) { ?>
+              <div class="swiper-slide"><a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('medium', array( 'class' => 'promo-slide' )); ?></a></div>
+            <?php
+            }
+          endwhile; 
+          wp_reset_postdata();
+        endif;
+      ?>
+    </div>
+  </div>
+</section>
 <div id="archive" class="container pt-3 menus">
   <div class="row">
     <?php
@@ -53,12 +85,15 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           $udate = strtotime($rdate);
           $rr    = $udate+$post->ID;
           $rawr  = substr($rr,-2);
-          if($rawr < 45) {
+          if($rawr < 65) {
             $rating = 99-$rawr;
           } else {
             $rating = $rawr;
           }
           $raval = number_format($rating * 0.05,1);
+          if ($raval < 3) {
+            $raval = "3.1";
+          }
           $ru = substr($rr,-4,-1);
           if($ru < 117) {
             $users = 978-$ru;
@@ -69,7 +104,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           <div class="col-6 d-flex flex-column mitem">
             <?php
           	$poslug  = $post->post_name;
-            $arcurl  = get_post_type_archive_link( 'menu' );
+            $arcurl  = get_post_type_archive_link( 'pasta' );
             $posurl  = $arcurl.$poslug.'/';
             #featured image
             if ( has_post_thumbnail()) { ?>
@@ -77,12 +112,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <?php
           	}
             ?>
-            <div class="col-12 mt-2 mb-2 overflow-hidden">
+            <div class="mt-2">
               <a href="<?php echo $posurl; ?>">
-                <h2 class="ww" ><?php the_title(); ?></h2>
+                <h2 class="ww overflow-hidden" ><?php the_title(); ?></h2>
               </a>
             </div>
-            <div class="col-12 hg">
+            <div class="hg">
               <span>Rp.</span>
               <span>
                 <?php
@@ -93,10 +128,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
                 }
                 ?>
               </span>
+              <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
+              <span class="rating"><?php echo $raval; ?></span>
             </div>
-            <div class="d-flex flex-row justify-content-around mt-2 mb-2">
-              <a href="<?php echo $siteurl ?>/shop"><button class="btn btn-success">Order</button></a>
-              <a href="<?php echo $posurl; ?>"><button class="btn btn-primary">View</button></a>
+            <div class="d-flex flex-row justify-content-between mt-2 mb-2">
+              <a href="<?php echo $siteurl ?>/shop"><button class="btn btn-success btn-size">Order</button></a>
+              <a href="<?php echo $posurl; ?>"><button class="btn btn-primary btn-size">View</button></a>
             </div>
           </div>
           <?php
@@ -104,6 +141,12 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         wp_reset_postdata();
       endif;
        ?>
+  </div>
+  <?php ########### BREADCRUMB ########## ?>
+  <hr>
+  <div class="bc text-body mb-2">
+    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
+    <a rel="nofollow"><?php echo $ptitle.$pnum;?></a>
   </div>
 </div>
 <?php
