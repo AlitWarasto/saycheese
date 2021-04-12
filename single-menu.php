@@ -102,7 +102,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             $i++;
           }?>
         </span>
-        <a href=""><button type="button" class="btn btn-success btn-size">Order Now</button></a>
+        <a href=""><button type="button" class="woofeature btn btn-success btn-size">Order Now</button></a>
       </div>
       <?php
     endwhile;

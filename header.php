@@ -57,8 +57,8 @@
 	  		<div class="bk text-muted" type="button" onclick="history.back();"><span>&lsaquo;</span></div>
 			  <a class="say-cart" href="<?php echo $siteurl ?>"><img height="auto" src="<?php echo get_template_directory_uri() ?>/img/home.svg" alt="logo panties pizza terbaru kecil bulat"></a>
 			  <a class="say-cart"href="<?php echo $siteurl ?>/menu"><img src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil"></a>
-			  <a class="say-cart"href="<?php echo $siteurl ?>/shop"><img src="<?php echo get_template_directory_uri() ?>/img/shop.svg" alt="shop panties pizza kecil"></a>
-			  <a id="say-bag" class="say-cart navbar-brand"></a>
+			  <a class="woofeature say-cart"href="<?php echo $siteurl ?>/shop"><img src="<?php echo get_template_directory_uri() ?>/img/shop.svg" alt="shop panties pizza kecil"></a>
+			  <a id="say-bag" class="woofeature say-cart navbar-brand"></a>
 			</nav>
   	</header>
 	<?php } ?>

@@ -207,4 +207,15 @@
       });
     });
   });
+  jQuery('#checkbox').click(function(){
+    if(jQuery('#checkbox')) {
+      jQuery('#checkbox').attr('value', '1');
+      jQuery("#cloff").css({"display":"none"});
+      jQuery("#clon").css({"display":"block"});
+    } else {
+      jQuery('#checkbox').attr('value', '0');
+      jQuery("#cloff").css({"display":"block"});
+      jQuery("#clon").css({"display":"none"});
+    }
+  });
   </script>

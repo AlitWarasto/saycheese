@@ -1,4 +1,8 @@
 <?php
+function wpem(){
+  wp_enqueue_media();
+}
+add_action( 'admin_enqueue_scripts', 'wpem' );
 #reg setting DB hook
 function saycheese_reg() {
   #register_setting('nama_group_setting','nama_input_nya');
@@ -11,6 +15,7 @@ function saycheese_reg() {
   register_setting('saycheese_sett','img_slice');
   register_setting('saycheese_sett','img_calzone');
   register_setting('saycheese_sett','img_phone');
+  register_setting('saycheese_sett','woofeature');
 }
 add_action('admin_init', 'saycheese_reg');
 
@@ -132,6 +137,21 @@ function saycheese_home_settings(){
           <img id="img-phone" src="<?php echo get_option('img_phone'); ?>" class="img-icon"/>
           <input type="button" value="Upload Image" class="button-primary" id="upload-img-phone"/>
           <input id="img_phone" type="hidden" name="img_phone" value="<?php echo get_option('img_phone'); ?>"/>
+        </div>
+      </div>
+      <h2>Woocommerce Feature</h2>
+      <div class="btn-wrap">
+        <div class="fg">
+          <input name="woofeature" class="form-check-input" type="checkbox" value="<?php echo get_option('woofeature'); ?>" id="checkbox"
+            <?php if (get_option('woofeature') == "1") {
+              echo "checked";
+            } else {
+              echo "";
+            }
+            ?>
+          >
+          <label id="cloff" class="form-check-label" for="checkbox"> Woocommerce Feature is <strong>Off</strong></label>
+          <label id="clon" class="form-check-label" for="checkbox" style="display: none;"> Woocommerce Feature is <strong>On</strong></label>
         </div>
       </div>
       <div class="fg">

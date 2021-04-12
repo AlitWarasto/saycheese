@@ -132,7 +132,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
               <span class="rating"><?php echo $raval; ?></span>
             </div>
             <div class="d-flex flex-row justify-content-between mt-2 mb-2">
-              <a href="<?php echo $siteurl ?>/shop"><button class="btn btn-success btn-size">Order</button></a>
+              <a href="<?php echo $siteurl ?>/shop"><button class="woofeature btn btn-success btn-size">Order</button></a>
               <a href="<?php echo $posurl; ?>"><button class="btn btn-primary btn-size">View</button></a>
             </div>
           </div>

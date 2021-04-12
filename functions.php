@@ -14,7 +14,6 @@ $themeurl = get_bloginfo('template_url');
 
 /*=== Mobile View Detection ===*/
 require get_template_directory().'/md/Mobile_Detect.php';
-include(TEMPLATEPATH.'/inc/landing-settings.php');
 
 function load_stylesheets(){
 	wp_register_style('appcss', get_template_directory_uri(). '/css/app.css', '',0.1,'all');
@@ -28,7 +27,6 @@ function load_stylesheets(){
 add_action('wp_enqueue_scripts','load_stylesheets',1);
 
 function load_javascript(){
-    //wp_enqueue_media();
     wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
     wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js','', 4.0, true);
     wp_register_script('popper', get_template_directory_uri(). '/js/popper.js','', 1.6, true);
@@ -164,3 +162,6 @@ function remove_label( $title ) {
     return $title;
 }
 add_filter( 'get_the_archive_title', 'remove_label' );
+
+## Say Cheese Settings Admin Panel ##
+include(TEMPLATEPATH.'/inc/landing-settings.php');
