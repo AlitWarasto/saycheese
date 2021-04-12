@@ -1,3 +1,12 @@
+<?php
+# jQuery and wp media hook
+function wpem(){
+  wp_enqueue_media();
+  wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
+  wp_enqueue_script('jquery351');
+}
+add_action( 'admin_enqueue_scripts', 'wpem' );
+?>
 <script type="text/javascript">
   /* Upload Btn Mixzone*/
   (function( $ ) {
@@ -207,15 +216,18 @@
       });
     });
   });
-  jQuery('#checkbox').click(function(){
-    if(jQuery('#checkbox')) {
-      jQuery('#checkbox').attr('value', '1');
-      jQuery("#cloff").css({"display":"none"});
-      jQuery("#clon").css({"display":"block"});
-    } else {
-      jQuery('#checkbox').attr('value', '0');
-      jQuery("#cloff").css({"display":"block"});
-      jQuery("#clon").css({"display":"none"});
+  /* woo feature on / off */
+  $('#checkbox input').click(function(){
+    if($(this)[0].hasAttribute("checked");){
+      /* code to do when unlocking */
+          $('#switch_status').html('Switched on.');
+    }else{
+      /* code to do when locking */
+          $('#switch_status').html('Switched off.');
     }
+    
+    /* reverse locking status */
+    $('#toggle_event_editing button').eq(0).toggleClass('locked_inactive locked_active btn-default btn-info');
+    $('#toggle_event_editing button').eq(1).toggleClass('unlocked_inactive unlocked_active btn-info btn-default');
   });
   </script>
