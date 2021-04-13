@@ -62,12 +62,13 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           ?>
         </span>
         <span class="hinfo">Info Harga Wilayah</span>
-        <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/love.SVG"></span>
+        <span id="users" class="star love"><img class="img-fluid"src="<?php echo $themeurl ?>/img/love0.SVG"></span>
         <span class="users float-right ml-2 text-muted"><?php echo $users; ?></span>
-        <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
+        <span id="star" class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
         <span class="rating"><?php echo $raval; ?></span>
       </div>
-      <div class="toast fade hide ml-1" data-autohide="false">
+      <!-- Toast Info Harga -->
+      <div id="info-harga" class="toast fade hide position-absolute col-12" data-autohide="false" style="width: 87vw;bottom: 30vh;background-color: white;z-index: 9;right: 50%;transform: translate(50%, 13%);">
         <div class="toast-header">
           <strong class="mr-auto text-primary">Harga</strong>
           <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
@@ -81,6 +82,20 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           </p>
           <p>Harga Wilayah 2 : <span class="hg">Rp. <?php echo $hw2; ?></span></p>
           <p>Harga Wilayah 3 : <span class="hg">Rp. <?php echo $hw3; ?></span></p>
+        </div>
+      </div>
+      <!-- Toast Rating Star -->
+      <div id="rating-star" class="toast fade hide position-absolute" data-autohide="false" style="width: 70vw;bottom: 30vh;background-color: white;z-index: 9;right: 50%;transform: translate(50%, 0);">
+        <div class="toast-header">
+          <strong class="mr-auto text-primary">5 star if you like it</strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body position-relative">
+          <div class="stars d-flex justify-content-center">
+            <input type="radio" id="star1" name="rating" value="1" /><input type="radio" id="star2" name="rating" value="2" /><input type="radio" id="star3" name="rating" value="3" /><input type="radio" id="star4" name="rating" value="4" /><input type="radio" id="star5" name="rating" value="5" />
+            
+            <label for="star1" aria-label="Banana">1 star</label><label for="star2">2 stars</label><label for="star3">3 stars</label><label for="star4">4 stars</label><label for="star5">5 stars</label>
+          </div>
         </div>
       </div>
       <div class="col-12 d-flex justify-content-between align-items-center mb-2" style="font-size:x-small;font-weight:bold;">

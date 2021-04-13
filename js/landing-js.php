@@ -1,16 +1,6 @@
-<?php
-# jQuery and wp media hook
-function wpem(){
-  wp_enqueue_media();
-  wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
-  wp_enqueue_script('jquery351');
-}
-add_action( 'admin_enqueue_scripts', 'wpem' );
-?>
 <script type="text/javascript">
-  /* Upload Btn Mixzone*/
   (function( $ ) {
-  'use strict';
+    /* Upload Btn Mixzone*/
     $(function() {
       $('#upload-mixzone').click(open_custom_media_window);
       function open_custom_media_window() {
@@ -32,10 +22,7 @@ add_action( 'admin_enqueue_scripts', 'wpem' );
         return false;
       }
     });
-  })( jQuery );
-  /* Upload Btn In Out*/
-  (function( $ ) {
-  'use strict';
+    /* Upload Btn In Out*/
     $(function() {
       $('#upload-inout').click(open_custom_media_window);
       function open_custom_media_window() {
@@ -57,13 +44,9 @@ add_action( 'admin_enqueue_scripts', 'wpem' );
         return false;
       }
     });
-  })( jQuery );
-  /* Upload Btn Slice*/
-  (function( $ ) {
-  'use strict';
+    /* Upload Btn Slice*/
     $(function() {
       $('#upload-slice').click(open_custom_media_window);
-
       function open_custom_media_window() {
         if (this.window === undefined) {
           this.window = wp.media({
@@ -83,10 +66,7 @@ add_action( 'admin_enqueue_scripts', 'wpem' );
         return false;
       }
     });
-  })( jQuery );
-/* Upload Btn Calzone*/
-  (function( $ ) {
-  'use strict';
+    /* Upload Btn Calzone*/
     $(function() {
       $('#upload-calzone').click(open_custom_media_window);
       function open_custom_media_window() {
@@ -108,26 +88,23 @@ add_action( 'admin_enqueue_scripts', 'wpem' );
         return false;
       }
     });
-  })( jQuery );
 
-  /* Upload Display Mixzone
-  Another Methode*/
-  jQuery(function(){
-    jQuery('#upload-img-mixzone').on("click", function(){
-      var images = wp.media({
-                    title     : "Upload Image",
-                    multiple  : false
-      }).open().on("select", function(e){
-        var uImg = images.state().get("selection").first().toJSON();
-        var sImg= uImg.url;
-        jQuery('#img-mixzone').attr('src', sImg);
-        jQuery('#img_mixzone').attr('value', sImg);
+    /* Upload Display Mixzone
+    Another Methode*/
+    $(function(){
+      $('#upload-img-mixzone').on("click", function(){
+        var images = wp.media({
+                      title     : "Upload Image",
+                      multiple  : false
+        }).open().on("select", function(e){
+          var uImg = images.state().get("selection").first().toJSON();
+          var sImg= uImg.url;
+          $('#img-mixzone').attr('src', sImg);
+          $('#img_mixzone').attr('value', sImg);
+        });
       });
     });
-  });
-  /* Upload Display In Out*/
-  (function( $ ) {
-  'use strict';
+    /* Upload Display In Out*/
     $(function() {
       $('#upload-img-inout').click(open_custom_media_window);
       function open_custom_media_window() {
@@ -149,13 +126,9 @@ add_action( 'admin_enqueue_scripts', 'wpem' );
         return false;
       }
     });
-  })( jQuery );
-  /* Upload Display Slice*/
-  (function( $ ) {
-  'use strict';
+    /* Upload Display Slice*/
     $(function() {
       $('#upload-img-slice').click(open_custom_media_window);
-
       function open_custom_media_window() {
         if (this.window === undefined) {
           this.window = wp.media({
@@ -175,10 +148,7 @@ add_action( 'admin_enqueue_scripts', 'wpem' );
         return false;
       }
     });
-  })( jQuery );
-/* Upload Display Calzone*/
-  (function( $ ) {
-  'use strict';
+    /* Upload Display Calzone*/
     $(function() {
       $('#upload-img-calzone').click(open_custom_media_window);
       function open_custom_media_window() {
@@ -200,34 +170,37 @@ add_action( 'admin_enqueue_scripts', 'wpem' );
         return false;
       }
     });
-  })( jQuery );
-  /* Upload Display Phone */
-  jQuery(function(){
-    jQuery('#upload-img-phone').on("click", function(){
-      var images = wp.media({
-                    title     : "Upload Image",
-                    multiple  : false
-      }).open().on("select", function(e){
-        var uImg = images.state().get("selection").first().toJSON();
-        var sImg= uImg.url;
-        jQuery('#img-phone').attr('src', sImg);
-        jQuery('#img_phone').attr('value', sImg);
-          //console.log(selectedImage.sizes.medium.url);
+    /* Upload Display Phone */
+    $(function(){
+      $('#upload-img-phone').on("click", function(){
+        var images = wp.media({
+                      title     : "Upload Image",
+                      multiple  : false
+        }).open().on("select", function(e){
+          var uImg = images.state().get("selection").first().toJSON();
+          var sImg= uImg.url;
+          $('#img-phone').attr('src', sImg);
+          $('#img_phone').attr('value', sImg);
+            //console.log(selectedImage.sizes.medium.url);
+        });
       });
     });
-  });
-  /* woo feature on / off */
-  $('#checkbox input').click(function(){
-    if($(this)[0].hasAttribute("checked");){
-      /* code to do when unlocking */
-          $('#switch_status').html('Switched on.');
+    /* woo feature on / off */
+    if ($('#woofeature').val()=="1") {
+      $('#checkbox').prop('checked', true);
+      $('#switch_status').html('Switched <span style="color:green;font-weight:bold;font-size:large;">ON</span>.');
     }else{
-      /* code to do when locking */
-          $('#switch_status').html('Switched off.');
-    }
-    
-    /* reverse locking status */
-    $('#toggle_event_editing button').eq(0).toggleClass('locked_inactive locked_active btn-default btn-info');
-    $('#toggle_event_editing button').eq(1).toggleClass('unlocked_inactive unlocked_active btn-info btn-default');
-  });
-  </script>
+      $('#checkbox').prop('checked', false);
+      $('#switch_status').html('Switched <span style="color:#8c8f94;font-weight:bold;font-size:large;">OFF</span>.');
+    };
+    $('#checkbox').click(function(){
+      if($(this).prop('checked')){
+        $('#switch_status').html('Switched <span style="color:green;font-weight:bold;font-size:large;">ON</span>.');
+        $('#woofeature').attr('value',"1");
+      }else{
+        $('#switch_status').html('Switched <span style="color:#8c8f94;font-weight:bold;font-size:large;">OFF</span>.');
+        $('#woofeature').attr('value',"0");
+      }
+    });
+  })( jQuery );
+</script>

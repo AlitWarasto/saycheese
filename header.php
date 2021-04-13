@@ -19,6 +19,11 @@
  			.col-1,.col-2,.col-3{max-width: 100%;}
  			.form-row{display: flex;flex-direction: column;}
  		<?php }	?>
+ 		<?php if (get_option('woofeature')=="1") { ?>
+ 			.woofeature{display: block;}
+ 		<?php } else { ?>
+ 			.woofeature{display: none;}
+ 		<?php }	?>
  		#woocommerce,.menus{
  			background-image: url("<?php echo $themeurl ?>/img/pattern.png");
  		}

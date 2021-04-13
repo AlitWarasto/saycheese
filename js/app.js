@@ -63,9 +63,28 @@ $(document).ready(function(){
       slideShadows : false,
     },
 		});
+	/*Star Click*/
+	$('#users img').click(function(){
+		var sImg0 = jturl.templateUrl +"/img/love0.SVG";
+		var sImg1 = jturl.templateUrl +"/img/love.SVG";
+		var users = parseInt($('.users').text());
+		if($(this).attr('src')== sImg0){
+			$(this).attr('src', sImg1);
+			users += 1;
+			$('.users').html(users);
+		}else{
+			$(this).attr('src', sImg0);
+			users -= 1;
+			$('.users').html(users);
+		};
+	});
 	/*Toast Click on Info Harga Wilayah*/
 	 $(".hinfo").click(function(){
-    $('.toast').toast('show');
+    $('#info-harga').toast('show');
+  });
+	 /*Toast Click on Rating Star*/
+	 $("#star").click(function(){
+    $('#rating-star').toast('show');
   });
 	/*Add margin bottom to footer as navbar height*/
 	var navheight = parseInt($('.navbar').height()) + parseInt($('.navbar').css('padding-top')) + parseInt($('.navbar').css('padding-bottom'));

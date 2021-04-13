@@ -1,6 +1,9 @@
 <?php
+/* jQuery and wp media hook */
 function wpem(){
   wp_enqueue_media();
+  wp_register_script('jquery351', get_template_directory_uri(). '/js/jquery351.js','', 3.5, true);
+  wp_enqueue_script('jquery351');
 }
 add_action( 'admin_enqueue_scripts', 'wpem' );
 #reg setting DB hook
@@ -197,10 +200,11 @@ function saycheese_home_settings(){
       <div class="btn-wrap">
         <div class="fg">
           <label class="switch">
-            <input type="checkbox" name="woofeature" id="checkbox" value="1">
+            <input type="checkbox" id="checkbox">
             <span class="slider round"></span>
+            <input id="woofeature" type="hidden" name="woofeature" value="<?php echo get_option('woofeature'); ?>"/>
           </label>
-          <div class="" id="switch_status">Switched off.</div>
+          <div id="switch_status">Switched <span>off</span>.</div>
         </div>
       </div>
       <div class="fg">
@@ -212,3 +216,4 @@ function saycheese_home_settings(){
   <?php
   include(TEMPLATEPATH.'/js/landing-js.php');
 }
+?>
