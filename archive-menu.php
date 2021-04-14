@@ -3,30 +3,6 @@
 #saycheese theme wp
 #version 1.0
 
-if(is_category()) {
-  $ptitle = $wp_query->queried_object->name;
-  $plink  = $siteurl.'/category/'.$wp_query->queried_object->slug .'/';
-} elseif(is_tag()) {
-  $ptitle = ucwords($wp_query->queried_object->name);
-  $plink  = $siteurl.'/tag/'.$wp_query->queried_object->slug .'/';
-} elseif(is_day()) {
-  $ptitle = date('F', mktime(0,0,0,$wp_query->query_vars['monthnum'],1,$wp_query->query_vars['year'])).' '.$wp_query->query_vars['day'].', '.$wp_query->query_vars['year'].' Archive';
-  $plink  = $siteurl.'/'.$wp_query->query_vars['year'].'/'.$wp_query->query_vars['monthnum'].'/'.$wp_query->query_vars['day'].'/';
-} elseif(is_month()) {
-  $ptitle = date('F', mktime(0,0,0,$wp_query->query_vars['monthnum'],1,$wp_query->query_vars['year'])).', '.$wp_query->query_vars['year'].' Archive';
-  $plink  = $siteurl.'/'.$wp_query->query_vars['year'].'/'.$wp_query->query_vars['monthnum'].'/';
-} elseif(is_year()) {
-  $ptitle = $wp_query->query_vars['year'].' Archive';
-  $plink  = $siteurl.'/'.$wp_query->query_vars['year'].'/';
-} elseif(is_author()) {
-  $authname = $wp_query->queried_object->data->display_name;
-  $ptitle   = $wp_query->queried_object->data->display_name.'&#8217;s Articles';
-  $plink    = $siteurl.'/author/'.$wp_query->query_vars['author_name'].'/';
-} else {
-  $ptitle = get_the_archive_title();
-  $plink  = '';
-}
-
 include(TEMPLATEPATH.'/header.php');
 
 $detect = new Mobile_Detect; #mobile detect#
@@ -106,7 +82,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
           	$poslug  = $post->post_name;
             $arcurl  = get_post_type_archive_link( 'menu' );
             $posurl  = $arcurl.$poslug.'/';
-            #featured image
+            ### featured image ###
             if ( has_post_thumbnail()) { ?>
               <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid' )); ?></a>
             <?php
@@ -117,6 +93,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
                 <h2 class="ww overflow-hidden" ><?php the_title(); ?></h2>
               </a>
             </div>
+            <!-- Harga -->
             <div class="hg">
               <span>Rp.</span>
               <span>
@@ -128,11 +105,13 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
                 }
                 ?>
               </span>
+              <!-- Star Rating -->
               <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
               <span class="rating"><?php echo $raval; ?></span>
             </div>
+            <!-- Button Feature -->
             <div class="d-flex flex-row justify-content-between mt-2 mb-2">
-              <a href="<?php echo $siteurl ?>/shop"><button class="woofeature btn btn-success btn-size">Order</button></a>
+              <a href="<?php echo $siteurl.'/product/'.$poslug ?>"><button class="woofeature btn btn-success btn-size">Order</button></a>
               <a href="<?php echo $posurl; ?>"><button class="btn btn-primary btn-size">View</button></a>
             </div>
           </div>
@@ -142,6 +121,38 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       endif;
        ?>
   </div>
+  <?php
+  ######## PAGINATION ########
+  if(is_archive('menu')) {
+    $ptitle = get_the_archive_title();
+    $plink  = $siteurl.'/menu/';
+  } else {
+    $ptitle = get_the_archive_title();
+    $plink  = '';
+  }
+  if($wp_query->found_posts <= $wp_query->query_vars['posts_per_page']) {} else {
+    $maxp = $wp_query->max_num_pages;
+    if($paged == 0 || $paged < 1) {
+      $prelink = '';
+      $nexlink = '<a href="'.$plink.'page/'.($paged+2).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
+    } elseif($paged == $maxp) {
+      if($paged == 2) {
+        $prelink = '<a href="'.$plink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+      } else {
+        $prelink = '<a href="'.$plink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+      }
+      $nexlink = '';
+    } else {
+      if($paged == 2) {
+        $prelink = '<a href="'.$plink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+      } else {
+        $prelink = '<a href="'.$plink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+      }
+      $nexlink = '<a href="'.$plink.'page/'.($paged+1).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
+    }
+    echo '<div class="d-flex justify-content-end mt-3">'.$prelink.$nexlink.'</div>';
+  }
+  ?>
   <?php ########### BREADCRUMB ########## ?>
   <hr>
   <div class="bc text-body mb-2">

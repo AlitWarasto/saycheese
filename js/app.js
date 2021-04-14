@@ -78,12 +78,16 @@ $(document).ready(function(){
 			$('.users').html(users);
 		};
 	});
-	/*Toast Click on Info Harga Wilayah*/
-	 $(".hinfo").click(function(){
+	/* Toast Menus Header */
+ 	$("#hmenus").click(function(){
+  	$('#tmenus').toast('show');
+  });
+ 	/*Toast Click on Info Harga Wilayah*/
+ 	$(".hinfo").click(function(){
     $('#info-harga').toast('show');
   });
-	 /*Toast Click on Rating Star*/
-	 $("#star").click(function(){
+ 	/*Toast Click on Rating Star*/
+ 	$("#star").click(function(){
     $('#rating-star').toast('show');
   });
 	/*Add margin bottom to footer as navbar height*/

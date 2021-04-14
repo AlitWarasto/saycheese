@@ -217,6 +217,8 @@ a{
 /*MENU PIZZA STYLE*/
 .cw{
   width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
   padding: 0.5rem;
   position: absolute;
   z-index: 2;
@@ -300,7 +302,7 @@ a{
   color: #495057;
 }
 /*SINGLE MENU STYLE*/
-.toast-body a{
+.toast-body .tAng{
 	position: absolute;
   background-color: darkgray;
   color: rgb(0 0 0 / 50%);

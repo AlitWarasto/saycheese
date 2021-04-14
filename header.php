@@ -61,9 +61,30 @@
 	  	<nav class="navbar fixed-bottom navbar-light bg-light">
 	  		<div class="bk text-muted" type="button" onclick="history.back();"><span>&lsaquo;</span></div>
 			  <a class="say-cart" href="<?php echo $siteurl ?>"><img height="auto" src="<?php echo get_template_directory_uri() ?>/img/home.svg" alt="logo panties pizza terbaru kecil bulat"></a>
-			  <a class="say-cart"href="<?php echo $siteurl ?>/menu"><img src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil"></a>
-			  <a class="woofeature say-cart"href="<?php echo $siteurl ?>/shop"><img src="<?php echo get_template_directory_uri() ?>/img/shop.svg" alt="shop panties pizza kecil"></a>
+			  <div id="hmenus" class="say-cart"><img src="<?php echo get_template_directory_uri() ?>/img/menus.SVG" alt="panties pizza menus"></div>
+			  <a class="woofeature say-cart"href="<?php echo $siteurl ?>/shop"><img src="<?php echo get_template_directory_uri() ?>/img/shop.svg" alt="shop panties pizza"></a>
 			  <a id="say-bag" class="woofeature say-cart navbar-brand"></a>
+				<!-- Toast Menus -->
+	      <div id="tmenus" class="toast fade hide position-absolute" data-autohide="false" style="width: 85vw;bottom: 1rem;background-color: white;z-index: 9;right: 50%;transform: translate(50%, 0);box-shadow: 2px 5px 59px 25px rgb(0 0 0 / 39%);">
+	        <div class="toast-header">
+	          <strong class="mr-auto text-primary">Pick Our Menus</strong>
+	          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+	        </div>
+	        <div class="toast-body">
+	        	<div class="d-flex justify-content-center">
+							<a class="col-3" href="<?php echo $siteurl ?>/menu"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza kecil"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/mix-zone-pizza-satu-pizza-dengan-dua-rasa"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza mixzone"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/lets-upgrade-your-mood-with-in-and-out-topping"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza in and out"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/pizza-slice"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/pizza.SVG" alt="panties pizza slice"></a>
+	          </div>
+	          <hr>
+	          <div class="d-flex justify-content-center">
+							<a class="col-3" href="<?php echo $siteurl ?>/beverage">Drinks</a>
+							<a class="col-3" href="<?php echo $siteurl ?>/pasta">Pasta</a>
+							<a class="col-3" href="<?php echo $siteurl ?>/rice">Rice</a>
+	          </div>
+	        </div>
+	      </div>
 			</nav>
   	</header>
 	<?php } ?>

@@ -17,6 +17,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 <div id="single-page" class="container pt-3">
   <div class="row">
     <?php while (have_posts()) : the_post();
+      $poslug  = $post->post_name;
       /*========== HARGA PERWILAYAH ============*/
       $hw1= get_post_meta($post->ID,'hargawil1',TRUE);
       $hw2= get_post_meta($post->ID,'hargawil2',TRUE);
@@ -68,7 +69,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         <span class="rating"><?php echo $raval; ?></span>
       </div>
       <!-- Toast Info Harga -->
-      <div id="info-harga" class="toast fade hide position-absolute col-12" data-autohide="false" style="width: 87vw;bottom: 30vh;background-color: white;z-index: 9;right: 50%;transform: translate(50%, 13%);">
+      <div id="info-harga" class="toast fade hide position-absolute col-12" data-autohide="false" style="width: 87vw;bottom: 30vh;background-color: white;z-index: 9;right: 50%;transform: translate(50%, 13%);box-shadow: 2px 5px 59px 25px rgb(0 0 0 / 39%);">
         <div class="toast-header">
           <strong class="mr-auto text-primary">Harga</strong>
           <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
@@ -76,7 +77,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         <div class="toast-body position-relative">
           <p>Harga Wilayah 1 : 
             <span class="hg">Rp. <?php echo $hw1; ?></span>
-            <a href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/">
+            <a class="tAng" href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/">
               <span>Info Wilayah</span>
             </a>
           </p>
@@ -85,7 +86,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         </div>
       </div>
       <!-- Toast Rating Star -->
-      <div id="rating-star" class="toast fade hide position-absolute" data-autohide="false" style="width: 70vw;bottom: 30vh;background-color: white;z-index: 9;right: 50%;transform: translate(50%, 0);">
+      <div id="rating-star" class="toast fade hide position-absolute" data-autohide="false" style="width: 70vw;bottom: 30vh;background-color: white;z-index: 9;right: 50%;transform: translate(50%, 0);box-shadow: 2px 5px 59px 25px rgb(0 0 0 / 39%);">
         <div class="toast-header">
           <strong class="mr-auto text-primary">5 star if you like it</strong>
           <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
@@ -117,7 +118,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             $i++;
           }?>
         </span>
-        <a href=""><button type="button" class="woofeature btn btn-success btn-size">Order Now</button></a>
+        <a href="<?php echo $siteurl.'/product/'.$poslug ?>"><button type="button" class="woofeature btn btn-success btn-size">Order Now</button></a>
       </div>
       <?php
     endwhile;
