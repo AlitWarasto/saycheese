@@ -56,7 +56,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         <span>
           <?php
           if ($hw1 != ""){
-            echo number_format($hw1,0);
+            echo number_format($hw1,0,',','.');
             } else {
             echo "-";
             }
@@ -76,13 +76,13 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         </div>
         <div class="toast-body position-relative">
           <p>Harga Wilayah 1 : 
-            <span class="hg">Rp. <?php echo $hw1; ?></span>
+            <span class="hg">Rp. <?php echo number_format($hw1,0,',','.'); ?></span>
             <a class="tAng" href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/">
               <span>Info Wilayah</span>
             </a>
           </p>
-          <p>Harga Wilayah 2 : <span class="hg">Rp. <?php echo $hw2; ?></span></p>
-          <p>Harga Wilayah 3 : <span class="hg">Rp. <?php echo $hw3; ?></span></p>
+          <p>Harga Wilayah 2 : <span class="hg">Rp. <?php echo number_format($hw2,0,',','.'); ?></span></p>
+          <p>Harga Wilayah 3 : <span class="hg">Rp. <?php echo number_format($hw3,0,',','.'); ?></span></p>
         </div>
       </div>
       <!-- Toast Rating Star -->

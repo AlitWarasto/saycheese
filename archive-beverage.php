@@ -98,7 +98,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
               <span>
                 <?php
                 if ($hw1 != ""){
-                echo number_format($hw1,0);
+                echo number_format($hw1,0,',','.');
                 } else {
                 echo "-";
                 }
