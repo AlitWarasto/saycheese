@@ -433,13 +433,17 @@ footer li{
   background-color: #ad0006;
 }
 /*== MISC ==*/
+.bc ul li{
+	list-style: none;
+	display: inline;
+}
 .bc span{
   display: inline-block;
   margin-left: 0.3em;
-  font-size: 1.1rem;
 }
-.bc a:nth-last-child(1){
+.bc li:nth-last-child(1) a{
   color: #8e8e8e;
+  font-weight: normal;
 }
 .bk{
   position: relative;

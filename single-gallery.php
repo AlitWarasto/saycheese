@@ -145,18 +145,29 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     endwhile;
     ?>
   </div>
+  <hr>
   <?php
   ########### BREADCRUMB ##########
-  /* CATEGORY */
-  $cats    = get_the_category();
-  $catname = $cats[0]->name;
-  $catslug = $cats[0]->slug;
+  //Get post type    
+  $post_type_obj = get_post_type_object( get_post_type() );
+  //Get post type's label
+  $artitle = apply_filters('post_type_archive_title', $post_type_obj->labels->name );        
+  $archive_title = apply_filters('post_type_archive_title', $post_type_obj->labels->all_items);
   ?>
-  <hr>
   <div class="bc text-body mb-2">
-    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
-    <a href="<?php echo $siteurl.'/category/'.$catslug.'/' ?>" rel="nofollow"><?php echo $catname; ?></a><span>&rsaquo;</span>
-    <a rel="nofollow"><?php the_title();?></a>
+    <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
+      <li><a href="<?php echo $siteurl; ?>" rel="nofollow"><span>Home</span> &rsaquo;</a></li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('gallery') ?>">
+         <span property="name"><?php echo $artitle; ?></span> &rsaquo;</a>
+         <meta property="position" content="1">
+      </li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="<?php echo $archurl;?>">
+        <span property="name"><?php the_title();?></span></a>
+        <meta property="position" content="2">
+      </li>
+    </ul>
   </div>
 </div>
 
