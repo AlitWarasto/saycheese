@@ -122,7 +122,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Mixzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="<?php echo get_option('btn_mixzone'); ?>" loading="lazy" alt="Test Alt Text">
+                <a href="<?php echo $siteurl; ?>/mix-zone-pizza-satu-pizza-dengan-dua-rasa/"><img src="<?php echo get_option('btn_mixzone'); ?>" loading="lazy" alt=""></a>
               </div>
             </div>
         </div>
@@ -130,7 +130,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>In & Out</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="<?php echo get_option('btn_inout'); ?>" loading="lazy" alt="Test Alt Text">
+                <a href="<?php echo $siteurl; ?>/lets-upgrade-your-mood-with-in-and-out-topping/"><img src="<?php echo get_option('btn_inout'); ?>" loading="lazy" alt=""></a>
               </div>
             </div>
         </div>
@@ -138,7 +138,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Pizza Slice</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <img src="<?php echo get_option('btn_slice'); ?>" loading="lazy" alt="Test Alt Text">
+                <a href="<?php echo $siteurl; ?>/pizza-slice/"><img src="<?php echo get_option('btn_slice'); ?>" loading="lazy" alt=""></a>
               </div>
             </div>
         </div>
@@ -146,7 +146,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             <h5>Calzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <a href="<?php echo $siteurl; ?>/menu"><img src="<?php echo get_option('btn_calzone'); ?>" loading="lazy" alt="Test Alt Text"></a>
+                <a href="<?php echo $siteurl; ?>/menu"><img src="<?php echo get_option('btn_calzone'); ?>" loading="lazy" alt=""></a>
               </div>
             </div>
         </div>
@@ -156,19 +156,19 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <section id="section4">
   	<div>
 	  	<img src="<?php echo get_option('img_mixzone'); ?>" loading="lazy">
-	  	<a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+	  	<a href="<?php echo $siteurl; ?>/mix-zone-pizza-satu-pizza-dengan-dua-rasa/"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
   		<img src="<?php echo get_option('img_inout'); ?>" loading="lazy">
-	  	<a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+	  	<a href="<?php echo $siteurl; ?>/lets-upgrade-your-mood-with-in-and-out-topping/"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
 	  	<img src="<?php echo get_option('img_slice'); ?>" loading="lazy">
-		  <a href="#"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+		  <a href="<?php echo $siteurl; ?>/pizza-slice/"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
   		<img src="<?php echo get_option('img_calzone'); ?>" loading="lazy">
-		  <a href="<?php echo $siteurl; ?>/menu"><button class="btn btn-danger shadow">Lihat Menu</button></a>
+		  <a href="<?php echo $siteurl; ?>/menu/"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   </section>
   <section id="section5" class="container-fluid pb-5">

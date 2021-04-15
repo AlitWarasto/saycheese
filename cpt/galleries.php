@@ -35,7 +35,7 @@ register_post_type(
   'labels'        => $gall,
   'public'        => true,
   'has_archive'   => true,
-  'supports'      => array('title', 'editor'),
+  'supports'      => array('title', 'editor', 'thumbnail'),
   'menu_position' => 5,
   'taxonomies'    => array( 'category' ),
   'menu_icon' 	  => get_template_directory_uri() . '/img/admin/g.png'

@@ -18,6 +18,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="row">
     <?php while (have_posts()) : the_post();
       $poslug  = $post->post_name;
+
       /*========== HARGA PERWILAYAH ============*/
       $hw1= get_post_meta($post->ID,'hargawil1',TRUE);
       $hw2= get_post_meta($post->ID,'hargawil2',TRUE);
@@ -46,22 +47,40 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       ?>
       <h1 class="col-12 text-center"><?php the_title(); ?></h1>
       <hr>
-      <?php #featured image
-      if ( has_post_thumbnail()) { ?>
-        <a href="#"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid text-center' )); ?></a>
-      <?php } ?>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <?php # featured image galleries #
+          $args = array(
+            'numberposts' => -1,
+            'orderby' => 'date',
+            'post_mime_type' => 'image',
+            'post_parent' => $post->ID,
+            'post_status' => null,
+            'post_type' => 'attachment',
+          );
+          $atts = get_children($args);
+          ### IMAGE ###
+          $ai = 1;
+          shuffle($atts);
+          foreach($atts as $att) {
+            if($ai > 3) {
+              break;
+            } else {
+              $atitle = ucwords(str_replace(array('-','_','+'),' ',$att->post_title));
+              $aturl  = $posurl.$att->post_name.'/';
+              $mimg   = wp_get_attachment_image_src($att->ID,'large');
+              $murl   = $mimg[0];
+              echo'<div class="swiper-slide"><a href="'.$aturl.'"><img class="img-fluid" src="'.$murl.'" alt="'.$atitle.'"></a></div>';
+            }
+            $ai++;
+          }?>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
       <div class="col-12 mt-2"><?php the_content(); ?></div>
       <div class="col-12 hg mb-2">
         <span>Rp.</span>
-        <span>
-          <?php
-          if ($hw1 != ""){
-            echo number_format($hw1,0,',','.');
-            } else {
-            echo "-";
-            }
-          ?>
-        </span>
+        <span><?php if ($hw1){echo number_format($hw1,0,',','.');} else {echo "-";} ?></span>
         <span class="hinfo">Info Harga Wilayah</span>
         <span id="users" class="star love"><img class="img-fluid"src="<?php echo $themeurl ?>/img/love0.SVG"></span>
         <span class="users float-right ml-2 text-muted"><?php echo $users; ?></span>
@@ -76,13 +95,13 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         </div>
         <div class="toast-body position-relative">
           <p>Harga Wilayah 1 : 
-            <span class="hg">Rp. <?php echo number_format($hw1,0,',','.'); ?></span>
+            <span class="hg">Rp. <?php if ($hw1){echo number_format($hw1,0,',','.');} else {echo "-";} ?></span>
             <a class="tAng" href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/">
               <span>Info Wilayah</span>
             </a>
           </p>
-          <p>Harga Wilayah 2 : <span class="hg">Rp. <?php echo number_format($hw2,0,',','.'); ?></span></p>
-          <p>Harga Wilayah 3 : <span class="hg">Rp. <?php echo number_format($hw3,0,',','.'); ?></span></p>
+          <p>Harga Wilayah 2 : <span class="hg">Rp. <?php if ($hw1){echo number_format($hw2,0,',','.');} else {echo "-";} ?></span></p>
+          <p>Harga Wilayah 3 : <span class="hg">Rp. <?php if ($hw1){echo number_format($hw3,0,',','.');} else {echo "-";} ?></span></p>
         </div>
       </div>
       <!-- Toast Rating Star -->
@@ -121,16 +140,18 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         <a href="<?php echo $siteurl.'/product/'.$poslug ?>"><button type="button" class="woofeature btn btn-success btn-size">Order Now</button></a>
       </div>
       <?php
+      include(TEMPLATEPATH.'/inc/schema.php');
     endwhile;
     ?>
-
   </div>
   <?php
   ########### BREADCRUMB ##########
-  /* CATEGORY */
+  $archurl = get_post_type_archive_link('menu').$poslug;
   $cats    = get_the_category();
   $catname = $cats[0]->name;
   $catslug = $cats[0]->slug;
+  $aTit    = the_archive_title('menu');
+  print_r($aTit);
   ?>
   <hr>
   <div class="bc text-body mb-2">
@@ -138,8 +159,19 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     <a href="<?php echo $siteurl.'/category/'.$catslug.'/' ?>" rel="nofollow"><?php echo $catname; ?></a><span>&rsaquo;</span>
     <a rel="nofollow"><?php the_title();?></a>
   </div>
+    <ol vocab="https://schema.org/" typeof="BreadcrumbList">
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('menu') ?>">
+         <span property="name">Menu</span></a>
+         <meta property="position" content="1">
+      </li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="<?php echo $archurl;?>">
+        <span property="name"><?php the_title();?></span></a>
+        <meta property="position" content="2">
+      </li>
+    </ol>
 </div>
-
 <?php
 get_footer();
 } else {

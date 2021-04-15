@@ -3,6 +3,28 @@
 #saycheese theme wp
 #version 1.0
 
+$atitle = ucwords(str_replace(array('-','_','+'),' ',$post->post_title));
+$aslug  = $post->post_name;
+$date   = date('l, F dS Y H:i:s A',strtotime($post->post_date));
+$parid  = $post->post_parent;
+/* PARENT */
+$par    = get_post($parid);
+$title  = $par->post_title;
+$poslug = $par->post_name;
+$posurl = $siteurl.'/'.$poslug.'/';
+$aurl   = $posurl.$aslug.'/';
+
+/* ATTACHMENTS */
+$args = array(
+  'numberposts' => -1,
+  'order' => 'ASC',
+  'post_mime_type' => 'image',
+  'post_parent' => $parid,
+  'post_status' => null,
+  'post_type' => 'attachment',
+);
+$atts = get_children($args);
+
 include(TEMPLATEPATH.'/header.php');
 
 $detect = new Mobile_Detect; #mobile detect
@@ -13,21 +35,38 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="lo">Loading..</div>
 </div>
 <div id="image">
-  <?php
-  while (have_posts()) : the_post();?>
-    <h1 class="col-12 pt-2 text-center">The image(s) of <?php the_title(); ?></h1>
+  <div class="mb-2">
     <?php
-    $mfi = kdmfi_get_featured_image_id('mfi');
-    $imfi = wp_get_attachment_image_src($mfi, 'large');
-    ?>
-    <div class="swiper-container mb-2">
-      <div class="swiper-wrapper">
-        <img src="<?php echo $imfi[0]; ?>" alt="<?php the_title(); ?>" class="img-fluid mb-2"/>
+    while (have_posts()) : the_post();?>
+      <h1 class="col-12 pt-2 text-center"><?php echo $atitle; ?></h1>
+      <?php
+      $limg = wp_get_attachment_image_src($post->ID,'large');
+      $lurl = $limg[0];
+      $lw   = $limg[1];
+      $lh   = $limg[2];
+      $lalt = $atitle.' '.$title;
+      ?>
+      <img src="<?php echo $lurl; ?>" title="<?php echo $atitle; ?>" alt="<?php echo $lalt; ?>" class="img-fluid mb-2"/>
+    <?php endwhile; ?>
+    </div>
+    <hr>
+    <div class="container">
+      <div class="d-flex row">
+        <h2 class="col-12 h4 mb-3">Pick an Image</h2>
+        <?php
+        while (have_posts()) : the_post();
+          foreach($atts as $att) {
+            $atitle = ucwords(str_replace(array('-','_','+'),' ',$att->post_title));
+            $aturl  = $posurl.$att->post_name.'/';
+            $malt   = $atitle.' '.$title.' '.$katname;
+            $mimg   = wp_get_attachment_image_src($att->ID,'thumbnail');
+            $murl   = $mimg[0];
+            echo '<a class="col-4 mb-2" href="'.$aturl.'"><img class="img-fluid" src="'.$murl.'" alt="'.$malt.'" /></a>';
+          }
+        endwhile;
+        ?>
       </div>
     </div>
-  <?php
-  endwhile;
-  ?>
 </div>
 <?php
 get_footer();

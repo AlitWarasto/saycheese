@@ -35,7 +35,7 @@ register_post_type(
           'labels'        => $menus,
           'public'        => true,
           'has_archive'   => true,
-          'supports'      => array('title', 'editor', 'thumbnail', 'categories'),
+          'supports'      => array('title', 'editor', 'thumbnail'),
           'menu_icon' 	  => get_template_directory_uri() . '/img/admin/btn-menu.png',
           'menu_position' => 5,
           'taxonomies'    => array( 'category' ),

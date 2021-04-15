@@ -32,6 +32,9 @@ $(document).ready(function(){
 	    delay: 2500,
 	    disableOnInteraction: true,
 	  },
+	  pagination: {
+      el: '.swiper-pagination',
+    },
 	});
 	/*Initialize Swiper Social Feed*/
 	var swiperbtm = new Swiper('.swiper-btm', {
@@ -89,6 +92,11 @@ $(document).ready(function(){
  	/*Toast Click on Rating Star*/
  	$("#star").click(function(){
     $('#rating-star').toast('show');
+  });
+  $(window).click(function(){
+  	$('#tmenus').toast('hide');
+    $('#rating-star').toast('hide');
+  	$('#info-harga').toast('hide');
   });
 	/*Add margin bottom to footer as navbar height*/
 	var navheight = parseInt($('.navbar').height()) + parseInt($('.navbar').css('padding-top')) + parseInt($('.navbar').css('padding-bottom'));

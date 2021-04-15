@@ -80,6 +80,31 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       endif;
        ?>
   </div>
+  <?php
+  ######## PAGINATION ########
+  if($wp_query->found_posts <= $wp_query->query_vars['posts_per_page']) {} else {
+    $maxp = $wp_query->max_num_pages;
+    if($paged == 0 || $paged < 1) {
+      $prelink = '';
+      $nexlink = '<a href="'.$plink.'page/'.($paged+2).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
+    } elseif($paged == $maxp) {
+      if($paged == 2) {
+        $prelink = '<a href="'.$plink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+      } else {
+        $prelink = '<a href="'.$plink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+      }
+      $nexlink = '';
+    } else {
+      if($paged == 2) {
+        $prelink = '<a href="'.$plink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+      } else {
+        $prelink = '<a href="'.$plink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+      }
+      $nexlink = '<a href="'.$plink.'page/'.($paged+1).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
+    }
+    echo '<div class="d-flex justify-content-end mt-3">'.$prelink.$nexlink.'</div>';
+  }
+  ?>
   <?php ########### BREADCRUMB ########## ?>
   <hr>
   <div class="bc text-body mb-2">
