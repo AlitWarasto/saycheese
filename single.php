@@ -16,14 +16,16 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 </div>
 <div id="single-page" class="container pt-3">
   <div class="row">
-    <?php while (have_posts()) : the_post();?>
+    <?php
+    while (have_posts()) : the_post();
+    ?>
       <h1 class="col text-center"><?php the_title(); ?></h1>
       <hr>
       <?php #featured image
       if ( has_post_thumbnail()) { ?>
         <a href="#"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid text-center' )); ?></a>
       <?php } ?>
-      <div class="col mt-2"><?php the_content(); ?></div>
+      <div class="col-12 mt-2"><?php the_content(); ?></div>
       <div class="col-12 d-flex flex-row justify-content-between mb-2">
         <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>">
           <div style="font-size:x-small;color: #8e8e8e;">Publised <?php the_time('F j, Y') ?></div>
@@ -58,12 +60,24 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   $cats    = get_the_category();
   $catname = $cats[0]->name;
   $catslug = $cats[0]->slug;
+  global $wp;
+  $cPostUrl = home_url(add_query_arg(array(), $wp->request));
   ?>
   <hr>
   <div class="bc text-body mb-2">
-    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
-    <a href="<?php echo $siteurl.'/category/'.$catslug.'/' ?>" rel="nofollow"><?php echo $catname; ?></a><span>&rsaquo;</span>
-    <a rel="nofollow"><?php the_title();?></a>
+    <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
+      <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="<?php echo $siteurl.'/category/'.$catslug.'/' ?>">
+         <span property="name"><?php echo $catname; ?></span> &rsaquo;</a>
+         <meta property="position" content="1">
+      </li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="<?php echo $cPostUrl; ?>">
+        <span property="name"><?php the_title();?></span></a>
+        <meta property="position" content="2">
+      </li>
+    </ul>
   </div>
 </div>
 <?php

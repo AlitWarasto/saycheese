@@ -44,7 +44,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     </div>
   </div>
 </section>
-<div id="archive" class="container pt-3 menus">
+<div id="archive" class="container menus pt-3 pb-1">
   <div class="row">
     <?php
     the_archive_title( '<h1 class="col-12 text-center">', '</h1>' );
@@ -152,9 +152,15 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   ?>
   <?php ########### BREADCRUMB ########## ?>
   <hr>
-  <div class="bc text-body mb-2">
-    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
-    <a rel="nofollow"><?php echo $ptitle.$pnum;?></a>
+  <div class="bc text-body">
+    <ul class="pl-0 mb-2" vocab="https://schema.org/" typeof="BreadcrumbList">
+      <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('menu') ?>">
+        <span property="name"><?php the_archive_title();?></span></a>
+        <meta property="position" content="1">
+      </li>
+    </ul>
   </div>
 </div>
 <?php

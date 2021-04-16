@@ -18,6 +18,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="row">
     <?php while (have_posts()) : the_post();
       $poslug  = $post->post_name;
+      $posurl  = $siteurl.'/'.$poslug.'/';
 
       /*========== HARGA PERWILAYAH ============*/
       $hw1= get_post_meta($post->ID,'hargawil1',TRUE);
@@ -150,12 +151,13 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   //Get post type    
   $post_type_obj = get_post_type_object( get_post_type() );
   //Get post type's label
-  $artitle = apply_filters('post_type_archive_title', $post_type_obj->labels->name );        
+  $artitle       = apply_filters('post_type_archive_title', $post_type_obj->labels->name );        
   $archive_title = apply_filters('post_type_archive_title', $post_type_obj->labels->all_items);
+  $archurl       = get_post_type_archive_link('menu').$poslug;
   ?>
   <div class="bc text-body mb-2">
     <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <li><a href="<?php echo $siteurl; ?>" rel="nofollow"><span>Home</span> &rsaquo;</a></li>
+      <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
       <li property="itemListElement" typeof="ListItem">
         <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('menu') ?>">
          <span property="name"><?php echo $artitle; ?></span> &rsaquo;</a>

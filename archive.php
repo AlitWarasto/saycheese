@@ -42,7 +42,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   <div class="spinner-border text-warning"></div>
   <div class="lo">Loading..</div>
 </div>
-<div id="archive" class="container pt-3">
+<div id="archive" class="container pt-3 pb-1">
   <div class="row">
     <h1 class="col-12 text-center"><?php echo $ptitle.$pnum; ?></h1>
     <hr>
@@ -105,11 +105,21 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     echo '<div class="d-flex justify-content-end mt-3">'.$prelink.$nexlink.'</div>';
   }
   ?>
-  <?php ########### BREADCRUMB ########## ?>
+  <?php
+  ########### BREADCRUMB ##########
+  global $wp;
+  $cPostUrl = home_url(add_query_arg(array(), $wp->request));
+  ?>
   <hr>
-  <div class="bc text-body mb-2">
-    <a href="<?php echo $siteurl; ?>" rel="nofollow">Home</a><span>&rsaquo;</span>
-    <a rel="nofollow"><?php echo $ptitle.$pnum;?></a>
+  <div class="bc text-body">
+    <ul class="pl-0 mb-2" vocab="https://schema.org/" typeof="BreadcrumbList">
+      <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="<?php echo $cPostUrl?>">
+        <span property="name"><?php the_archive_title();?></span></a>
+        <meta property="position" content="1">
+      </li>
+    </ul>
   </div>
 </div>
 <?php

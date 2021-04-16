@@ -153,10 +153,11 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
   //Get post type's label
   $artitle = apply_filters('post_type_archive_title', $post_type_obj->labels->name );        
   $archive_title = apply_filters('post_type_archive_title', $post_type_obj->labels->all_items);
+  $archurl       = get_post_type_archive_link('beverage').$poslug;
   ?>
   <div class="bc text-body mb-2">
     <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <li><a href="<?php echo $siteurl; ?>" rel="nofollow"><span>Home</span> &rsaquo;</a></li>
+      <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
       <li property="itemListElement" typeof="ListItem">
         <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('beverage') ?>">
          <span property="name"><?php echo $artitle; ?></span> &rsaquo;</a>
