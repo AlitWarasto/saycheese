@@ -80,6 +80,17 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     # Current Post
     global $wp;
     $cPostUrl = home_url(add_query_arg(array(), $wp->request));
+    $str1 = rtrim($cPostUrl,"/");
+    $str2 = strrpos($str1, "/");
+    $str3 = substr($str1, 0,$str2);
+    $str4 = strrpos($str3,"/");
+    $str5 = substr($str3, 0,$str4);
+    echo $str5 . "/<br>";
+    $post_data = get_post($post->post_parent);
+    $parent_slug = $post_data->post_name;
+    $anc = get_post_ancestors($parentId);
+    $ancs = get_ancestors($parentId);
+    print_r($ancs);
     ?>
     <hr>
     <div class="bc text-body mb-2">
