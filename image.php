@@ -80,31 +80,32 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     # Current Post
     global $wp;
     $cPostUrl = home_url(add_query_arg(array(), $wp->request));
-    $str1 = rtrim($cPostUrl,"/");
-    $str2 = strrpos($str1, "/");
-    $str3 = substr($str1, 0,$str2);
-    $str4 = strrpos($str3,"/");
-    $str5 = substr($str3, 0,$str4);
-    echo $str5 . "/<br>";
+    # Archive Post
     $post_data = get_post($post->post_parent);
     $parent_slug = $post_data->post_name;
-    $anc = get_post_ancestors($parentId);
-    $ancs = get_ancestors($parentId);
-    print_r($ancs);
+    $aParent = rtrim($pParent,$parent_slug.'/');//archive parent url
+    $str6 = strrpos($aParent, "/");
+    $str7 = $str6 + 1 ;
+    $aPTitle = ucwords(str_replace("-"," ",substr($aParent, $str7)));//archive parent title
     ?>
     <hr>
     <div class="bc text-body mb-2">
       <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
         <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
         <li property="itemListElement" typeof="ListItem">
+          <a property="item" typeof="WebPage" href="<?php echo $aParent."/" ?>">
+          <span property="name"><?php echo $aPTitle; ?></span> &rsaquo;</a>
+          <meta property="position" content="1">
+        </li>
+        <li property="itemListElement" typeof="ListItem">
           <a property="item" typeof="WebPage" href="<?php echo $pParent ?>">
           <span property="name"><?php echo $title; ?></span> &rsaquo;</a>
-          <meta property="position" content="1">
+          <meta property="position" content="2">
         </li>
         <li property="itemListElement" typeof="ListItem">
           <a property="item" typeof="WebPage" href="<?php echo $cPostUrl; ?>">
           <span property="name"><?php the_title();?></span></a>
-          <meta property="position" content="2">
+          <meta property="position" content="3">
         </li>
       </ul>
     </div>

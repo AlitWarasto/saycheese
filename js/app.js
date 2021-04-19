@@ -81,7 +81,11 @@ $(document).ready(function(){
 			$('.users').html(users);
 		};
 	});
-	/* Toast Menus Header */
+	/* Toast Home Menu Header */
+ 	$("#hhome").click(function(){
+  	$('#thome').toast('show');
+  });
+  /* Toast Menus Header */
  	$("#hmenus").click(function(){
   	$('#tmenus').toast('show');
   });
@@ -95,6 +99,7 @@ $(document).ready(function(){
   });
   $(window).click(function(){
   	$('#tmenus').toast('hide');
+  	$('#home').toast('hide');
     $('#rating-star').toast('hide');
   	$('#info-harga').toast('hide');
   });

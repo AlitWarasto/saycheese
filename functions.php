@@ -16,13 +16,18 @@ $themeurl = get_bloginfo('template_url');
 require get_template_directory().'/md/Mobile_Detect.php';
 
 function load_stylesheets(){
-	wp_register_style('appcss', get_template_directory_uri(). '/css/app.css', '',0.1,'all');
 	wp_register_style('bootstrap', get_template_directory_uri(). '/css/bootstrap.min.css', '',4.0,'all');
 	wp_register_style('swiper', get_template_directory_uri(). '/css/swiper-bundle.min.css', '',3.0,'all');
-    /**/
 	wp_enqueue_style('bootstrap');
 	wp_enqueue_style('swiper');
-	wp_enqueue_style('appcss');
+    $detect = new Mobile_Detect; #mobile detect#
+    if ( $detect->isMobile() && !$detect->isTablet() ){ 
+    	wp_register_style('appcss', get_template_directory_uri(). '/css/app.css', '',0.1,'all');
+    	wp_enqueue_style('appcss');
+    } else {
+        wp_register_style('appcssd', get_template_directory_uri(). '/css/appd.css', '',0.1,'all');
+        wp_enqueue_style('appcssd');
+    }
 }
 add_action('wp_enqueue_scripts','load_stylesheets',1);
 
@@ -31,14 +36,14 @@ function load_javascript(){
     wp_register_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js','', 4.0, true);
     wp_register_script('popper', get_template_directory_uri(). '/js/popper.js','', 1.6, true);
 	wp_register_script('swiper', get_template_directory_uri(). '/js/swiper-bundle.min.js','jquery', 3, true);
-    wp_register_script('appjs', get_template_directory_uri(). '/js/app.js','',0.1, true);
     wp_enqueue_script('jquery351');
     wp_enqueue_script('swiper');
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('popper');
-	wp_enqueue_script('appjs');
     $transarr = array( 'templateUrl' => get_stylesheet_directory_uri() );
     wp_localize_script( 'appjs', 'jturl', $transarr );
+    wp_register_script('appjs', get_template_directory_uri(). '/js/app.js','',0.1, true);
+	wp_enqueue_script('appjs');
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
 
@@ -120,7 +125,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
     ob_start();
 
     ?>
-    <a id="say-bag" class="say-cart woofeature" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'saycheese'); ?>"><img src="<?php echo get_template_directory_uri() ?>/img/shopping-bag.SVG" class="img-fluid"><span><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'saycheese'), $woocommerce->cart->cart_contents_count);?></span></a>
+    <a id="say-bag" class="say-cart woofeature" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'saycheese'); ?>"><img src="<?php echo get_template_directory_uri() ?>/img/navbar/shopping-bag.SVG" class="img-fluid"><span><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'saycheese'), $woocommerce->cart->cart_contents_count);?></span></a>
     <?php
     $fragments['a#say-bag'] = ob_get_clean();
     return $fragments;

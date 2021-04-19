@@ -210,13 +210,35 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 get_footer();
 } else {
   ?>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center align-items-center" style="width: 100vw;height: 100vh;font-family: 'Roboto', sans-serif;font-size: 5vw;font-weight: 900;color: black;">
-          <h1>ONLY AVAILABLE ON MOBILE DEVICE (PHONE)</h1>
-        </div>
+  <section id="section1" class="container">
+    <div class="swiper-container">
+      <div id="aksen" class="aksen"></div>
+      <div class="swiper-wrapper">
+      <?php
+        $shn = new WP_Query(array(
+          'category_name' => 'Latest News Panties Pizza, Promo',
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'posts_per_page' => 3,
+          'offset' => 0
+        ));
+          /*=== WP LOOP === */
+          if($shn->have_posts()) :
+            while($shn->have_posts()) :
+              $shn->the_post();
+              $poslug  = $post->post_name;
+              $posurl  = $siteurl.'/'.$poslug.'/';
+              if ( has_post_thumbnail()) { ?>
+                <div class="swiper-slide"><a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid' )); ?></a></div>
+              <?php
+              }
+            endwhile; 
+            wp_reset_postdata();
+          endif;
+          ?>
       </div>
     </div>
+  </section>
   <?php
 }
 get_footer();
