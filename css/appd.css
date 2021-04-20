@@ -3,6 +3,7 @@ app style css desktop for pantiespizza.com
 version 1.0
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 body{
   position: relative;
@@ -13,16 +14,47 @@ body{
 }
 a{
   font-weight: bold;
-  text-decoration: underline dotted;
+  text-decoration: none;
 }
+.bgRed {
+	background-color: #ef040d;
+}
+.bgRedOld {
+	background-color: #ad0006;
+}
+.prl15{
+	padding: 0 15px;
+}
+/*### FOOTER STYLE ###*/
+footer{
+  background-color: #ef0c15;
+  color: white;
+}
+footer ul{
+  font-size: 1em;
+  font-weight: bold;
+}
+footer li{
+  height: 1.3rem;
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+.sm li::before{
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+#fs2{
+  background-color: #ad0006;
+}
+/*### HEADER ###*/
 header{
 	z-index: 4;
 	right: 50%;
 	transform: translateX(50%);
 }
 .navbar{
-	background: linear-gradient(0deg, rgba(255,255,255,0.5) 0%, rgba(154,154,154,1) 100%); 
-	opacity: .7;
+	background: linear-gradient(0deg, rgb(255 255 255 / 0%) 0%, rgb(0 0 0 / 58%) 100%);
+	opacity: 1;
 }
 .custom-logo{
   position: absolute;
@@ -32,7 +64,14 @@ header{
 	top: 0;
 	left: 0;
 }
-/*HOME PAGE(LANDING PAGE) STYLE*/
+/*### HOME PAGE(LANDING PAGE) STYLE ###*/
+#section1 #aksen{
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	width: 100%;
+	height: 27%;
+}
 .swiper-container {
   width: 100%;
   height: 70vh;
@@ -64,4 +103,46 @@ header{
   object-position: center;
   width: 100%;
   height: 100%;
+}
+#section2 {
+	font-family: 'Paytone One', sans-serif;
+}
+#section2 h4 {
+	font-size: 100px;
+	padding: 0;
+	margin: 0;
+}
+#section2 h4::before {
+  content: 'Rp.';
+  transform: translate(-50px, 24px);
+}
+#section2 h4::after {
+  content: '-an';
+  transform: translate(0px, 24px);
+}
+#section2 h4::before, #section2 h4::after {
+	font-size: 28px;
+	position: absolute;
+}
+#section2 h5, #section2 h6 {font-family: 'Roboto', sans-serif;}
+#section2 h5 {
+  font-size: 60px;
+  margin-bottom: -18px;
+  font-weight: 900;
+}
+#section2 h6 {
+	font-size: 21px;
+	line-height: 27px;
+	font-weight: 900;
+}
+.btnMenu {
+  width: 145px;
+  margin: 0 0.5rem;
+}
+.btnMenu .col {height: 130px;padding: 0;border-radius: 18px;}
+.btnMenu .col img {
+  object-fit: contain;
+  object-position: 0px 10px;
+  width: 145px;
+  height: 185px;
 }

@@ -210,6 +210,13 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 get_footer();
 } else {
   ?>
+  <style type="text/css">
+    #section1 #aksen{
+      background-image: url("<?php echo $themeurl ?>/img/desktop/aksen.SVG");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
   <section id="section1" class="container">
     <div class="swiper-container">
       <div id="aksen" class="aksen"></div>
@@ -229,13 +236,59 @@ get_footer();
               $poslug  = $post->post_name;
               $posurl  = $siteurl.'/'.$poslug.'/';
               if ( has_post_thumbnail()) { ?>
-                <div class="swiper-slide"><a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('Lthumb', array( 'class' => 'img-fluid' )); ?></a></div>
+                <div class="swiper-slide"><a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('full', array( 'class' => 'img-fluid' )); ?></a></div>
               <?php
               }
             endwhile; 
             wp_reset_postdata();
           endif;
           ?>
+      </div>
+    </div>
+  </section>
+  <section id="section2" class="container">
+    <div class="row prl15">
+      <div class="col-md-12 bgRed d-flex flex-column align-items-center pt-3 pb-5">
+        <h5 class="h2 col-md-8 text-center mt-3 text-light">Harga mulai dari</h5>
+        <h4 class="h1 col-md-6 text-light text-center">19.000</h4>
+        <div class="col-md-12 row justify-content-center">
+          <h6 class="col-md-5 text-center text-light">Selalu menggunakan keju yang berkualitas dan berserfikat HALAL dari MUI, serta memiliki 20 lebih varian rasa</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section3" class="container">
+    <div class="row prl15">
+      <div class="col-md-12 bgRedOld pt-3 pb-5">
+        <div class="d-flex flex-column align-items-center">
+          <h3 class="h1 text-light font-weight-bolder mb-3">Our Special Menu</h3>
+        </div>
+        <div class="col-md-12 bgRedOld d-flex flex-row justify-content-center">
+          <div class="btnMenu">
+            <div class="col bg-light">
+              <img class="img-fluid" src="<?php echo get_option('btn_mixzone'); ?>">
+            </div>
+            <p class="text-light text-center font-weight-bold mt-3">MixZone</p>
+          </div>
+          <div class="btnMenu">
+            <div class="col bg-light">
+              <img class="img-fluid" src="<?php echo get_option('btn_inout'); ?>">
+            </div>
+            <p class="text-light text-center font-weight-bold mt-3">In and Out</p>
+          </div>
+          <div class="btnMenu">
+            <div class="col bg-light">
+              <img class="img-fluid" src="<?php echo get_option('btn_slice'); ?>">
+            </div>
+            <p class="text-light text-center font-weight-bold mt-3">Pizza Slice</p>
+          </div>
+          <div class="btnMenu">
+            <div class="col bg-light">
+              <img class="img-fluid" src="<?php echo get_option('btn_calzone'); ?>">
+            </div>
+            <p class="text-light text-center font-weight-bold mt-3">Calzone</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
