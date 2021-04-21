@@ -245,21 +245,22 @@ a{
  .swiper-slide-duplicate-prev .promo-slide, .swiper-slide-duplicate-next .promo-slide{opacity: 0;}
 .mitem{
   position: relative;
-  max-width: 48vw;
   min-height: 7rem;
-  margin: 7.5rem 0.2em 0;
+  margin: 7.5rem -0.8em 0;
   padding: 1rem 0.5rem 0;
-  border-radius: 2%;
+  border-radius: 5px;
   background-color: white;
 }
 .mitem > img{
   min-width: 100%;
 }
 .mitem > a {
+  width: 150px;
   position: absolute;
   z-index: 2;
-  top: -35vw;
-  padding: 3vw;
+  bottom: 95px;
+  right: 50%;
+  transform: translateX(50%);
 }
 .ww{
   white-space: normal;

@@ -50,9 +50,41 @@
 				content: url("<?php echo $themeurl ?>/img/line.SVG");
 			}
 		</style>
-	<?php } else { #desktop
-
-	} ?>
+	<?php } else { #desktop ?>
+		<style type="text/css">
+	 		<?php 
+	 		if (is_page('checkout')) { ?>
+	 			.col-1,.col-2,.col-3{max-width: 100%;}
+	 			.form-row{display: flex;flex-direction: column;}
+	 		<?php }	?>
+	 		<?php if (get_option('woofeature')=="1") { ?>
+	 			.woofeature{display: block;}
+	 		<?php } else { ?>
+	 			.woofeature{display: none;}
+	 		<?php }	?>
+	 		#woocommerce,.menus{
+	 			background-image: url("<?php echo $themeurl ?>/img/pattern.png");
+	 		}
+			.wa::before{
+				content: url("<?php echo $themeurl ?>/img/whatsapp.SVG");
+			}
+			.ig::before {
+				content: url("<?php echo $themeurl ?>/img/instagram.SVG");
+			}
+			.fb::before {
+				content: url("<?php echo $themeurl ?>/img/facebook.SVG");
+			}
+			.tk::before {
+				content: url("<?php echo $themeurl ?>/img/tiktok.SVG");
+			}
+			.tw::before {
+				content: url("<?php echo $themeurl ?>/img/twitter.SVG");
+			}
+			.ln::before {
+				content: url("<?php echo $themeurl ?>/img/line.SVG");
+			}
+		</style>
+	<?php } ?>
 </head>
 <body <?php body_class();?>>
 	<?php

@@ -216,6 +216,11 @@ get_footer();
       background-repeat: no-repeat;
       background-size: cover;
     }
+    #section3 #bgYL{
+      background-image: url("<?php echo $themeurl ?>/img/desktop/yellowwave.SVG");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   </style>
   <section id="section1" class="container">
     <div class="swiper-container">
@@ -289,6 +294,61 @@ get_footer();
             <p class="text-light text-center font-weight-bold mt-3">Calzone</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section id="section3" class="container">
+    <div class="row prl15">
+      <div id="bgYL"class="col-md-12 pt-3 pb-5">
+        <div id="bgRedOld"class="bgRedOld"></div>
+        <div class="col-md-10 mr-auto ml-auto mt-5">
+          <h3 class="text-left font-weight-bolder">VIDEO</h3>
+        </div>
+        <div class="col-md-10 mr-auto ml-auto mt-3 d-flex justify-content-between">
+          <div class="col-md-6 embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item pr-1 pl-1" src="https://www.youtube.com/embed/_eUozyB3HVM" title="Panties Pizza Review by Nex Carlos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6 embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item pr-1 pl-1" src="https://www.youtube.com/embed/GJNRQerkC3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section4" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="bgYL col-md-12 pt-4 pb-4"></div>
+        <div class="d-flex justify-content-center mb-5">
+          <div class="col-md-5 pt-3 pb-3">
+            <img id="img_phone" class="img-fluid" src="<?php echo get_option('img_phone'); ?>">
+          </div>
+          <div class="col-md-7 pt-5 pb-5">
+            <h4 class="h1 font-weight-bolder cRed">Temukan Promo <br>Khusus Followers !</h4>
+            <a href=""><button class="btn btn-warning font-weight-bold">Follow @pantiespizzaindonesia</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section4" class="container">
+    <div class="row">
+      <div class="pt-3 overflow-hidden">
+        <?php
+        #note : class for swiper controlled by app.js
+        $swb = new WP_Query(array(
+          'post_type' => 'page',
+          'title' => 'instagram feed',
+        ));
+          /*=== WP LOOP === */
+          if($swb->have_posts()) :
+            while($swb->have_posts()) :
+              $swb->the_post();
+              the_content();
+            endwhile; 
+            wp_reset_postdata();
+          endif;
+        ?>
       </div>
     </div>
   </section>

@@ -22,12 +22,15 @@ a{
 .bgRedOld {
 	background-color: #ad0006;
 }
+.cRed{
+	color: #ef040d;
+}
 .prl15{
 	padding: 0 15px;
 }
 /*### FOOTER STYLE ###*/
-footer{
-  background-color: #ef0c15;
+footer .bgGrey{
+  background-color: #A7A7A7;
   color: white;
 }
 footer ul{
@@ -111,6 +114,7 @@ header{
 	font-size: 100px;
 	padding: 0;
 	margin: 0;
+	position: relative;
 }
 #section2 h4::before {
   content: 'Rp.';
@@ -145,4 +149,30 @@ header{
   object-position: 0px 10px;
   width: 145px;
   height: 185px;
+}
+#section3 #bgYL {
+	width: 100%;
+	height: 100%;
+}
+#section3 #bgRedOld{
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  right: 50%;
+  transform: translateX(50%);
+  top: 0;
+}
+#section3 iframe{
+	border-radius: 18px;
+}
+#section4 .bgYL {
+	background-color: #efc70c;
+}
+#section4 #img_phone{
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	left: auto;
+	top: -3vw;
 }
