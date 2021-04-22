@@ -196,7 +196,7 @@ a{
   text-align: -webkit-center;
 }
 #single-page :is(p, ol, ul), #page :is(p, ol, ul){
-  font-size: 4vw;
+  font-size: 18px;
   font-weight: normal;
 }
 /*PAGE STYLE*/
@@ -345,7 +345,7 @@ a{
 }
 .wa::before,.ig::before,.fb::before,.tk::before,.tw::before,.ln::before{
   background-repeat: no-repeat;
-  width: 6.5vw;
+  width: 24px;
   display: block;
   float: left;
   transform: translateX(-15%);

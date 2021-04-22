@@ -40,18 +40,17 @@ function load_javascript(){
     wp_enqueue_script('swiper');
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('popper');
+
     $detect = new Mobile_Detect; #mobile detect#
     if ( $detect->isMobile() && !$detect->isTablet() ){ 
-        $transarr = array( 'templateUrl' => get_stylesheet_directory_uri() );
-        wp_localize_script( 'appjs', 'jturl', $transarr );
         wp_register_script('appjs', get_template_directory_uri(). '/js/app.js','',0.1, true);
-    	wp_enqueue_script('appjs');
     } else {
-        $transarr = array( 'templateUrl' => get_stylesheet_directory_uri() );
-        wp_localize_script( 'appjsd', 'jturl', $transarr );
-        wp_register_script('appjsd', get_template_directory_uri(). '/js/appd.js','',0.1, true);
-        wp_enqueue_script('appjsd');
+        wp_register_script('appjs', get_template_directory_uri(). '/js/appd.js','',0.1, true);
     }
+    
+    wp_enqueue_script('appjs');
+    $transarr = array( 'templateUrl' => get_stylesheet_directory_uri() );
+    wp_localize_script( 'appjs', 'jturl', $transarr );
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
 

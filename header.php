@@ -65,22 +65,22 @@
 	 		#woocommerce,.menus{
 	 			background-image: url("<?php echo $themeurl ?>/img/pattern.png");
 	 		}
-			.wa::before{
+			.wa{
 				content: url("<?php echo $themeurl ?>/img/whatsapp.SVG");
 			}
-			.ig::before {
+			.ig {
 				content: url("<?php echo $themeurl ?>/img/instagram.SVG");
 			}
-			.fb::before {
+			.fb {
 				content: url("<?php echo $themeurl ?>/img/facebook.SVG");
 			}
-			.tk::before {
+			.tk {
 				content: url("<?php echo $themeurl ?>/img/tiktok.SVG");
 			}
-			.tw::before {
+			.tw {
 				content: url("<?php echo $themeurl ?>/img/twitter.SVG");
 			}
-			.ln::before {
+			.ln span:nth-child(1) {
 				content: url("<?php echo $themeurl ?>/img/line.SVG");
 			}
 		</style>
@@ -151,7 +151,7 @@
 			<?php
 		 	}
 	} else{ ?>
-		<header class="container-xl position-absolute">
+		<header class="container position-absolute">
 			<nav class=" navbar navbar-expand-md navbar-light">
 			  <a class="navbar-brand" href="<?php echo $siteurl; ?>"><?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

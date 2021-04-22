@@ -92,14 +92,14 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       <div id="info-harga" class="toast fade hide position-absolute col-12" data-autohide="false" style="width: 87vw;bottom: 30vh;background-color: white;z-index: 9;right: 50%;transform: translate(50%, 13%);box-shadow: 2px 5px 59px 25px rgb(0 0 0 / 39%);">
         <div class="toast-header">
           <strong class="mr-auto text-primary">Harga</strong>
+          <a class="tAng" href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/">
+            <span>Info Wilayah</span>
+          </a>
           <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
         </div>
         <div class="toast-body position-relative">
           <p>Harga Wilayah 1 : 
             <span class="hg">Rp. <?php if ($hw1){echo number_format($hw1,0,',','.');} else {echo "-";} ?></span>
-            <a class="tAng" href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/">
-              <span>Info Wilayah</span>
-            </a>
           </p>
           <p>Harga Wilayah 2 : <span class="hg">Rp. <?php if ($hw1){echo number_format($hw2,0,',','.');} else {echo "-";} ?></span></p>
           <p>Harga Wilayah 3 : <span class="hg">Rp. <?php if ($hw1){echo number_format($hw3,0,',','.');} else {echo "-";} ?></span></p>

@@ -33,18 +33,32 @@ footer .bgGrey{
   background-color: #A7A7A7;
   color: white;
 }
+footer a {
+	color: white;
+}
+footer a:hover, footer a:focus {
+	text-decoration: none;
+	color: #ad0006;
+}
 footer ul{
-  font-size: 1em;
+  /* font-size: 1em; */
   font-weight: bold;
 }
 footer li{
-  height: 1.3rem;
+  display: block;
+  /* height: 1.3rem; */
   margin: 0;
   font-size: 0.8em;
   font-weight: normal;
 }
-.sm li::before{
+.sm li span:nth-child(1) {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  width: 24px;
+  display: inline-block;
+}
+footer ul .ln span:nth-child(1) {position: absolute;top: 0;left: 0;}
+footer ul .ln span:nth-child(2) {
+
 }
 #fs2{
   background-color: #ad0006;

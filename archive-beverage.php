@@ -77,39 +77,44 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
             $users = $ru;
           }
           ?>
-          <div class="col-6 d-flex flex-column mitem">
-            <?php
-            $poslug  = $post->post_name;
-            $arcurl  = get_post_type_archive_link( 'beverage' );
-            $posurl  = $arcurl.$poslug.'/';
-            #featured image
-            if ( has_post_thumbnail()) { ?>
-              <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid' )); ?></a>
-            <?php
-            }
-            ?>
-            <div class="mt-2">
-              <a href="<?php echo $posurl; ?>">
-                <h2 class="ww overflow-hidden" ><?php the_title(); ?></h2>
-              </a>
-            </div>
-            <div class="hg">
-              <span>Rp.</span>
-              <span>
-                <?php
-                if ($hw1 != ""){
-                echo number_format($hw1,0,',','.');
-                } else {
-                echo "-";
-                }
-                ?>
-              </span>
-              <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
-              <span class="rating"><?php echo $raval; ?></span>
-            </div>
-            <div class="d-flex flex-row justify-content-between mt-2 mb-2">
-              <a href="<?php echo $siteurl ?>/shop"><button class="woofeature btn btn-success btn-size">Order</button></a>
-              <a href="<?php echo $posurl; ?>"><button class="btn btn-primary btn-size">View</button></a>
+          <div class="col-6">
+            <div class="mitem d-flex flex-column">
+              <?php
+              $poslug  = $post->post_name;
+              $arcurl  = get_post_type_archive_link( 'beverage' );
+              $posurl  = $arcurl.$poslug.'/';
+              ### featured image ###
+              if ( has_post_thumbnail()) { ?>
+                <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid' )); ?></a>
+              <?php
+              }
+              ?>
+              <div class="mt-2">
+                <a href="<?php echo $posurl; ?>">
+                  <h2 class="ww overflow-hidden" ><?php the_title(); ?></h2>
+                </a>
+              </div>
+              <!-- Harga -->
+              <div class="hg">
+                <span>Rp.</span>
+                <span>
+                  <?php
+                  if ($hw1 != ""){
+                  echo number_format($hw1,0,',','.');
+                  } else {
+                  echo "-";
+                  }
+                  ?>
+                </span>
+                <!-- Star Rating -->
+                <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
+                <span class="rating"><?php echo $raval; ?></span>
+              </div>
+              <!-- Button Feature -->
+              <div class="d-flex flex-row justify-content-between mt-2 mb-2">
+                <a href="<?php echo $siteurl.'/product/'.$poslug ?>"><button class="woofeature btn btn-success btn-size">Order</button></a>
+                <a href="<?php echo $posurl; ?>"><button class="btn btn-primary btn-size">View</button></a>
+              </div>
             </div>
           </div>
           <?php
