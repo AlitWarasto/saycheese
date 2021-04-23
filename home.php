@@ -211,20 +211,17 @@ get_footer();
 } else {
   ?>
   <style type="text/css">
-    #section1 #aksen{
-      background-image: url("<?php echo $themeurl ?>/img/desktop/aksen.SVG");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
     #section3 #bgYL{
       background-image: url("<?php echo $themeurl ?>/img/desktop/yellowwave.SVG");
       background-repeat: no-repeat;
       background-size: cover;
     }
   </style>
-  <section id="section1" class="container">
+  <section id="section1" class="container position-relative">
+    <div id="aksen" class="aksen col-md-12 pl-0">
+      <img class="img-fluid" src="<?php echo $themeurl ?>/img/desktop/aksen.SVG">
+    </div>
     <div class="swiper-container">
-      <div id="aksen" class="aksen"></div>
       <div class="swiper-wrapper">
       <?php
         $shn = new WP_Query(array(
@@ -251,9 +248,9 @@ get_footer();
       </div>
     </div>
   </section>
-  <section id="section2" class="container">
+  <section id="section2" class="container" style="z-index: 3;position: relative;">
     <div class="row prl15">
-      <div class="col-md-12 bgRed d-flex flex-column align-items-center pt-3 pb-5">
+      <div class="col-md-12 bgRed d-flex flex-column align-items-center" style="padding-bottom: 70px;">
         <h5 class="h2 col-md-8 text-center mt-3 text-light">Harga mulai dari</h5>
         <h4 class="h1 col-md-6 text-light text-center">19.000</h4>
         <div class="col-md-12 row justify-content-center">
@@ -302,14 +299,14 @@ get_footer();
       <div id="bgYL"class="col-md-12 pt-3 pb-5">
         <div id="bgRedOld"class="bgRedOld"></div>
         <div class="col-md-10 mr-auto ml-auto mt-5">
-          <h3 class="text-left font-weight-bolder">VIDEO</h3>
+          <h3 class="h5 text-left font-weight-bolder">VIDEO</h3>
         </div>
         <div class="col-md-10 mr-auto ml-auto mt-3 d-flex justify-content-between">
           <div class="col-md-6 embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item pr-1 pl-1" src="https://www.youtube.com/embed/_eUozyB3HVM" title="Panties Pizza Review by Nex Carlos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item pr-2 pl-1" src="https://www.youtube.com/embed/_eUozyB3HVM" title="Panties Pizza Review by Nex Carlos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="col-md-6 embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item pr-1 pl-1" src="https://www.youtube.com/embed/GJNRQerkC3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item pr-1 pl-2" src="https://www.youtube.com/embed/GJNRQerkC3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -331,7 +328,7 @@ get_footer();
       </div>
     </div>
   </section>
-  <section id="section4" class="container">
+  <section id="section4" class="container pt-4">
     <div class="row">
       <div class="pt-3 overflow-hidden">
         <?php

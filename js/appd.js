@@ -42,8 +42,11 @@ $(document).ready(function(){
 			autoHeight: false,
 			loop: true,
 		  centeredSlides: true,
-		  freeMode: true,
-		  autoplay: false,
+		  freeMode: false,
+		  autoplay: {
+	    delay: 2500,
+	    disableOnInteraction: true,
+	  },
 		});
 	/*Initialize Swiper Hot Promo Menu*/
 	var swiperbtm = new Swiper('#woo-container', {
