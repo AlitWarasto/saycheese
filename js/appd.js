@@ -106,7 +106,11 @@ $(document).ready(function(){
     $('#rating-star').toast('hide');
   	$('#info-harga').toast('hide');
   });
-	/*Add margin bottom to footer as navbar height
-	var navheight = parseInt($('.navbar').height()) + parseInt($('.navbar').css('padding-top')) + parseInt($('.navbar').css('padding-bottom'));
-	$('#fs2').css({"margin-bottom": navheight + "px"});*/
+	/*Add margin bottom to section 5*/
+	var mWidth = 1200;
+	var dWidth = parseInt($('#section5').width());
+	var s5mb   = mWidth - dWidth * 1.1;
+	console.log(dWidth)
+	console.log(s5mb)
+	$('#section5').css({"margin-bottom": s5mb + "px"});
 });
