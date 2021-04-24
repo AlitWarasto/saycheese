@@ -106,11 +106,13 @@ $(document).ready(function(){
     $('#rating-star').toast('hide');
   	$('#info-harga').toast('hide');
   });
-	/*Add margin bottom to section 5*/
+	/*Add margin bottom to section 5
 	var mWidth = 1200;
 	var dWidth = parseInt($('#section5').width());
-	var s5mb   = mWidth - dWidth * 1.1;
+	var s5mb   = mWidth - dWidth;
+	var s5mbPlus = dWidth - (s5mb * 3.27);
 	console.log(dWidth)
 	console.log(s5mb)
-	$('#section5').css({"margin-bottom": s5mb + "px"});
+	console.log(s5mbPlus)
+	$('#section5').css({"margin-bottom": s5mb + "px"});*/
 });

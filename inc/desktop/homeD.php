@@ -56,25 +56,25 @@
         <div class="col-md-12 bgRedOld d-flex flex-row justify-content-center">
           <div class="btnMenu">
             <div class="col bg-light">
-              <img class="img-fluid" src="<?php echo get_option('btn_mixzone'); ?>">
+              <a href="<?php echo $siteurl ?>/menu/"><img class="img-fluid" src="<?php echo get_option('btn_mixzone'); ?>"></a>
             </div>
             <p class="text-light text-center font-weight-bold mt-3">MixZone</p>
           </div>
           <div class="btnMenu">
             <div class="col bg-light">
-              <img class="img-fluid" src="<?php echo get_option('btn_inout'); ?>">
+              <a href="<?php echo $siteurl ?>/menu/"><img class="img-fluid" src="<?php echo get_option('btn_inout'); ?>"></a>
             </div>
             <p class="text-light text-center font-weight-bold mt-3">In and Out</p>
           </div>
           <div class="btnMenu">
             <div class="col bg-light">
-              <img class="img-fluid" src="<?php echo get_option('btn_slice'); ?>">
+              <a href="<?php echo $siteurl ?>/pizza-slice/"><img class="img-fluid" src="<?php echo get_option('btn_slice'); ?>"></a>
             </div>
             <p class="text-light text-center font-weight-bold mt-3">Pizza Slice</p>
           </div>
           <div class="btnMenu">
             <div class="col bg-light">
-              <img class="img-fluid" src="<?php echo get_option('btn_calzone'); ?>">
+              <a href="<?php echo $siteurl ?>/menu/"><img class="img-fluid" src="<?php echo get_option('btn_calzone'); ?>"></a>
             </div>
             <p class="text-light text-center font-weight-bold mt-3">Calzone</p>
           </div>
