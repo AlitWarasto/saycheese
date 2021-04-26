@@ -50,7 +50,7 @@ $(document).ready(function(){
 		});
 	/*Initialize Swiper Hot Promo Menu*/
 	var swiperbtm = new Swiper('#woo-container', {
-			slidesPerView: 2,
+			slidesPerView: 3,
 			spaceBetween: 5,
 			autoHeight: false,
 			loop: true,

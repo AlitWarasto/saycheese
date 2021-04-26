@@ -5,6 +5,7 @@ version 1.0
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
+/*Consistence Class*/
 body{
   position: relative;
   font-family: 'Roboto', sans-serif;
@@ -13,7 +14,12 @@ body{
   padding: 0;
 }
 a{
-  font-weight: bold;
+  font-weight: bolder;
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: #495057;
   text-decoration: none;
 }
 .bgRed {
@@ -23,10 +29,19 @@ a{
 	background-color: #ad0006;
 }
 .cRed{
-	color: #ef040d;
+	color: #ef040d !important;
 }
 .prl15{
 	padding: 0 15px;
+}
+.btn-size{
+  font-size: .7rem;
+}
+.imgCenter {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 0;
 }
 /*### FOOTER STYLE ###*/
 footer .bgGrey{
@@ -86,7 +101,6 @@ header{
 	position: absolute;
 	z-index: 2;
 	bottom: 0px;
-	padding-right: 30px;
 	height: 105px;
 }
 .swiper-container {
@@ -116,10 +130,10 @@ header{
 	height: 100%;
 }
 .swiper-slide img {
-  object-fit: cover;
-  object-position: center;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 #section2 {
 	font-family: 'Paytone One', sans-serif;
@@ -192,4 +206,151 @@ header{
 	z-index: 2;
 	left: auto;
 	transform: translate(0, -12%);
+}
+/*## ARCHIVE MENU ##*/
+.cw{
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  background-color: #ffc107bf;
+  padding: 15px;
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: bold;
+}
+.menus{
+  background-color: #e9ecefab;
+}
+.mitem {
+  position: relative;
+  min-height: 7rem;
+  margin: 9.5rem -0.8em 0;
+  padding: 1rem 0.5rem 0;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+.mitem a img{
+  position: absolute;
+  z-index: 2;
+  width: 195px;
+  right: 50%;
+  transform: translate(50%, 0);
+  bottom: 100px;
+}
+.ww{
+  white-space: normal;
+  height: 2rem;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 0.8rem;
+  color: #495057;
+  font-weight: bold;
+}
+.hg{
+  font-size: 1rem;
+  color: #ef0c15;
+  position: relative;
+}
+.hg span:nth-child(1){
+  font-size: .75rem;
+}
+.hinfo{
+  position: absolute;
+  margin-left: 0.4em;
+  background-color: #e9ecef;
+  color: #ffc107;
+  padding: 0.2em 0.4em;
+  border-radius: 3%;
+  font-size: 8px;
+  top: -0.4em;
+  cursor: pointer;
+}
+.star,.rating {
+  float: right;
+}
+.star{
+  max-width: 100%;
+  width: 1rem;
+  display: block;
+  margin-top: -2px;
+  margin-left: 3px;
+}
+.rating{
+  color: #495057;
+}
+
+/*== MISC ==*/
+
+/*star rating single menu*/
+.star,.rating {
+  float: right;
+}
+.star{
+  max-width: 100%;
+  width: 1rem;
+  display: block;
+  margin-top: -2px;
+  margin-left: 3px;
+}
+.rating{
+  color: #495057;
+}
+.stars input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.stars label {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 6px;
+  height: 30px;
+  width: 30px;
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='transparent' stroke='orange' stroke-width='38' d='M259.216 29.942L330.27 173.92l158.89 23.087L374.185 309.08l27.145 158.23-142.114-74.698-142.112 74.698 27.146-158.23L29.274 197.007l158.89-23.088z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  font-size: 0;
+  cursor: pointer;
+}
+.stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
+.stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
+.stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
+.stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4),
+.stars input:nth-child(5):checked ~ label:nth-of-type(-n + 5) {
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='orange' stroke='orange' stroke-width='38' d='M259.216 29.942L330.27 173.92l158.89 23.087L374.185 309.08l27.145 158.23-142.114-74.698-142.112 74.698 27.146-158.23L29.274 197.007l158.89-23.088z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+/*Breadcrumd*/
+.bc ul li{
+  list-style: none;
+  display: inline;
+}
+.bc span{
+  display: inline-block;
+  margin-left: 0.3em;
+}
+.bc li:nth-last-child(1) a{
+  color: #8e8e8e;
+  font-weight: normal;
+}
+.bk{
+  position: relative;
+  background-color: #e9ecef;
+  padding: 1.1rem;
+  border-radius: 50%;
+}
+.bk span{
+  position: absolute;
+  font-size: xxx-large;
+  top: 39%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+.bk-float{
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+}
+/*sidebar*/
+#sidebar {
+  margin-top: -3px;
 }

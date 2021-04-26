@@ -5,8 +5,8 @@
       background-size: cover;
     }
   </style>
-  <section id="section1" class="container position-relative">
-    <div id="aksen" class="aksen col-md-12 pl-0">
+  <section id="section1" class="container position-relative pl-0 pr-0">
+    <div id="aksen" class="aksen col-md-12 pl-0 pr-0">
       <img class="img-fluid" src="<?php echo $themeurl ?>/img/desktop/aksen.SVG">
     </div>
     <div class="swiper-container">
@@ -36,7 +36,7 @@
       </div>
     </div>
   </section>
-  <section id="section2" class="container" style="z-index: 3;position: relative;">
+  <section id="section2" class="container pl-0 pr-0" style="z-index: 3;position: relative;">
     <div class="row prl15">
       <div class="col-md-12 bgRed d-flex flex-column align-items-center" style="padding-bottom: 70px;">
         <h5 class="h2 col-md-8 text-center mt-3 text-light">Harga mulai dari</h5>
@@ -47,7 +47,7 @@
       </div>
     </div>
   </section>
-  <section id="section3" class="container">
+  <section id="section3" class="container pl-0 pr-0">
     <div class="row prl15">
       <div class="col-md-12 bgRedOld pt-3 pb-5">
         <div class="d-flex flex-column align-items-center">
@@ -82,7 +82,7 @@
       </div>
     </div>
   </section>
-  <section id="section4" class="container">
+  <section id="section4" class="container pl-0 pr-0">
     <div class="row prl15">
       <div id="bgYL"class="col-md-12 pt-3 pb-5">
         <div id="bgRedOld"class="bgRedOld"></div>
@@ -100,7 +100,7 @@
       </div>
     </div>
   </section>
-  <section id="section5" class="container">
+  <section id="section5" class="container pl-0 pr-0">
     <div class="row">
       <div class="col-md-12">
         <div class="bgYL col-md-12 pt-4 pb-4"></div>
@@ -116,7 +116,7 @@
       </div>
     </div>
   </section>
-  <section id="section6" class="container">
+  <section id="section6" class="container pl-0 pr-0">
     <div class="row">
       <div class="overflow-hidden">
         <?php

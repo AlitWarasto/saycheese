@@ -14,7 +14,7 @@ $sbpost = new WP_Query('posts_per_page=5');
 ?>
 <hr>
 <div id="sidebar" class="row">
-  <h2 class="col-12 text-center">Latest News</h2>
+  <h2 class="h4 col-12 text-center">Latest News</h2>
     <?php
     if($sbpost->have_posts()) :
       while ($sbpost->have_posts()) : $sbpost->the_post();?>
