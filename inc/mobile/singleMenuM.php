@@ -132,6 +132,9 @@
       include(TEMPLATEPATH.'/inc/schema.php');
     endwhile;
     ?>
+    <div class="col-12">
+      <?php include(TEMPLATEPATH.'/sidebar-menu.php');?>
+    </div>
   </div>
   <hr>
   <?php

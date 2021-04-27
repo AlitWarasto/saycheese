@@ -42,7 +42,19 @@
 		</style>
 	</head>
 <body <?php body_class();?>>
-	<header class="container position-absolute pl-0 pr-0">
+	<?php 
+	if (is_home()) { ?>
+		<style type="text/css">
+			header{
+				z-index: 4;
+				right: 50%;
+				transform: translateX(50%);
+			}
+		</style>
+		<header class="container position-absolute pl-0 pr-0">
+	<?php } else { ?>
+		<header class="container pl-0 pr-0">
+  <?php } ?>
 		<nav class=" navbar navbar-expand-md navbar-light">
 		  <a class="navbar-brand" href="<?php echo $siteurl; ?>"><?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

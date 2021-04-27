@@ -11,8 +11,11 @@ print_r($allposts);*/
 
 <?php
 $sbpost = new WP_Query('posts_per_page=5');
-?>
+
+$detect = new Mobile_Detect; #mobile detect#
+if ( $detect->isMobile() && !$detect->isTablet() ){ ?>
 <hr>
+<?php }else{} ?>
 <div id="sidebar" class="row">
   <h2 class="h4 col-12 text-center">Latest News</h2>
     <?php
