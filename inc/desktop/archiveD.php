@@ -1,6 +1,6 @@
-<div id="archive" class="container pt-5 pb-1">
+<div id="archive" class="container pt-3 pb-1">
   <div class="row">
-    <h1 class="col-12 text-center"><?php echo $ptitle.$pnum; ?></h1>
+    <h1 class="col-12 text-center mb-3"><?php echo $ptitle.$pnum; ?></h1>
     <hr>
       <?php
       if(have_posts()) :

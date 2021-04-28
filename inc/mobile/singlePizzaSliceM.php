@@ -82,7 +82,7 @@
           <div class="toast-header">
             <strong class="mr-auto text-primary">Harga</strong>
             <a class="tAng" href="<?php echo $siteurl; ?>/info-wilayah-panties-pizza-indonesia/">
-              <small>Info Wilayah</small>
+              <span>Info Wilayah</span>
             </a>
             <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
           </div>
@@ -154,7 +154,7 @@
     <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
       <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
       <li property="itemListElement" typeof="ListItem">
-        <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('menu') ?>">
+        <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('pizza-slice') ?>">
          <span property="name"><?php echo $artitle; ?></span> &rsaquo;</a>
          <meta property="position" content="1">
       </li>

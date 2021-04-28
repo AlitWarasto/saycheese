@@ -437,6 +437,7 @@ footer li{
 .bc ul li{
 	list-style: none;
 	display: inline;
+  font-size: 14px;
 }
 .bc span{
   display: inline-block;

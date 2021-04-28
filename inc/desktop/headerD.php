@@ -55,7 +55,7 @@
 	<?php } else { ?>
 		<header class="container pl-0 pr-0">
   <?php } ?>
-		<nav class=" navbar navbar-expand-md navbar-light">
+		<nav class=" navbar navbar-expand-md">
 		  <a class="navbar-brand" href="<?php echo $siteurl; ?>"><?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -70,7 +70,7 @@
 		        <a class="nav-link text-light" href="<?php echo $siteurl; ?>/category/promo/">Promo</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link text-light" href="#">Latest News</a>
+		        <a class="nav-link text-light" href="<?php echo $siteurl; ?>/category/latest-news-panties-pizza/">Latest News</a>
 		      </li>
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,9 +84,9 @@
 		        </div>
 		      </li>
 		      <li class="nav-item">
-		        <span class="nav-link text-light"> | </span>
+		        <span class="nav-link cRed"> | </span>
 		      </li><li class="nav-item">
-		        <a class="nav-link cRed" href="<?php echo $siteurl; ?>/branch/">Location</a>
+		        <a class="nav-link text-light" href="<?php echo $siteurl; ?>/branch/">Location</a>
 		      </li>
 		    </ul>
 		  </div>

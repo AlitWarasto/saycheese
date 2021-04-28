@@ -75,25 +75,26 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     ########### BREADCRUMB ##########
     # Parent Post
     global $post;
-    $parentId = $post->post_parent;
-    $pParent = get_permalink($parentId);
+    $parentId     = $post->post_parent;
+    $pParent      = get_permalink($parentId);
     # Current Post
     global $wp;
-    $cPostUrl = home_url(add_query_arg(array(), $wp->request));
+    $cPostUrl     = home_url(add_query_arg(array(), $wp->request));
     # Archive Post
-    $post_data = get_post($post->post_parent);
-    $parent_slug = $post_data->post_name;
-    $aParent = rtrim($pParent,$parent_slug.'/');//archive parent url
-    $str6 = strrpos($aParent, "/");
-    $str7 = $str6 + 1 ;
-    $aPTitle = ucwords(str_replace("-"," ",substr($aParent, $str7)));//archive parent title
+    $post_data    = get_post($post->post_parent);
+    $parent_slug  = $post_data->post_name.'/';
+    $sSt          = strlen($pParent) - strlen($parent_slug);
+    $aParent      = substr($pParent,0,$sSt);//archive parent url
+    $str6         = strlen($siteurl);
+    $str7         = $str6 + 1 ;
+    $aPTitle      = rtrim(ucwords(str_replace("-"," ",substr($aParent, $str7))), "/");//archive parent title
     ?>
     <hr>
     <div class="bc text-body mb-2">
       <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
         <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
         <li property="itemListElement" typeof="ListItem">
-          <a property="item" typeof="WebPage" href="<?php echo $aParent."/" ?>">
+          <a property="item" typeof="WebPage" href="<?php echo $aParent ?>">
           <span property="name"><?php echo $aPTitle; ?></span> &rsaquo;</a>
           <meta property="position" content="1">
         </li>

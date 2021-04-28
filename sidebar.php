@@ -34,7 +34,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){ ?>
           <a href="<?php echo $posurl; ?>">
             <h3 class="mt-2 mb-0 ww overflow-hidden" ><?php the_title(); ?></h3>
           </a>
-          <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>" class="" style="color: #8e8e8e;font-size: x-small;"><?php the_time('F j, Y') ?></a>
+          <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>" class="" style="color: #8e8e8e;font-size: x-small;font-style: italic;"><?php the_time('F j, Y') ?></a>
         </div>
         <?php
       endwhile;
