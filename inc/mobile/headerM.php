@@ -1,7 +1,24 @@
+<?php
+include(TEMPLATEPATH.'/inc/assets/error-log.php');
+if(is_home()|| is_attachment() || is_single() || is_archive()){
+  $rmeta = '<meta name="robots" content="index,follow"/>';
+}elseif(is_404() || is_page('Privacy Policy') || is_page('Cookie Policy') || is_page('Copyright') || is_page('Terms') ) {
+  $rmeta = '<meta name="robots" content="noindex,nofollow"/>';
+} else {
+  $rmeta = '<meta name="robots" content="index,nofollow"/>';
+}
+/* METAS */
+if(empty($mt)) {$mt = '<title>'.wp_title('-',false,'right').$sitename.'</title>';} else {}
+if(empty($md)) {$md = '';} else {}
+if(empty($mk)) {$mk = '';} else {}
+$metas = array($mt,$md,$mk,$rmeta);
+$metas = implode('',$metas);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?php echo $post->post_title. " | " . $sitename ?></title>
+		<?php //include_once("analyticstracking.php"); ?>
+		<?php echo $metas; ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<?php
 		wp_head();

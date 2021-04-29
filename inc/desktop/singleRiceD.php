@@ -149,7 +149,7 @@
     <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
       <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
       <li property="itemListElement" typeof="ListItem">
-        <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('menu') ?>">
+        <a property="item" typeof="WebPage" href="<?php echo get_post_type_archive_link('rice') ?>">
          <span property="name"><?php echo $artitle; ?></span> &rsaquo;</a>
          <meta property="position" content="1">
       </li>
