@@ -57,6 +57,22 @@ $metas = implode('',$metas);
 				content: url("<?php echo $themeurl ?>/img/line.SVG");
 			}
 		</style>
+		<?php
+    /*Logo Rich Card*/
+    $loloc = get_template_directory_uri() ."/img/logo.png";
+    if (is_page("about")){
+      echo'
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "'.$siteurl.'",
+          "logo": "'.$loloc.'"
+        }
+    </script>';
+    }
+    /*Logo Rich Card End*/
+    ?>
 	</head>
 <body <?php body_class();?>>
 	<?php 
@@ -106,6 +122,17 @@ $metas = implode('',$metas);
 		        <span class="nav-link cRed"> | </span>
 		      </li><li class="nav-item">
 		        <a class="nav-link text-light" href="<?php echo $siteurl; ?>/branch/">Location</a>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Info
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="<?php echo $siteurl; ?>/about">About</a>
+		          <a class="dropdown-item" href="<?php echo $siteurl; ?>/contact">Contact Us</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item text-warning" href="<?php echo $siteurl; ?>/program-kemitraan-panties-pizza">Kemitraan</a>
+		        </div>
 		      </li>
 		    </ul>
 		  </div>

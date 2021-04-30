@@ -24,14 +24,7 @@ $metas = implode('',$metas);
 		wp_head();
 		get_header(); ?>
 
-		<style type="text/css">/*
-			@font-face {
-			font-family: "Roboto";
-			src: url("<?php echo $themeurl; ?>/fonts/roboto/Roboto-Regular.ttf");
-			src: url("<?php echo $themeurl; ?>/fonts/roboto/Roboto-Regular.ttf") format("woff"),
-			url("<?php echo $themeurl; ?>/fonts/roboto/Roboto-Regular.ttf") format("opentype"),
-			url("<?php echo $themeurl; ?>/fonts/roboto/Roboto-Regular.ttf") format("svg");
-			}*/
+		<style type="text/css">
 			<?php 
 			if (is_page('checkout')) { ?>
 				.col-1,.col-2,.col-3{max-width: 100%;}
@@ -64,6 +57,22 @@ $metas = implode('',$metas);
 				content: url("<?php echo $themeurl ?>/img/line.SVG");
 			}
 		</style>
+		<?php
+    /*Logo Rich Card*/
+    $loloc = get_template_directory_uri() ."/img/logo.png";
+    if (is_page("about")){
+      echo'
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "'.$siteurl.'",
+          "logo": "'.$loloc.'"
+        }
+    </script>';
+    }
+    /*Logo Rich Card End*/
+    ?>
 	</head>
 <body <?php body_class();?>>
 	<?php if (is_home()) { ?>

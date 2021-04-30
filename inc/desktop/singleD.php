@@ -47,6 +47,7 @@
   $cats    = get_the_category();
   $catname = $cats[0]->name;
   $catslug = $cats[0]->slug;
+  /* Current Url */
   global $wp;
   $cPostUrl = home_url(add_query_arg(array(), $wp->request));
   ?>

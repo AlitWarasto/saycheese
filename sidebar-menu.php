@@ -14,8 +14,20 @@ $randomQuery  = new WP_Query(array(
   'order' => 'ASC',
 ));
 */
+if (is_singular('menu')) {
+  $postType = 'menu';
+} elseif (is_singular('beverage')) {
+  $postType = 'beverage';
+} elseif (is_singular('rice')) {
+  $postType = 'rice';
+} elseif (is_singular('pasta')) {
+  $postType = 'pasta';
+} elseif (is_singular('pizza-slice')) {
+  $postType = 'pizza-slice';
+} else {}
+
 $sbm = new WP_Query(array(
-  'post_type' =>'menu',
+  'post_type' => $postType,
   'orderby' => 'date',
   'order' => 'ASC',
   'posts_per_page' => 6, 
