@@ -184,6 +184,20 @@
             //console.log(selectedImage.sizes.medium.url);
         });
       });
+    });/* Upload Display Pizza Image */
+    $(function(){
+      $('#upload-img-pizza').on("click", function(){
+        var images = wp.media({
+                      title     : "Upload Image",
+                      multiple  : false
+        }).open().on("select", function(e){
+          var uImg = images.state().get("selection").first().toJSON();
+          var sImg= uImg.url;
+          $('#img-pizza').attr('src', sImg);
+          $('#img_pizza').attr('value', sImg);
+            //console.log(selectedImage.sizes.medium.url);
+        });
+      });
     });
     /* woo feature on / off */
     if ($('#woofeature').val()=="1") {

@@ -66,42 +66,7 @@
   </section>
   <section id="section3">
   	<div id="section-3-aksen-1"></div>
-  	<?php
-    $ig = new WP_Query(array(
-      'post_type' => 'page',
-      'title' => 'image gallery',
-      ));
-    if($ig->have_posts()) :
-      while($ig->have_posts()) :
-        $ig->the_post();
-      	$args = array(
-          'post_mime_type' => 'image',
-          'post_parent' => $post->ID,
-          'post_status' => null,
-          'post_type' => 'attachment',
-        );
-      	$imgs = get_children($args);
-      	shuffle($imgs);
-      	$i = 1;
-      	foreach ($imgs as $img) {
-      		if ($i>1) {
-      			break;
-      		} else {
-            #An attachment/image ID is all that's needed to retrieve its alt and title attributes.
-            $image_alt = get_post_meta( $img->ID, '_wp_attachment_image_alt', true);
-            $imgalt = ucwords(str_replace(array('-','_','+'),' ',$image_alt));
-            $image_title = get_the_title($img->ID);
-      	  	$limg = wp_get_attachment_image_src($img->ID,'medium');
-      	    $limgurl = $limg[0];?>
-            <img src="<?php echo $limgurl; ?>" loading="lazy" alt="<?php echo $imgalt; ?>">
-            <?php
-        		}
-            $i++;
-      	}
-      endwhile;
-      wp_reset_postdata();
-    endif;
-  	?>
+  	<img src="<?php echo get_option('img_pizza'); ?>" loading="lazy">
   	<div id="section-3-aksen-2"></div>
     <div class="container">
       <div class="row d-flex align-items-center">

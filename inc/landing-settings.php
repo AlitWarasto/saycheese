@@ -18,6 +18,7 @@ function saycheese_reg() {
   register_setting('saycheese_sett','img_slice');
   register_setting('saycheese_sett','img_calzone');
   register_setting('saycheese_sett','img_phone');
+  register_setting('saycheese_sett','img_pizza');
   register_setting('saycheese_sett','woofeature');
 }
 add_action('admin_init', 'saycheese_reg');
@@ -194,6 +195,15 @@ function saycheese_home_settings(){
           <img id="img-phone" src="<?php echo get_option('img_phone'); ?>" class="img-icon"/>
           <input type="button" value="Upload Image" class="button-primary" id="upload-img-phone"/>
           <input id="img_phone" type="hidden" name="img_phone" value="<?php echo get_option('img_phone'); ?>"/>
+        </div>
+      </div>
+      <h2>Pizza Display Image</h2>
+      <div class="btn-wrap">
+        <div class="fg">
+          <label for="img_pizza">Section 3 Pizza Display Image</label>
+          <img id="img-pizza" src="<?php echo get_option('img_pizza'); ?>" class="img-icon"/>
+          <input type="button" value="Upload Image" class="button-primary" id="upload-img-pizza"/>
+          <input id="img_pizza" type="hidden" name="img_pizza" value="<?php echo get_option('img_pizza'); ?>"/>
         </div>
       </div>
       <h2>Woocommerce Feature</h2>
