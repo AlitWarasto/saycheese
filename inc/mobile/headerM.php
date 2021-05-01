@@ -39,22 +39,22 @@ $metas = implode('',$metas);
 				background-image: url("<?php echo $themeurl ?>/img/pattern.png");
 			}
 			.wa::before{
-				content: url("<?php echo $themeurl ?>/img/whatsapp.SVG");
+				content: url("<?php echo $themeurl ?>/img/whatsapp.svg");
 			}
 			.ig::before {
-				content: url("<?php echo $themeurl ?>/img/instagram.SVG");
+				content: url("<?php echo $themeurl ?>/img/instagram.svg");
 			}
 			.fb::before {
-				content: url("<?php echo $themeurl ?>/img/facebook.SVG");
+				content: url("<?php echo $themeurl ?>/img/facebook.svg");
 			}
 			.tk::before {
-				content: url("<?php echo $themeurl ?>/img/tiktok.SVG");
+				content: url("<?php echo $themeurl ?>/img/tiktok.svg");
 			}
 			.tw::before {
-				content: url("<?php echo $themeurl ?>/img/twitter.SVG");
+				content: url("<?php echo $themeurl ?>/img/twitter.svg");
 			}
 			.ln::before {
-				content: url("<?php echo $themeurl ?>/img/line.SVG");
+				content: url("<?php echo $themeurl ?>/img/line.svg");
 			}
 		</style>
 		<?php
@@ -73,8 +73,30 @@ $metas = implode('',$metas);
     }
     /*Logo Rich Card End*/
     ?>
+    <!-- Facebook Pixel Code 
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '206497110181756');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=206497110181756&ev=PageView&noscript=1"
+    /></noscript>-->
+    <!-- End Facebook Pixel Code -->
 	</head>
 <body <?php body_class();?>>
+	<script>/*
+    fbq('track', 'Lead');
+    fbq('track', 'Search');
+    fbq('track', 'ViewContent');*/
+  </script>
 	<?php if (is_home()) { ?>
   	<header>
 			<?php
@@ -88,7 +110,7 @@ $metas = implode('',$metas);
 	  	<nav class="navbar fixed-bottom navbar-light bg-light">
 	  		<div class="bk text-muted" type="button" onclick="history.back();"><span>&lsaquo;</span></div>
 			  <div id="hhome" class="say-cart"><img height="auto" src="<?php echo get_template_directory_uri() ?>/img/home.svg" alt="logo panties pizza terbaru kecil bulat"></div>
-			  <div id="hmenus" class="say-cart"><img src="<?php echo get_template_directory_uri() ?>/img/menus.SVG" alt="panties pizza menus"></div>
+			  <div id="hmenus" class="say-cart"><img src="<?php echo get_template_directory_uri() ?>/img/menus.svg" alt="panties pizza menus"></div>
 			  <a class="woofeature say-cart"href="<?php echo $siteurl ?>/shop"><img src="<?php echo get_template_directory_uri() ?>/img/navbar/shop.svg" alt="shop panties pizza"></a>
 			  <a id="say-bag" class="woofeature say-cart navbar-brand"></a>
 				<!-- Toast Menus -->
@@ -99,16 +121,16 @@ $metas = implode('',$metas);
 	        </div>
 	        <div class="toast-body">
 	        	<div class="d-flex justify-content-center">
-							<a class="col-3" href="<?php echo $siteurl ?>/menu"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/calzone.SVG" alt="panties pizza kecil"></a>
-							<a class="col-3" href="<?php echo $siteurl ?>/mix-zone-pizza-satu-pizza-dengan-dua-rasa"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/mixzone.SVG" alt="panties pizza mixzone"></a>
-							<a class="col-3" href="<?php echo $siteurl ?>/lets-upgrade-your-mood-with-in-and-out-topping"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/inout.SVG" alt="panties pizza in and out"></a>
-							<a class="col-3" href="<?php echo $siteurl ?>/pizza-slice"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/slice.SVG" alt="panties pizza slice"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/menu"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/calzone.svg" alt="panties pizza kecil"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/mix-zone-pizza-satu-pizza-dengan-dua-rasa"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/mixzone.svg" alt="panties pizza mixzone"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/lets-upgrade-your-mood-with-in-and-out-topping"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/inout.svg" alt="panties pizza in and out"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/pizza-slice"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/slice.svg" alt="panties pizza slice"></a>
 	          </div>
 	          <hr>
 	          <div class="d-flex justify-content-center">
-							<a class="col-3" href="<?php echo $siteurl ?>/beverage"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/drink.SVG" alt="drinks pizza panties"></a>
-							<a class="col-3" href="<?php echo $siteurl ?>/pasta"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/pasta.SVG" alt="pasta panties pizza"></a>
-							<a class="col-3" href="<?php echo $siteurl ?>/rice"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/rice.SVG" alt="panties pizza rice"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/beverage"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/drink.svg" alt="drinks pizza panties"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/pasta"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/pasta.svg" alt="pasta panties pizza"></a>
+							<a class="col-3" href="<?php echo $siteurl ?>/rice"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/img/navbar/rice.svg" alt="panties pizza rice"></a>
 	          </div>
 	        </div>
 	      </div>
@@ -126,7 +148,7 @@ $metas = implode('',$metas);
 	          </div>
 	          <hr>
 	          <div class="d-flex justify-content-center">
-							<a class="col-4" href="<?php echo $siteurl ?>/kemitraan/">Kemitraan</a>
+							<a class="col-4" href="<?php echo $siteurl ?>/program-kemitraan-panties-pizza/">Kemitraan</a>
 							<a class="col-4" href="<?php echo $siteurl ?>/branch/">Cabang</a>
 	          </div>
 	        </div>

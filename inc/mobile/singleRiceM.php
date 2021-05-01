@@ -71,9 +71,9 @@
         <span>Rp.</span>
         <span><?php if ($hw1){echo number_format($hw1,0,',','.');} else {echo "-";} ?></span>
         <span class="hinfo">Info Harga Wilayah</span>
-        <span id="users" class="star love"><img class="img-fluid"src="<?php echo $themeurl ?>/img/love0.SVG"></span>
+        <span id="users" class="star love"><img class="img-fluid"src="<?php echo $themeurl ?>/img/love0.svg"></span>
         <span class="users float-right ml-2 text-muted"><?php echo $users; ?></span>
-        <span id="star" class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
+        <span id="star" class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.svg"></span>
         <span class="rating"><?php echo $raval; ?></span>
       </div>
       <div class="col-12 position-relative">

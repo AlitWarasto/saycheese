@@ -39,22 +39,22 @@ $metas = implode('',$metas);
 				background-image: url("<?php echo $themeurl ?>/img/pattern.png");
 			}
 			.wa{
-				content: url("<?php echo $themeurl ?>/img/whatsapp.SVG");
+				content: url("<?php echo $themeurl ?>/img/whatsapp.svg");
 			}
 			.ig {
-				content: url("<?php echo $themeurl ?>/img/instagram.SVG");
+				content: url("<?php echo $themeurl ?>/img/instagram.svg");
 			}
 			.fb {
-				content: url("<?php echo $themeurl ?>/img/facebook.SVG");
+				content: url("<?php echo $themeurl ?>/img/facebook.svg");
 			}
 			.tk {
-				content: url("<?php echo $themeurl ?>/img/tiktok.SVG");
+				content: url("<?php echo $themeurl ?>/img/tiktok.svg");
 			}
 			.tw {
-				content: url("<?php echo $themeurl ?>/img/twitter.SVG");
+				content: url("<?php echo $themeurl ?>/img/twitter.svg");
 			}
 			.ln span:nth-child(1) {
-				content: url("<?php echo $themeurl ?>/img/line.SVG");
+				content: url("<?php echo $themeurl ?>/img/line.svg");
 			}
 		</style>
 		<?php
@@ -73,8 +73,30 @@ $metas = implode('',$metas);
     }
     /*Logo Rich Card End*/
     ?>
+    <!-- Facebook Pixel Code 
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '206497110181756');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=206497110181756&ev=PageView&noscript=1"
+    /></noscript>-->
+    <!-- End Facebook Pixel Code -->
 	</head>
 <body <?php body_class();?>>
+	<script>/*
+    fbq('track', 'Lead');
+    fbq('track', 'Search');
+    fbq('track', 'ViewContent');*/
+  </script>
 	<?php 
 	if (is_home()) { ?>
 		<style type="text/css">

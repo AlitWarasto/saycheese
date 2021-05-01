@@ -7,6 +7,15 @@
  * @version 2.1.03.03
  */
 
+/*== Require https ===
+
+if ($_SERVER['HTTPS'] != "on") {
+    $url = "https://". $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    header("Location: $url");
+    exit;
+}
+*/
+
 $siteurl  = get_option('siteurl');
 $sitename = get_option('blogname');
 $sitedesc = get_option('blogdescription');

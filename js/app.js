@@ -68,8 +68,8 @@ $(document).ready(function(){
 		});
 	/*Star Click*/
 	$('#users img').click(function(){
-		var sImg0 = jturl.templateUrl +"/img/love0.SVG";
-		var sImg1 = jturl.templateUrl +"/img/love.SVG";
+		var sImg0 = jturl.templateUrl +"/img/love0.svg";
+		var sImg1 = jturl.templateUrl +"/img/love.svg";
 		var users = parseInt($('.users').text());
 		if($(this).attr('src')== sImg0){
 			$(this).attr('src', sImg1);

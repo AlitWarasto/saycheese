@@ -93,7 +93,7 @@
                   ?>
                 </span>
                 <!-- Star Rating -->
-                <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.SVG"></span>
+                <span class="star"><img class="img-fluid"src="<?php echo $themeurl ?>/img/star.svg"></span>
                 <span class="rating"><?php echo $raval; ?></span>
               </div>
               <!-- Button Feature -->

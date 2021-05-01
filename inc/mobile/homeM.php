@@ -1,22 +1,22 @@
 <style type="text/css">
 	  #aksen{
-	    background-image: url("<?php echo $themeurl ?>/img/aksen.SVG");
+	    background-image: url("<?php echo $themeurl ?>/img/aksen.svg");
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	  }
 	  #section-3-aksen-1{
-	  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-1.SVG");
+	  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-1.svg");
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	  }
 	  #section-3-aksen-2{
-	  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-2.SVG");
+	  	background-image: url("<?php echo $themeurl ?>/img/section-3-aksen-2.svg");
 	  	background-repeat: no-repeat;
 	    background-size: 100%;
 	    background-position: center;
 	  }
 	  #section-6-mui{
-	  	background-image: url("<?php echo $themeurl ?>/img/halal-mui.SVG");
+	  	background-image: url("<?php echo $themeurl ?>/img/halal-mui.svg");
 	  	background-repeat: no-repeat;
 	  	background-size: 100%;
 	    background-position: center;
