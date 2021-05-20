@@ -1,6 +1,6 @@
 <div id="archive" class="container pt-3 pb-1">
   <div class="row">
-    <h1 class="col-12 text-center mb-3"><?php echo $ptitle.$pnum; ?></h1>
+    <h1 class="col-12 text-center mb-3"><?php echo $postTitle.$pnum; ?></h1>
     <hr>
       <?php
       if(have_posts()) :
@@ -42,21 +42,21 @@
     $maxp = $wp_query->max_num_pages;
     if($paged == 0 || $paged < 1) {
       $prelink = '';
-      $nexlink = '<a href="'.$plink.'page/'.($paged+2).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
+      $nexlink = '<a href="'.$pageLink.'page/'.($paged+2).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
     } elseif($paged == $maxp) {
       if($paged == 2) {
-        $prelink = '<a href="'.$plink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+        $prelink = '<a href="'.$pageLink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
       } else {
-        $prelink = '<a href="'.$plink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+        $prelink = '<a href="'.$pageLink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
       }
       $nexlink = '';
     } else {
       if($paged == 2) {
-        $prelink = '<a href="'.$plink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+        $prelink = '<a href="'.$pageLink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
       } else {
-        $prelink = '<a href="'.$plink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+        $prelink = '<a href="'.$pageLink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
       }
-      $nexlink = '<a href="'.$plink.'page/'.($paged+1).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
+      $nexlink = '<a href="'.$pageLink.'page/'.($paged+1).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
     }
     echo '<div class="d-flex justify-content-end mt-3">'.$prelink.$nexlink.'</div>';
   }

@@ -4,7 +4,7 @@
 </div>
 <div id="archive" class="container pt-3 pb-1">
   <div class="row">
-    <h1 class="col-12 text-center"><?php echo $ptitle.$pnum; ?></h1>
+    <h1 class="col-12 text-center"><?php echo $postTitle.$pnum; ?></h1>
     <hr>
       <?php
       if(have_posts()) :
@@ -32,7 +32,7 @@
               <h5 class="col mt-2" ><?php the_title(); ?></h5>
             </a>
             <p class="col"><?php echo $excerpt; ?></p>
-            <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>" class="col mt-2" style="color: #8e8e8e;font-size: x-small;"><?php the_time('F j, Y') ?></a>
+            <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>" class="col mt-2" style="color: #8e8e8e;font-size: x-small;bottom: 15px;font-style: italic;"><?php the_time('F j, Y') ?></a>
           </div>
           <?php
         endwhile;
@@ -46,21 +46,21 @@
     $maxp = $wp_query->max_num_pages;
     if($paged == 0 || $paged < 1) {
       $prelink = '';
-      $nexlink = '<a href="'.$plink.'page/'.($paged+2).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
+      $nexlink = '<a href="'.$pageLink.'page/'.($paged+2).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
     } elseif($paged == $maxp) {
       if($paged == 2) {
-        $prelink = '<a href="'.$plink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+        $prelink = '<a href="'.$pageLink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
       } else {
-        $prelink = '<a href="'.$plink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+        $prelink = '<a href="'.$pageLink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
       }
       $nexlink = '';
     } else {
       if($paged == 2) {
-        $prelink = '<a href="'.$plink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+        $prelink = '<a href="'.$pageLink.'"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
       } else {
-        $prelink = '<a href="'.$plink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
+        $prelink = '<a href="'.$pageLink.'page/'.($paged-1).'/"><button class="btn btn-info btn-size ml-1">&#x02039; Prev</button></a>';
       }
-      $nexlink = '<a href="'.$plink.'page/'.($paged+1).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
+      $nexlink = '<a href="'.$pageLink.'page/'.($paged+1).'/"><button class="btn btn-info btn-size ml-1">Next &#x0203A;</button></a>';
     }
     echo '<div class="d-flex justify-content-end mt-3">'.$prelink.$nexlink.'</div>';
   }

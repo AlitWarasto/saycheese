@@ -4,27 +4,34 @@
 #version 1.0
 
 if(is_category()) {
-  $ptitle = $wp_query->queried_object->name;
-  $plink  = $siteurl.'/category/'.$wp_query->queried_object->slug .'/';
+  $postTitle = $wp_query->queried_object->name;
+  $pageLink  = $siteurl.'/category/'.$wp_query->queried_object->slug .'/';
 } elseif(is_tag()) {
-  $ptitle = ucwords($wp_query->queried_object->name);
-  $plink  = $siteurl.'/tag/'.$wp_query->queried_object->slug .'/';
+  $postTitle = ucwords($wp_query->queried_object->name);
+  $pageLink  = $siteurl.'/tag/'.$wp_query->queried_object->slug .'/';
 } elseif(is_day()) {
-  $ptitle = date('F', mktime(0,0,0,$wp_query->query_vars['monthnum'],1,$wp_query->query_vars['year'])).' '.$wp_query->query_vars['day'].', '.$wp_query->query_vars['year'].' Archive';
-  $plink  = $siteurl.'/'.$wp_query->query_vars['year'].'/'.$wp_query->query_vars['monthnum'].'/'.$wp_query->query_vars['day'].'/';
+  $postTitle = date('F', mktime(0,0,0,$wp_query->query_vars['monthnum'],1,$wp_query->query_vars['year'])).' '.$wp_query->query_vars['day'].', '.$wp_query->query_vars['year'].' Archive';
+  $pageLink  = $siteurl.'/'.$wp_query->query_vars['year'].'/'.$wp_query->query_vars['monthnum'].'/'.$wp_query->query_vars['day'].'/';
 } elseif(is_month()) {
-  $ptitle = date('F', mktime(0,0,0,$wp_query->query_vars['monthnum'],1,$wp_query->query_vars['year'])).', '.$wp_query->query_vars['year'].' Archive';
-  $plink  = $siteurl.'/'.$wp_query->query_vars['year'].'/'.$wp_query->query_vars['monthnum'].'/';
+  $postTitle = date('F', mktime(0,0,0,$wp_query->query_vars['monthnum'],1,$wp_query->query_vars['year'])).', '.$wp_query->query_vars['year'].' Archive';
+  $pageLink  = $siteurl.'/'.$wp_query->query_vars['year'].'/'.$wp_query->query_vars['monthnum'].'/';
 } elseif(is_year()) {
-  $ptitle = $wp_query->query_vars['year'].' Archive';
-  $plink  = $siteurl.'/'.$wp_query->query_vars['year'].'/';
+  $postTitle = $wp_query->query_vars['year'].' Archive';
+  $pageLink  = $siteurl.'/'.$wp_query->query_vars['year'].'/';
 } elseif(is_author()) {
   $authname = $wp_query->queried_object->data->display_name;
-  $ptitle   = $wp_query->queried_object->data->display_name.'&#8217;s Articles';
-  $plink    = $siteurl.'/author/'.$wp_query->query_vars['author_name'].'/';
+  $postTitle   = $wp_query->queried_object->data->display_name.'&#8217;s Articles';
+  $pageLink    = $siteurl.'/author/'.$wp_query->query_vars['author_name'].'/';
 } else {
-  $ptitle = '';
-  $plink  = '';
+  $postTitle = '';
+  $pageLink  = '';
+}
+
+/* PAGE NUMBER  */
+if($paged) {
+  $pnum = ' Page '.$paged.'';
+} else {
+  $pnum = '';
 }
 
 /* Random Query 
