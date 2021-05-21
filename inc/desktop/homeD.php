@@ -1,13 +1,13 @@
   <style type="text/css">
     #section4 #bgYL{
-      background-image: url("<?php echo $themeurl ?>/img/desktop/yellowwave.SVG");
+      background-image: url("<?php echo $themeurl ?>/img/desktop/yellowwave.svg");
       background-repeat: no-repeat;
       background-size: cover;
     }
   </style>
   <section id="section1" class="container position-relative pl-0 pr-0">
     <div id="aksen" class="aksen col-md-12 pl-0 pr-0">
-      <img class="img-fluid" src="<?php echo $themeurl ?>/img/desktop/aksen.SVG">
+      <img class="img-fluid" src="<?php echo $themeurl ?>/img/desktop/aksen.svg">
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">

@@ -17,7 +17,7 @@ $metas = implode('',$metas);
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php //include_once("analyticstracking.php"); ?>
+		<?php //include_once(TEMPLATEPATH."/analyticstracking.php"); ?>
 		<?php echo $metas; ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<?php
@@ -73,7 +73,7 @@ $metas = implode('',$metas);
     }
     /*Logo Rich Card End*/
     ?>
-    <!-- Facebook Pixel Code 
+    <!-- Facebook Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -88,14 +88,14 @@ $metas = implode('',$metas);
     </script>
     <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=206497110181756&ev=PageView&noscript=1"
-    /></noscript>-->
+    /></noscript>
     <!-- End Facebook Pixel Code -->
 	</head>
 <body <?php body_class();?>>
-	<script>/*
+	<script>/**/
     fbq('track', 'Lead');
     fbq('track', 'Search');
-    fbq('track', 'ViewContent');*/
+    fbq('track', 'ViewContent');
   </script>
 	<?php 
 	if (is_home()) { ?>

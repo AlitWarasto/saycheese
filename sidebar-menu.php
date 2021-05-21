@@ -74,7 +74,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){ ?>
           <div class="mitem d-flex flex-column">
             <?php
           	$poslug  = $post->post_name;
-            $arcurl  = get_post_type_archive_link( 'menu' );
+            $arcurl  = get_post_type_archive_link( $postType );
             $posurl  = $arcurl.$poslug.'/';
             ### featured image ###
             if ( has_post_thumbnail()) { ?>

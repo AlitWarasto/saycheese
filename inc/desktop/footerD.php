@@ -9,7 +9,7 @@
 				</ul>
 				<ul class="list-unstyled">
 					<li><a href="<?php echo get_site_url(); ?>/branch/">Cabang</a></li>
-					<li><a href="<?php echo get_site_url(); ?>/program-kemitran-panties-pizza/">Kemitraan</a></li>
+					<li><a href="<?php echo get_site_url(); ?>/program-kemitraan-panties-pizza/">Kemitraan</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3 d-flex align-items-center justify-content-end pr-0">
@@ -19,10 +19,10 @@
 		<div class="col-md-12 d-flex bgGrey pt-3">
 			<div class="col-md-8">
 				<ul class="sm list-unstyled d-flex justify-content-start">
-					<li class="mr-3"><a href="#"><span class="ig "></span></a></li>
-					<li class="mr-3"><a href="#"><span class="tk "></span></a></li>
-					<li class="mr-3"><a href="#"><span class="tw "></span></a></li>
-					<li class="mr-3"><a href="#"><span class="fb "></span></a></li>
+					<li class="mr-3"><a href="https://www.instagram.com/pantiespizzaindonesia"><span class="ig "></span></a></li>
+					<li class="mr-3"><a href="https://www.tiktok.com/@pantiespizzaid"><span class="tk "></span></a></li>
+					<li class="mr-3"><a href="https://twitter.com/pantiespizza_id"><span class="tw "></span></a></li>
+					<li class="mr-3"><a href="https://www.facebook.com/PPizzaIndonesia"><span class="fb "></span></a></li>
 				</ul>
 			</div>
 			<div class="sm col-md-4">
@@ -36,7 +36,7 @@
 			<div class="col-6 text-light"> &#169; 2021 Panties Pizza Indonesia</div>
 			<div class="col-6 d-flex flex-column align-items-end">
 				<a href="<?php echo get_site_url(); ?>/privacy-policy/">Kebijakan Privasi</a>
-				<a href="#">Credit</a>
+				<a href="<?php echo get_site_url(); ?>/credit/">Credit</a>
 			</div>
 		</div>
 </footer>

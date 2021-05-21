@@ -71,7 +71,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       endif;
       ?>
     </div>
-    <?php 
+    <?php
     ########### BREADCRUMB ##########
     # Parent Post
     global $post;
@@ -115,7 +115,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
 <?php
 } else { # DESKTOP VIEW DOWN HERE
   ?>
-<div id="image" class="mt-3">
+<div id="image" class="container mt-3">
   <div class="mb-2 row justify-content-center ">
     <?php
     if(have_posts()) :
@@ -167,6 +167,26 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     $aPTitle      = rtrim(ucwords(str_replace("-"," ",substr($aParent, $str7))), "/");//archive parent title
     ?>
     <hr>
+    <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
+      <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
+    
+      <?php
+      $sls  = explode("/",$cPostUrl);
+      $in     =   0;
+      foreach ($sls as $sl) {
+        if ($in > 3) {
+            echo "/".$sl; ?>
+            <li property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="<?php echo $aParent ?>">
+              <span property="name"><?php echo $aPTitle; ?></span> &rsaquo;</a>
+              <meta property="position" content="1">
+            </li>
+        <?php
+        }
+        $in++;
+      }
+      ?>
+    </ul>
     <div class="bc text-body mb-2">
       <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
         <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
