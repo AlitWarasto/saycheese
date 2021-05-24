@@ -16,7 +16,6 @@ $aurl   = $posurl.$aslug.'/';
 /* SINGLE CATEGORY */
 $cats    = get_the_category($parid);
 $catname = $cats[0]->name;
-$catslug = $cats[0]->slug;
 
 /* ATTACHMENTS */
 $args = array(
@@ -50,7 +49,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         $lurl = $limg[0];
         $lw   = $limg[1];
         $lh   = $limg[2];
-        $lalt = $atitle.' '.$title;
+        $lalt = $atitle.' '.$title.' '.$catname;
         ?>
         <img src="<?php echo $lurl; ?>" title="<?php echo $atitle; ?>" alt="<?php echo $lalt; ?>" class="img-fluid mb-2"/>
   </div>
@@ -62,7 +61,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
         foreach($atts as $att) {
           $atitle = ucwords(str_replace(array('-','_','+'),' ',$att->post_title));
           $aturl  = $posurl.$att->post_name.'/';
-          $malt   = $atitle.' '.$title.' '.$katname;
+          $malt   = $atitle.' '.$title.' '.$catname;
           $mimg   = wp_get_attachment_image_src($att->ID,'thumbnail');
           $murl   = $mimg[0];
           echo '<a class="col-4 mb-2" href="'.$aturl.'"><img class="img-fluid" src="'.$murl.'" alt="'.$malt.'" /></a>';
@@ -71,12 +70,16 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
       endif;
       ?>
     </div>
-    <?php
+    <?php 
     ########### BREADCRUMB ##########
     # Parent Post
     global $post;
     $parentId     = $post->post_parent;
     $pParent      = get_permalink($parentId);
+    # Category
+    $pCats    = get_the_category($parentId);
+    $pCatName = $pCats[0]->name;
+    $pCatSlug = $pCats[0]->slug;
     # Current Post
     global $wp;
     $cPostUrl     = home_url(add_query_arg(array(), $wp->request));
@@ -88,6 +91,14 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     $str6         = strlen($siteurl);
     $str7         = $str6 + 1 ;
     $aPTitle      = rtrim(ucwords(str_replace("-"," ",substr($aParent, $str7))), "/");//archive parent title
+    # Cat Trick
+    if ($aPTitle != "" or !empty($aPTitle)) {
+      $aParent      = substr($pParent,0,$sSt);//archive parent url
+      $aPTitle      = rtrim(ucwords(str_replace("-"," ",substr($aParent, $str7))), "/");//archive parent title
+    } else {
+      $aParent = $siteurl."/category/".$pCatSlug;
+      $aPTitle = $pCatName;
+    }
     ?>
     <hr>
     <div class="bc text-body mb-2">
@@ -154,6 +165,10 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     global $post;
     $parentId     = $post->post_parent;
     $pParent      = get_permalink($parentId);
+    # Category
+    $pCats    = get_the_category($parentId);
+    $pCatName = $pCats[0]->name;
+    $pCatSlug = $pCats[0]->slug;
     # Current Post
     global $wp;
     $cPostUrl     = home_url(add_query_arg(array(), $wp->request));
@@ -165,28 +180,16 @@ if ( $detect->isMobile() && !$detect->isTablet() ){
     $str6         = strlen($siteurl);
     $str7         = $str6 + 1 ;
     $aPTitle      = rtrim(ucwords(str_replace("-"," ",substr($aParent, $str7))), "/");//archive parent title
+    # Cat Trick
+    if ($aPTitle != "" or !empty($aPTitle)) {
+      $aParent      = substr($pParent,0,$sSt);//archive parent url
+      $aPTitle      = rtrim(ucwords(str_replace("-"," ",substr($aParent, $str7))), "/");//archive parent title
+    } else {
+      $aParent = $siteurl."/category/".$pCatSlug;
+      $aPTitle = $pCatName;
+    }
     ?>
     <hr>
-    <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
-    
-      <?php
-      $sls  = explode("/",$cPostUrl);
-      $in     =   0;
-      foreach ($sls as $sl) {
-        if ($in > 3) {
-            echo "/".$sl; ?>
-            <li property="itemListElement" typeof="ListItem">
-              <a property="item" typeof="WebPage" href="<?php echo $aParent ?>">
-              <span property="name"><?php echo $aPTitle; ?></span> &rsaquo;</a>
-              <meta property="position" content="1">
-            </li>
-        <?php
-        }
-        $in++;
-      }
-      ?>
-    </ul>
     <div class="bc text-body mb-2">
       <ul class="pl-0" vocab="https://schema.org/" typeof="BreadcrumbList">
         <li><a href="<?php echo $siteurl; ?>"><span>Home</span> &rsaquo;</a></li>
