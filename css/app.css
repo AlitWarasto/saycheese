@@ -22,12 +22,13 @@ a{
 .loader{
   width: 100%;
   height: 100%;
-  background-color: #f8f9fa;
+  background-color: #fdfdfd;
   position: fixed;
   z-index: 9;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: .9;
 }
 .lo{
   padding-left: 15px;
@@ -199,6 +200,23 @@ a{
   font-size: 18px;
   font-weight: normal;
 }
+.expromo-sg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -400px;
+  left: -120px;
+  background-color: red;
+  transform: rotate( 48deg );
+  opacity: .5;
+}
+.expromo-sg p{
+  position: relative;
+  z-index: 3;
+  transform: translate(149px, 308px) rotate(-90deg);
+  color: white;
+  font-size: 30px !important;
+}
 /*PAGE STYLE*/
 .list-style-none{
   list-style: none;
@@ -213,6 +231,23 @@ a{
 }
 .archive-list :is(h1, h2, h3, h4, h5, h6, a){
 	color: #262626;
+}
+.expromo{
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transform: translate(-154px, -681px) rotate(45deg);
+  opacity: .5;
+}
+.expromo p{
+  position: relative;
+  z-index: 5;
+  transform: translate(148px, 215px) rotate( -90deg );
+  color: white;
+  font-size: xx-large;
+  text-align: left;
 }
 /*MENU PIZZA STYLE*/
 .cw{
@@ -242,7 +277,7 @@ a{
   transition: opacity .3s ease-in-out;
 }
 .swiper-slide-next .promo-slide, .swiper-slide-prev .promo-slide{opacity: .5;}
- .swiper-slide-duplicate-prev .promo-slide, .swiper-slide-duplicate-next .promo-slide{opacity: 0;}
+.swiper-slide-duplicate-prev .promo-slide, .swiper-slide-duplicate-next .promo-slide{opacity: 0;}
 .mitem{
   position: relative;
   min-height: 7rem;
@@ -411,6 +446,24 @@ a{
 /*SIDEBAR STYLE*/
 .sidebar-list img{
   min-width: 100%;
+}
+.expromo-sb{
+  position: absolute;
+  z-index: 3;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: -75px;
+  transform: rotate( 48deg );
+  opacity: .5;
+}
+.expromo-sb p{
+  position: relative;
+  z-index: 3;
+  transform: translate(65px, 39px) rotate( 271deg );
+  color: white;
+  font-size: 14px !important;
 }
 /*FOOTER STYLE*/
 footer{

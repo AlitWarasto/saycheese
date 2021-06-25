@@ -9,7 +9,7 @@
       <?php
       if(have_posts()) :
         while (have_posts()) : the_post();?>
-          <div class="archive-list mb-2">
+          <div class="archive-list mb-2 position-relative overflow-hidden">
             <?php
           	$poslug  = $post->post_name;
             $posurl  = $siteurl.'/'.$poslug.'/';
@@ -23,10 +23,16 @@
             }
             $excerpt = implode(" ",array_splice($xcont,0,$wl)).$titik;
             #featured image
-            if ( has_post_thumbnail()) { ?>
+            if ( has_post_thumbnail() and in_category('expired promo')) { ?>
+              <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('medium', array( 'class' => 'img-fluid' )); ?>
+                <div class="expromo">
+                  <p>Promo Berakhir</p>
+                </div>
+              </a>
+            <?php } else { ?>
               <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('medium', array( 'class' => 'img-fluid' )); ?></a>
             <?php
-          	}
+            }
             ?>
             <a href="<?php echo $posurl; ?>">
               <h5 class="col mt-2" ><?php the_title(); ?></h5>

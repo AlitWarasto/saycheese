@@ -9,10 +9,19 @@
     ?>
       <h1 class="col text-center"><?php the_title(); ?></h1>
       <hr>
-      <?php #featured image
-      if ( has_post_thumbnail()) { ?>
-        <a href="#"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid text-center' )); ?></a>
-      <?php } ?>
+      <?php 
+      #featured image
+      if ( has_post_thumbnail() and in_category('expired promo')) { ?>
+        <a class="position-relative overflow-hidden" href="<?php echo $posurl; ?>"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid' )); ?>
+          <div class="expromo-sg">
+            <p>Promo Berakhir</p>
+          </div>
+        </a>
+      <?php } else { ?>
+        <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid' )); ?></a>
+      <?php
+      }
+      ?>
       <div class="col-12 mt-2"><?php the_content(); ?></div>
       <div class="col-12 d-flex flex-row justify-content-between mb-2">
         <a href="<?php echo get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>">
