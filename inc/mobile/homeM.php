@@ -66,7 +66,7 @@
   </section>
   <section id="section3">
   	<div id="section-3-aksen-1"></div>
-  	<img src="<?php echo get_option('img_pizza'); ?>" loading="lazy">
+  	<img src="<?php echo get_option('img_pizza'); ?>" >
   	<div id="section-3-aksen-2"></div>
     <div class="container">
       <div class="row d-flex align-items-center">
@@ -74,7 +74,7 @@
             <h5>Mixzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <a href="<?php echo $siteurl; ?>/mix-zone-pizza-satu-pizza-dengan-dua-rasa/"><img src="<?php echo get_option('btn_mixzone'); ?>" loading="lazy" alt=""></a>
+                <a href="<?php echo $siteurl; ?>/mix-zone-pizza-satu-pizza-dengan-dua-rasa/"><img src="<?php echo get_option('btn_mixzone'); ?>"  alt=""></a>
               </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
             <h5>In & Out</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <a href="<?php echo $siteurl; ?>/lets-upgrade-your-mood-with-in-and-out-topping/"><img src="<?php echo get_option('btn_inout'); ?>" loading="lazy" alt=""></a>
+                <a href="<?php echo $siteurl; ?>/lets-upgrade-your-mood-with-in-and-out-topping/"><img src="<?php echo get_option('btn_inout'); ?>"  alt=""></a>
               </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
             <h5>Pizza Slice</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <a href="<?php echo $siteurl; ?>/pizza-slice/"><img src="<?php echo get_option('btn_slice'); ?>" loading="lazy" alt=""></a>
+                <a href="<?php echo $siteurl; ?>/pizza-slice/"><img src="<?php echo get_option('btn_slice'); ?>"  alt=""></a>
               </div>
             </div>
         </div>
@@ -98,7 +98,7 @@
             <h5>Calzone</h5>
             <div class="vm-bg shadow">
               <div class="ov-con">
-                <a href="<?php echo $siteurl; ?>/menu"><img src="<?php echo get_option('btn_calzone'); ?>" loading="lazy" alt=""></a>
+                <a href="<?php echo $siteurl; ?>/menu"><img src="<?php echo get_option('btn_calzone'); ?>"  alt=""></a>
               </div>
             </div>
         </div>
@@ -107,19 +107,19 @@
   </section>
   <section id="section4">
   	<div>
-	  	<img src="<?php echo get_option('img_mixzone'); ?>" loading="lazy">
+	  	<img src="<?php echo get_option('img_mixzone'); ?>" >
 	  	<a href="<?php echo $siteurl; ?>/mix-zone-pizza-satu-pizza-dengan-dua-rasa/"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-  		<img src="<?php echo get_option('img_inout'); ?>" loading="lazy">
+  		<img src="<?php echo get_option('img_inout'); ?>" >
 	  	<a href="<?php echo $siteurl; ?>/lets-upgrade-your-mood-with-in-and-out-topping/"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-	  	<img src="<?php echo get_option('img_slice'); ?>" loading="lazy">
+	  	<img src="<?php echo get_option('img_slice'); ?>" >
 		  <a href="<?php echo $siteurl; ?>/pizza-slice/"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   	<div>
-  		<img src="<?php echo get_option('img_calzone'); ?>" loading="lazy">
+  		<img src="<?php echo get_option('img_calzone'); ?>" >
 		  <a href="<?php echo $siteurl; ?>/menu/"><button class="btn btn-danger shadow">Lihat Menu</button></a>
 	  </div>
   </section>
@@ -129,7 +129,7 @@
   			<h2 class="text-center mb-3 font-weight-bolder text-danger">Temukan Promo Khusus Followers!</h2>
   			<a href="https://www.instagram.com/pantiespizzaindonesia/"><button class="btn btn-danger shadow">Ikuti @pantiespizzaindonesia</button></a>
   		</div>
-  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="<?php echo get_option('img_phone'); ?>" loading="lazy">
+  		<img class="img-fluid d-block mx-auto mb-3 mt-5" src="<?php echo get_option('img_phone'); ?>" >
   	</div>
   </section>
   <section id="section6" class="pt-5">

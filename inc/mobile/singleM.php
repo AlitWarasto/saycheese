@@ -11,7 +11,7 @@
       <hr>
       <?php 
       #featured image
-      if ( has_post_thumbnail() and in_category('expired promo')) { ?>
+      if ( has_post_thumbnail() and in_category('Expired Promo')) { ?>
         <a class="position-relative overflow-hidden" href="<?php echo $posurl; ?>"><?php the_post_thumbnail('large', array( 'class' => 'img-fluid' )); ?>
           <div class="expromo-sg">
             <p>Promo Berakhir</p>

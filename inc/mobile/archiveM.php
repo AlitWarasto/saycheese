@@ -23,7 +23,7 @@
             }
             $excerpt = implode(" ",array_splice($xcont,0,$wl)).$titik;
             #featured image
-            if ( has_post_thumbnail() and in_category('expired promo')) { ?>
+            if ( has_post_thumbnail() and in_category('Expired Promo')) { ?>
               <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('medium', array( 'class' => 'img-fluid' )); ?>
                 <div class="expromo">
                   <p>Promo Berakhir</p>

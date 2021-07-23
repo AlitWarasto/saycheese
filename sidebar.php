@@ -26,7 +26,7 @@ if ( $detect->isMobile() && !$detect->isTablet() ){ ?>
         	$poslug  = $post->post_name;
           $posurl  = $siteurl.'/'.$poslug.'/';
           #featured image
-          if ( has_post_thumbnail() and in_category('expired promo')) { ?>
+          if ( has_post_thumbnail() and in_category('Expired Promo')) { ?>
             <div class="overflow-hidden position-relative">
               <a href="<?php echo $posurl; ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid' )); ?>
                 <div class="expromo-sb">

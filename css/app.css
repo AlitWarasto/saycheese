@@ -28,7 +28,7 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: .9;
+  opacity: .5;
 }
 .lo{
   padding-left: 15px;
@@ -204,8 +204,8 @@ a{
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -400px;
-  left: -120px;
+  top: -250px;
+  left: -205px;
   background-color: red;
   transform: rotate( 48deg );
   opacity: .5;
@@ -213,7 +213,7 @@ a{
 .expromo-sg p{
   position: relative;
   z-index: 3;
-  transform: translate(149px, 308px) rotate(-90deg);
+  transform: translate(149px,81px) rotate(-90deg);
   color: white;
   font-size: 30px !important;
 }
