@@ -36,10 +36,10 @@
       </div>
     </div>
   </section>
-  <section id="section2" class="container pl-0 pr-0" style="z-index: 3;position: relative;">
+  <section id="section2" class="container pl-0 pr-0">
     <div class="row prl15">
-      <div class="col-md-12 bgRed d-flex flex-column align-items-center" style="padding-bottom: 70px;">
-        <h5 class="h2 col-md-8 text-center mt-3 text-light">Harga mulai dari</h5>
+      <div class="col-md-12 bgRed d-flex flex-column align-items-center mt-auto mb-auto  pt-3 pb-3">
+        <h5 class="h2 col-md-8 text-center text-light">Harga mulai dari</h5>
         <h4 class="h1 col-md-6 text-light text-center">19.000</h4>
         <div class="col-md-12 row justify-content-center">
           <h6 class="col-md-5 text-center text-light">Selalu menggunakan keju yang berkualitas dan berserfikat HALAL dari MUI, serta memiliki 20 lebih varian rasa</h6>

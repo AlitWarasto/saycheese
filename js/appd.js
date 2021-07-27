@@ -12,7 +12,7 @@ $(document).ready(function(){
 	/*inject class and styles woocommerce checkout
   $(".form-row").addClass("d-flex flex-column");*/
 	/*inject class and styles swiper buttom for ig social feed*/
-  $("#sb_instagram").addClass("swiper-btm").css("height","190px");
+  $("#sb_instagram").addClass("swiper-btm")//.css("height","190px");
   $("#sbi_images").addClass("swiper-wrapper");
   $(".sbi_item").addClass("swiper-slide");
   $(".sbi_photo").css({"background-image": "none","display": "unset"});

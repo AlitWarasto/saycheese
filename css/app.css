@@ -28,7 +28,8 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: .5;
+  opacity: 0.8;
+  filter: blur(2px);
 }
 .lo{
   padding-left: 15px;
