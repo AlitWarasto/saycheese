@@ -1,0 +1,89 @@
+/*
+mtr style css for pantiespizza.com @ page themplate kemitraan
+version 1.0
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&family=Work+Sans:wght@800&display=swap');
+body{font-family: 'Montserrat', sans-serif;}
+.menuKiri{
+	width: 5%;
+	height: 72vh;
+	background-color: #df242b;
+	position: relative;
+	float: left;
+}
+.menuKiri span {
+	position: absolute;
+	color: white;
+}
+.menuKiri span:nth-child(1){
+	top: 50px;
+	z-index: 2;
+}
+.menuKiri span:nth-child(2){
+	transform: rotate(270deg);
+	z-index: 3;
+	font-weight: 600;
+	letter-spacing: 4px;
+}
+.menuKiri span:nth-child(3){
+	bottom: 50px;
+	z-index: 4;
+}
+.h1,.h2,.h3,.h4,.h5,.h6{position: relative;letter-spacing: -2px;padding: 0;margin: 0;z-index: 5;}
+#kontainer{
+	background-color: #fff7ee;
+	max-width: 95%;
+	height: 72vh;
+	float: left;
+	padding: 0;
+}
+.row{margin: 0;padding: 0;}
+.col{position: relative;background-color: #fff;border-radius: 15px;transition: cubic-bezier(0.23, 0.86, 1, 1) 0.3s;overflow: hidden;}
+.col > div{margin-top: 7vh;}
+.col > div > div:nth-child(1){
+	width: 30px;
+	height: 5px;
+	background-color: #df242b;
+	border-radius: 15px;
+	float: left;
+	transition: cubic-bezier(0.26, 0.52, 0.49, 0.76) 0.5s;
+}
+.col > div > div:nth-child(2){
+	width: 5px;
+	height: 5px;
+	margin-left: 5px;
+	background-color: #9e9e9e;
+	border-radius: 30px;
+	float: left;
+	transition: cubic-bezier(0.26, 0.52, 0.49, 0.76) 0.5s;
+}
+.col img{
+  width: 13em;
+  position: absolute;
+  z-index: 3;
+  right: 1em;
+  bottom: -1em;
+}
+.hrBwh{
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	z-index: 2;
+	background-color: #df242b;
+	bottom: 28vh;
+}
+.hrBwh .hrMenu{
+	position: relative;
+	background-color: #df242b;
+	float: right;
+	color: whitesmoke;
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding: 10px 15px;
+	border-radius: 15px 15px 0 0;
+	transform: translate(-170px, -40px);
+}
+/*$$$$ ANIMATION $$$$*/
+.col:hover{background-color: #df242b;color: whitesmoke;cursor: pointer;}
+.col:hover .em{width: 5px;background-color: whitesmoke;transition: cubic-bezier(0.26, 0.52, 0.49, 0.76) 0.5s;}
+.col:hover .emm{width: 30px;background-color: white;transition: cubic-bezier(0.26, 0.52, 0.49, 0.76) 0.5s;}
