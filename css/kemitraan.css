@@ -1,0 +1,140 @@
+/* Kemitraan css
+	versi 1
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+#kemitraan-halaman-1 .row *,#kemitraan-halaman-2 .row *{padding: 0;}
+.bgPink{background-color: #FFF8EE;}
+#kemitraan-halaman-1 #logo{
+	height: 178px;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+#kemitraan-halaman-1 #bgh1{}
+#kemitraan-halaman-1 #aksen-1{
+	position: absolute;
+	right: 30px;
+	width: 82px;
+}
+#kemitraan-halaman-1 #aksenbg-h1{
+	position: absolute;
+	width: 230px;
+	height: 722px;
+	left: 0;
+	top: 0;
+	background: linear-gradient(90deg, #FFF8EE 0%, rgba(255, 255, 255, 0) 100%);
+}
+#kemitraan-halaman-1 h1{
+	position: absolute;
+	width: 433px;
+	height: 140px;
+	left: 0;
+	top: 15px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 76px;
+	line-height: 70px;
+	/* or 92% */
+	letter-spacing: -0.08em;
+	color: rgba(0, 0, 0, 0.76);
+}
+#kemitraan-halaman-1 h2{
+	position: absolute;
+	width: 425px;
+	height: 89px;
+	left: 15px;
+	top: 193px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 40px;
+	/* or 100% */
+	color: rgba(0, 0, 0, 0.76);
+}
+#kemitraan-halaman-1 h3{
+	position: absolute;
+	width: 145px;
+	height: 40px;
+	left: 15px;
+	top: 282px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 27px;
+	line-height: 40px;
+	/* identical to box height, or 148% */
+	letter-spacing: -0.08em;
+	color: rgba(0, 0, 0, 0.76);
+}
+#kemitraan-halaman-1 h4{
+	position: absolute;
+	width: 421px;
+	height: 75px;
+	left: 19px;
+	bottom: 15px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 40px;
+	color: rgba(0, 0, 0, 0.76);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#kemitraan-halaman-2 h1{
+	position: absolute;
+	z-index: 2;
+	width: 335px;
+	height: 70px;
+	right: 25%;
+	transform: translateX(100%);
+	top: 30px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 62px;
+	line-height: 70px;
+	letter-spacing: -0.08em;
+	color: rgba(0, 0, 0, 0.76);
+}
+#kemitraan-halaman-2 h6{
+	position: absolute;
+	width: 275px;
+	height: 30px;
+	left: 30px;
+	top: 115px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: -0.08em;
+	color: rgba(0, 0, 0, 0.76);
+}
+#kemitraan-halaman-2 p{
+	position: absolute;
+	width: 510px;
+	height: 450px;
+	left: 30px;
+	top: 175px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 24px;
+	/* or 125% */
+	color: #000000;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#kemitraan-halaman-2 span{
+	position: absolute;
+	width: 43px;
+	bottom: 0;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 78px;
+	line-height: 30px;
+	letter-spacing: -0.08em;
+	color: #ED3237;
+}
