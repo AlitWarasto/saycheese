@@ -63,4 +63,140 @@ include(TEMPLATEPATH.'/header.php'); ?>
 		</div>
 	</div>
 </section>
+<section id="kemitraan-halaman-4" class="container bgPink">
+	<div class="row">
+		<div class="col-md-4">
+			<h1>Jadilah bagian dari Mitra sukses kami!</h1>
+			<p>Saat ini adalah peluang terbaik dan tepat untuk Anda bergabung menjadi salah satu mitra sukses. Panties Pizza Indonesia. Dengan tim yang berpengalaman dan solid, siap membantu anda dalam menjalankan dan mengembangkan bisnis ini. Mulailah dari sekarang, kendalikan bisnismu dan RAIH OMSET RATUSAN JUTA RUPIAH.</p>
+			<h5>Puluhan Outlet yang tersebar di Indonesia</h5>
+		</div>
+		<div class="col-md-8">
+			<img id="bgh4" class="img-fluid" src="http://192.168.10.34/coba/wp-content/uploads/2022/02/cabang-usaha-panties-pizza-tersebar-di-indonesia.png">
+		</div>
+	</div>
+</section>
+<section id="kemitraan-halaman-5" class="container bgPink">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Benefit Kemitraan Panties Pizza Indonesia</h1>
+		</div>
+		<div class="col-md-6">
+			<ul>
+				<li>
+					<h3>Manajemen professional</h3>
+					<p>Panties Pizza dikelola oleh PT. Lingga Jaya Utama dengan pengalaman lebih dari 8th dalam dunia waralaba F&B. Dan telah tersebar di seluruh Indonesia</p>
+				</li>
+				<li>
+					<h3>Training</h3>
+					<p>Penyegaran program training yang jelas dan terarah untuk staff operasional Anda</p>
+				</li>
+				<li>
+					<h3>Terpercaya</h3>
+					<p>Dengan skema kemitraan yang tepat, sudah puluhan mitra percaya untuk mengembangkan bisnis ini yang telah tersebar di indonesia</p>
+				</li>
+				<li>
+					<h3>Inovasi</h3>
+					<p>Kami secara konsisten berusaha menciptakan inovasi variant product yang mampu bersaing di pasar</p>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-6">
+			<ul>
+				<li>
+					<h3>Maintenance</h3>
+					<p>Penyegaran program training yang jelas dan terarah untuk staff operasional Anda</p>
+				</li>
+				<li>
+					<h3>Design Outlet</h3>
+					<p>Kami telah menyiapkan standar konsep desain outlet siap pakai sesuai dengan karakter brand</p>
+				</li>
+				<li>
+					<h3>Merketing Support</h3>
+					<p>Kami siap memberikan support marketing secara maksimal dengan strategi yang tepat untuk mencetak omset, sehingga baik mitra / calon mitra dapat meraih kesuksesan bersama kami</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</section>
+	<section id="kemitraan-halaman-6" class="container bgPink">
+		<div class="row">
+			<div class="col-md-12 mb-3">
+				<h1>ChooseYour Desired Type of Outlet</h1>
+				<h4>Panties Pizza <span>Express</span></h4>
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-express-design.png">
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-express-design-front-store.png">
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-express-design-indoor.png">
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-express-design-indoor-layout.png">
+			</div>
+			<div class="col-md-12 mb-3">
+				<h4>Panties Pizza <span>Standart</span></h4>
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design-seating-room-alternative.png">
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design-front-store-alternative.png">
+			</div>
+			<div class="col-md-4">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-front-outlet-standart-design.png">
+			</div>
+			<div class="col-md-4">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design-tampak-depan.png">
+			</div>
+			<div class="col-md-4">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design-outlet-front-view.png">
+			</div>
+			<div class="col-md-12">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design-alternative-seating.png">
+			</div>
+			<div class="col-md-12">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design.png">
+			</div>
+			<div class="col-md-4">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design-seating-room.png">
+			</div>
+			<div class="col-md-4">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design-seating-room-front.png">
+			</div>
+			<div class="col-md-4">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-design-front-store.png">
+			</div>
+			<div class="col-md-12">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-standart-front-store-design.png">
+			</div>
+			<div class="col-md-12 mb-3">
+				<h4>Panties Pizza <span>Profesional</span></h4>
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-pro-design-outlet.png">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-pro-design-seating-room-alternative.png">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-pro-design-seating-room.png">
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-profesional-front-store-design.png">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/panties-pizza-pro-alternative-design-seating-room.png">
+			</div>
+		</div>
+	</section>
+	<section id="kemitraan-halaman-7" class="container bgPink">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>How to Join ?</h1>
+			</div>
+			<div class="col-md-7">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/cara-gabung-join-kemitraan-franchise-panties-pizza-indonesia-2022.png">
+			</div>
+			<div class="col-md-5">
+				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/how-to-join-panties-pizza-franchise.png">
+			</div>
+		</div>
+	</section>
 <?php get_footer(); ?>

@@ -209,3 +209,125 @@
 	text-align: center;
 	color: #ED3237;
 }
+#kemitraan-halaman-4 h1{
+	position: absolute;
+	z-index: 2;
+	width: 1020px;
+	left: 30%;
+	transform: translateX(-5%);
+	top: 30px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 56px;
+	line-height: 56px;
+	letter-spacing: -0.08em;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.76);
+}
+#kemitraan-halaman-4 p{
+	position: absolute;
+	z-index: 2;
+	width: 888px;
+	left: 30px;
+	top: 160px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 30px;
+	color: #000000;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#kemitraan-halaman-4 h5{
+	position: absolute;
+	z-index: 2;
+	width: 650px;
+	left: 30px;
+	bottom: 010px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 36px;
+	letter-spacing: -0.06em;
+	color: #000000;
+}
+#kemitraan-halaman-5{min-height: 720px;}
+#kemitraan-halaman-5 h1{
+	width: 626px;
+	margin-left: 30px;
+	margin-top: 30px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 56px;
+	line-height: 56px;
+	letter-spacing: -0.08em;
+	color: rgba(0, 0, 0, 0.76);
+}
+
+#kemitraan-halaman-5 ul{
+	margin-left: 60px;
+	margin-top: 30px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 24px;
+	color: #000000;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#kemitraan-halaman-5 ul li p{
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 24px;
+}
+#kemitraan-halaman-6 h1{
+	width: 933px;
+	margin-left: 30px;
+	margin-top: 30px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 56px;
+	line-height: 56px;
+	letter-spacing: -0.08em;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.76);
+}
+#kemitraan-halaman-6 h4{
+	margin-left: 45px;
+	margin-top: 30px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 48px;
+	line-height: 36px;
+	letter-spacing: -0.08em;
+	color: #000000;
+}
+#kemitraan-halaman-6 h4 span{
+	font-weight: normal;
+}
+#kemitraan-halaman-6 .row .col-md-6,
+#kemitraan-halaman-6 .row .col-md-4,
+#kemitraan-halaman-6 .row .col-md-12{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+#kemitraan-halaman-7 .row{
+	padding: 0 15px;
+}
+#kemitraan-halaman-7 h1{
+	font-family: Arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 56px;
+	line-height: 56px;
+	letter-spacing: -0.08em;
+	color: rgba(0, 0, 0, 0.76);
+}
