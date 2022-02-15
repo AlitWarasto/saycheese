@@ -72,6 +72,9 @@ $metas = implode('',$metas);
     </script>';
     }
     /*Logo Rich Card End*/
+    if (is_page("Kemitraan")) {?>
+    	<link rel="stylesheet" id="kemitraan-css" href="<?php echo $themeurl; ?>/css/kemitraan.css?ver=0.1" type="text/css" media="all">
+    <?php }
     ?>
 	</head>
 <body <?php body_class();?>>

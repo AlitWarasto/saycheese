@@ -7,7 +7,7 @@ include(TEMPLATEPATH.'/header.php'); ?>
 
 <section id="kemitraan-halaman-1" class="container bgPink">
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6 order-sm-first order-last">
 			<img id="logo" class="img-fluid" src="<?php echo $themeurl ?>/img/logo.png">
 			<h2>Indonesia’s Leader Cheesy Melt Pizza</h2>
 			<h3>Since 2013</h3>
@@ -189,13 +189,30 @@ include(TEMPLATEPATH.'/header.php'); ?>
 	<section id="kemitraan-halaman-7" class="container bgPink">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>How to Join ?</h1>
+				<h1 class="mx-3">How to Join ?</h1>
 			</div>
 			<div class="col-md-7">
 				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/cara-gabung-join-kemitraan-franchise-panties-pizza-indonesia-2022.png">
 			</div>
 			<div class="col-md-5">
 				<img class="img-fluid" src="<?php echo $siteurl; ?>/wp-content/uploads/2022/02/how-to-join-panties-pizza-franchise.png">
+			</div>
+		</div>
+	</section>
+	<section id="kemitraan-halaman-8" class="container bgPink py-3">
+		<div class="row justify-content-center">
+			<div class="col-md-12">
+				<h1 class="text-center">You Are Ready Now</h1>
+			</div>
+			<div class="col-md-8">
+				<h2 class="my-3">Let's Get Started</h2>
+				<h3>Hubungi kami melalui WhatsApp</h3>
+				<a href="https://bit.ly/kemitraanpantiespizza"><h4><span><img class="img-fluid" src="<?php echo $themeurl; ?>/img/whatsapp.svg"> </span><span>+62 812 2767 9996</span></h4></a>
+				<p>(Fast Response)</p>
+				<a href="mailto:mitra.pantiespizza@gmail.com"><h4><span><img class="img-fluid" src="<?php echo $themeurl; ?>/img/email.svg"> </span><span>mitra.pantiespizza@gmail.com</span></h4></a>
+				<a href="https://instagram.com/pantiespizzaindonesia"><h4><span><img class="img-fluid" src="<?php echo $themeurl; ?>/img/instagram.svg"> </span><span>@pantiespizzaindonesia</span></h4></a>
+				<p class="mt-5">Masih ragu? silakan isi formulir yang tersedia <a href="https://pantiespizza.com/form-kemitraan-panties-pizza/"><button class="btn btn-primary">disini</button></a> dan kami akan segera menghubungi anda.</p>
+
 			</div>
 		</div>
 	</section>
